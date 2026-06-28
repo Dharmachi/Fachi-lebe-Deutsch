@@ -1,0 +1,16 @@
+{
+  "name": "Fachi 學德語",
+  "short_name": "學德語",
+  "description": "德语 A1/A2 语法 + 词汇 学习 app",
+  "lang": "zh",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f6f7fb",
+  "theme_color": "#5b6cff",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}
