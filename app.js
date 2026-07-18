@@ -7,12 +7,13 @@
   "use strict";
 
   const DATA = window.GERMAN_DATA;
-  const DECKS = DATA.vocabDecks || [];
+  const AUTHORED = DATA.vocabDecks || [];   // data.js 里的词库(含暑期密集课程专区)
   const state = {
     view: "module",            // "module" | "vocab" | "review"
     moduleId: DATA.modules[0].id,
     tab: "grammar",
-    deckId: DECKS[0] ? DECKS[0].id : null,
+    deckId: AUTHORED[0] ? AUTHORED[0].id : null,
+    addColl: "我的补充",   // ➕ 添加时默认合集
     vocabTab: "cards",         // "cards" | "cloze"
     // SRS 复习 stepper
     reviewQueue: [], reviewIdx: 0, reviewFlipped: false, reviewTitle: "", reviewSource: "due",
@@ -20,17 +21,21 @@
     searchQuery: "", searchTag: "", searchLevel: "",
     score: { correct: 0, total: 0 }
   };
-  const currentDeck = () => DECKS.find((d) => d.id === state.deckId);
-
-  /* ---------- 「我的补充」词库(用户自己加的词,存 localStorage) ---------- */
+  /* ---------- 「我的补充」词库(用户自己加的词,存 localStorage,可分合集) ---------- */
   const USER_KEY = "drl_user_vocab_v1";
   let userWords = [];
   try { userWords = JSON.parse(localStorage.getItem(USER_KEY) || "[]"); } catch (e) { userWords = []; }
   if (!Array.isArray(userWords)) userWords = [];
-  const userDeck = { id: "my-words", level: "我的", lesson: "补充", theme: "课堂补充", source: "我添加", words: userWords };
-  DECKS.push(userDeck);
   function saveUserWords() { try { localStorage.setItem(USER_KEY, JSON.stringify(userWords)); } catch (e) {} }
   function addUserWord(w) { userWords.unshift(w); saveUserWords(); }
+  // 用户词按「合集(coll)」分成多个 deck
+  function userDeckList() {
+    const by = {};
+    userWords.forEach((w) => { const c = w.coll || "我的补充"; (by[c] = by[c] || []).push(w); });
+    return Object.keys(by).map((c) => ({ id: "user::" + c, group: "➕ 我的补充", level: "我的", lesson: c, theme: "自己添加", source: "我添加", words: by[c] }));
+  }
+  const allDecks = () => AUTHORED.concat(userDeckList());
+  const currentDeck = () => allDecks().find((d) => d.id === state.deckId);
 
   /* ---------- SRS 间隔重复引擎(localStorage 持久化) ---------- */
   const SRS = (function () {
@@ -100,7 +105,7 @@
   // 把所有 deck 的词拉平成 {deck, word}
   function allWords() {
     const out = [];
-    DECKS.forEach((d) => d.words.forEach((w) => out.push({ deck: d, word: w })));
+    allDecks().forEach((d) => d.words.forEach((w) => out.push({ deck: d, word: w })));
     return out;
   }
   // 按词去重(同一个 de 只保留一条,跨课合并)
@@ -187,7 +192,7 @@
     });
 
     // —— 词汇库 ——
-    if (DECKS.length) {
+    if (AUTHORED.length) {
       nav.appendChild(el("div", { class: "nav-head" }, "📚 词汇库"));
 
       nav.appendChild(el("button", {
@@ -222,16 +227,27 @@
         el("span", { class: "nav-sub" }, wbN ? "还没掌握的词" : "空")
       ]));
 
-      DECKS.forEach((d) => {
-        if (d.id === "my-words" && !d.words.length) return; // 空的「我的补充」不显示
-        const active = state.view === "vocab" && d.id === state.deckId;
-        nav.appendChild(el("button", {
-          class: "nav-item" + (active ? " active" : ""),
-          onclick: () => { state.view = "vocab"; state.deckId = d.id; state.vocabTab = "cards"; render(); }
-        }, [
-          el("span", {}, `${d.level} · ${d.lesson}`),
-          el("span", { class: "nav-sub" }, `${d.theme} · ${d.words.length}词`)
-        ]));
+      // 按「分组(group)」把 deck 分成专区显示
+      const groupName = (d) => d.group || (d.level === "A2" ? "A2 词库" : d.level === "A1" ? "A1 词库" : "词库");
+      const groups = {}, order = [];
+      allDecks().forEach((d) => {
+        if (!d.words.length) return;                 // 空 deck 不显示
+        const g = groupName(d);
+        if (!groups[g]) { groups[g] = []; order.push(g); }
+        groups[g].push(d);
+      });
+      order.forEach((g) => {
+        nav.appendChild(el("div", { class: "nav-subhead" }, g));
+        groups[g].forEach((d) => {
+          const active = state.view === "vocab" && d.id === state.deckId;
+          nav.appendChild(el("button", {
+            class: "nav-item" + (active ? " active" : ""),
+            onclick: () => { state.view = "vocab"; state.deckId = d.id; state.vocabTab = "cards"; render(); }
+          }, [
+            el("span", {}, `${d.level} · ${d.lesson}`),
+            el("span", { class: "nav-sub" }, `${d.theme} · ${d.words.length}词`)
+          ]));
+        });
       });
 
       // 备份:导出 / 导入复习进度
@@ -793,6 +809,8 @@
     f.note = el("input", { class: "addinput", type: "text", placeholder: "搭配/备注,如 + Dat、不可分(可留空)" });
     f.level = el("select", { class: "addinput" }, ["A1", "A2", "B1"].map((l) => el("option", { value: l }, l)));
     f.tags = el("input", { class: "addinput", type: "text", placeholder: "标签,逗号分隔,如 unterwegs, trennbar(可留空)" });
+    f.coll = el("input", { class: "addinput", type: "text", placeholder: "归入哪个合集,如 暑期密集 / 我的补充" });
+    f.coll.value = state.addColl || "我的补充";
 
     const msg = el("div", { class: "addmsg" });
     const onSave = () => {
@@ -805,27 +823,30 @@
         if (re.test(example)) example = example.replace(re, "**$1**");
       }
       const tags = f.tags.value.split(/[,，\s]+/).map((t) => t.trim()).filter(Boolean);
+      const coll = f.coll.value.trim() || "我的补充";
+      state.addColl = coll;
       addUserWord({
         de, gender: f.gender.value, plural: f.plural.value.trim(), zh,
         example, exampleZh: f.exampleZh.value.trim(), note: f.note.value.trim(),
-        level: f.level.value, tags: tags.length ? tags : ["补充"]
+        level: f.level.value, tags: tags.length ? tags : ["补充"], coll
       });
-      msg.textContent = `✅ 已添加「${de}」· 我的补充共 ${userWords.length} 个`; msg.className = "addmsg ok";
+      const n = userWords.filter((w) => (w.coll || "我的补充") === coll).length;
+      msg.textContent = `✅ 已添加「${de}」→ 合集「${coll}」共 ${n} 个`; msg.className = "addmsg ok";
       ["de", "plural", "zh", "example", "exampleZh", "note", "tags"].forEach((k) => (f[k].value = ""));
       f.de.focus();
       renderNav();
     };
     f.de.addEventListener("keydown", (e) => { if (e.key === "Enter") f.zh.focus(); });
     const save = el("button", { class: "btn", onclick: onSave }, "✅ 添加");
-    const view = el("button", { class: "btn ghost", onclick: () => { if (userWords.length) gotoDeck("my-words"); else { msg.textContent = "还没加词"; msg.className = "addmsg"; } } }, "查看「我的补充」");
+    const view = el("button", { class: "btn ghost", onclick: () => { const c = f.coll.value.trim() || "我的补充"; if (userWords.some((w) => (w.coll || "我的补充") === c)) gotoDeck("user::" + c); else { msg.textContent = "该合集还没词"; msg.className = "addmsg"; } } }, "查看该合集");
 
     const form = el("div", { class: "addform" }, [
       row("德语词 *", f.de), row("词性", f.gender), row("复数", f.plural),
       row("中文 *", f.zh), row("例句", f.example), row("例句中文", f.exampleZh),
-      row("搭配/备注", f.note), row("难度", f.level), row("标签", f.tags),
+      row("搭配/备注", f.note), row("难度", f.level), row("标签", f.tags), row("合集", f.coll),
       el("div", { class: "addrow" }, [el("label", {}, ""), el("div", {}, [save, document.createTextNode("  "), view])])
     ]);
-    panel.appendChild(el("p", { class: "muted" }, "填完点「添加」。名词选 der/die/das 并填复数;动词/词组选对应词性。加的词进「我的补充」词库,能翻卡、发音、复习,并随备份一起导出。"));
+    panel.appendChild(el("p", { class: "muted" }, "填完点「添加」。名词选 der/die/das 并填复数;动词/词组选对应词性。「合集」决定归到哪个专区(如填『暑期密集』就和密集课的词放一起,连续加会记住上次的合集)。加的词能翻卡、发音、复习,并随备份一起导出。"));
     panel.appendChild(form);
     panel.appendChild(msg);
     f.de.focus();
