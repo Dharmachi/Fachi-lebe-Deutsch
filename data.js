@@ -1718,7 +1718,3275 @@ window.GERMAN_DATA = {
         { type: "choice", prompt: "gehen 在完成时用哪个助动词?", options: ["sein", "haben"], answer: "sein", explanation: "移动动词 → sein(暗线,配模块六)。" },
         { type: "choice", prompt: "der Schrank 的复数?", options: ["Schränke", "Schranks", "Schranken"], answer: "Schränke", explanation: "der Schrank → die Schränke(变音)。" }
       ]
+    },
+
+{
+   "id": 11,
+   "title": "不规则动词训练营",
+   "subtitle": "完成时 104 词 · 元音家族速记",
+   "difficulty": 4,
+   "level": "A2",
+   "tags": [
+    "perfekt",
+    "ablaut",
+    "hilfsverb",
+    "partizip"
+   ],
+   "grammar": [
+    {
+     "id": "G33",
+     "title": "完成时两条铁律:ge- 放哪 + hat 还是 ist",
+     "level": "A2",
+     "difficulty": 3,
+     "tags": [
+      "perfekt",
+      "partizip",
+      "hilfsverb"
+     ],
+     "summary": "背 104 个不规则动词前,先把这两条规则装进脑子——它们决定了每个词的「外壳」,元音变化只决定「内核」。",
+     "explain": [
+      "① ge- 的位置:可分动词 → 前缀 + ge + 词干(an-ge-kommen、auf-ge-standen);不可分前缀(be- er- emp- ge- ver- unter- über-)→ 不加 ge-(bekommen、empfohlen、verstanden);无前缀 → 前面加 ge-。",
+      "② 助动词:有第四格宾语 → haben;位移或状态变化 → sein;三例外 sein / bleiben / werden → sein。",
+      "③ 全表只有 26 个词用 sein,其余 78 个一律 haben——背那 26 个清单比背规则快。"
+     ],
+     "mnemonic": "可分夹 ge、不可分不要 ge;动了/变了/三例外用 ist,其余全是 hat。",
+     "tables": [
+      {
+       "caption": "用 sein 的全部 26 个词(其余一律 haben)",
+       "headers": [
+        "用 sein 的动词"
+       ],
+       "rows": [
+        [
+         "abfahren · ankommen · aufstehen · ausgehen"
+        ],
+        [
+         "aussteigen · bleiben · drankommen · einfallen"
+        ],
+        [
+         "einschlafen · einsteigen · fahren · fliegen"
+        ],
+        [
+         "gehen · kommen · laufen · los sein"
+        ],
+        [
+         "losfahren · losgehen · mitkommen · rausgehen"
+        ],
+        [
+         "schwimmen · sein · umsteigen · umziehen"
+        ],
+        [
+         "werden · zurückfahren"
+        ]
+       ]
+      }
+     ],
+     "flowchart": {
+      "title": "hat 还是 ist?",
+      "start": "q1",
+      "nodes": {
+       "q1": {
+        "q": "句中有第四格宾语吗?(及物)",
+        "yes": "haben",
+        "no": "q2"
+       },
+       "q2": {
+        "q": "是位移(gehen/fahren/kommen…)或状态变化(aufstehen/einschlafen/werden)吗?",
+        "yes": "sein",
+        "no": "q3"
+       },
+       "q3": {
+        "q": "是三例外 sein / bleiben / werden 吗?",
+        "yes": "sein",
+        "no": "haben"
+       },
+       "haben": {
+        "result": "→ hat + PII",
+        "good": true
+       },
+       "sein": {
+        "result": "→ ist + PII",
+        "good": true
+       }
+      }
+     },
+     "notes": [
+      "⚠️ 反直觉:aufstehen 用 ist,但 stehen / verstehen 用 hat;einschlafen 用 ist,但 schlafen 用 hat。",
+      "⚠️ bekommen 三重坑:用 hat(虽然 kommen 用 ist)、be- 不可分无 ge-、PII 与原形同形。",
+      "⚠️ hochfahren 用 hat(及物:den Computer),但 fahren / abfahren / losfahren / zurückfahren 全用 ist。"
+     ],
+     "examples": [
+      {
+       "de": "Er ist um sechs Uhr aufgestanden.",
+       "zh": "他六点起床了。",
+       "trigger": "ist … aufgestanden",
+       "steps": [
+        "aufstehen 状态变化 → sein",
+        "可分动词 auf- → ge 夹中间",
+        "auf + ge + standen"
+       ]
+      },
+      {
+       "de": "Er hat den Computer hochgefahren.",
+       "zh": "他启动了电脑。",
+       "trigger": "hat … hochgefahren",
+       "steps": [
+        "有第四格宾语 den Computer → haben",
+        "虽然 fahren 用 sein,及物时用 haben",
+        "hoch + ge + fahren"
+       ]
+      }
+     ],
+     "miniQuiz": {
+      "type": "choice",
+      "prompt": "Er ___ ein Geschenk bekommen.",
+      "options": [
+       "hat",
+       "ist"
+      ],
+      "answer": "hat",
+      "explanation": "bekommen 及物、非位移 → haben;虽然 kommen 用 sein。"
+     },
+     "related": [
+      "G19",
+      "G20"
+     ]
+    },
+    {
+     "id": "G33b",
+     "title": "用 sein 的 26 个 vs 其余全 haben",
+     "level": "A2",
+     "difficulty": 3,
+     "tags": [
+      "perfekt",
+      "hilfsverb",
+      "sein"
+     ],
+     "summary": "完成时只有这 26 个词用 sein,其余 78 个不规则动词一律 haben——把这张表背熟,助动词就不用每次推理了。",
+     "mnemonic": "动了(位移)/ 变了(状态)/ 三例外(sein·bleiben·werden)→ ist;背下这 26 个,剩下闭眼选 hat。",
+     "tables": [
+      {
+       "caption": "✅ 用 sein 的全部 26 个 — 可开「默写模式」",
+       "maskable": true,
+       "headers": [
+        "用 sein 的动词",
+        "用 sein 的动词"
+       ],
+       "rows": [
+        [
+         "abfahren  出发,开走",
+         "ankommen  到达"
+        ],
+        [
+         "aufstehen  起床,起立",
+         "ausgehen  外出,出门"
+        ],
+        [
+         "aussteigen  下车",
+         "bleiben  停留,保持"
+        ],
+        [
+         "drankommen  轮到",
+         "einfallen  想起,浮现"
+        ],
+        [
+         "einschlafen  入睡",
+         "einsteigen  上车"
+        ],
+        [
+         "fahren  开车;乘车去",
+         "fliegen  飞;坐飞机"
+        ],
+        [
+         "gehen  走;去",
+         "kommen  来"
+        ],
+        [
+         "laufen  跑;走路",
+         "los sein  发生;出事"
+        ],
+        [
+         "losfahren  出发;启程",
+         "losgehen  开始;动身"
+        ],
+        [
+         "mitkommen  一起来",
+         "rausgehen  出去"
+        ],
+        [
+         "schwimmen  游泳",
+         "umsteigen  换乘"
+        ],
+        [
+         "umziehen  搬家",
+         "zurückfahren  返回;开回"
+        ],
+        [
+         "sein  是;存在",
+         "werden  变成;成为"
+        ]
+       ]
+      },
+      {
+       "caption": "⚠️ 长得像 sein、实际用 haben 的陷阱词",
+       "headers": [
+        "haben 动词",
+        "为什么容易记错"
+       ],
+       "rows": [
+        [
+         "aussehen 看起来",
+         "像 aus- 位移词,实为感官动词"
+        ],
+        [
+         "bekommen 得到",
+         "kommen 用 ist,它却用 hat"
+        ],
+        [
+         "hochfahren 启动电脑",
+         "fahren 家族唯一用 hat(及物)"
+        ],
+        [
+         "stehen 站 / verstehen 理解",
+         "但 aufstehen 用 ist"
+        ],
+        [
+         "sitzen 坐 / liegen 躺",
+         "静止动词,德标用 hat"
+        ],
+        [
+         "zurückfinden 找回",
+         "finden 家族全 hat"
+        ]
+       ]
+      }
+     ],
+     "notes": [
+      "口诀记 sein 三类:①位移 gehen/kommen/fahren/fliegen/laufen/schwimmen/steigen ②状态变化 aufstehen/einschlafen/werden ③三例外 sein/bleiben/passieren。",
+      "可分动词继承词根的助动词:fahren=ist → abfahren/losfahren/zurückfahren 也 ist;但 hochfahren(及物)是唯一例外,用 hat。"
+     ],
+     "examples": [
+      {
+       "de": "Er ist nach Wien gefahren.",
+       "zh": "他去了维也纳。",
+       "trigger": "ist gefahren",
+       "case": "",
+       "steps": [
+        "fahren 位移 → sein",
+        "无第四格宾语",
+        "ist + gefahren"
+       ]
+      },
+      {
+       "de": "Er hat das Auto nach Wien gefahren.",
+       "zh": "他把车开去了维也纳。",
+       "trigger": "hat gefahren",
+       "case": "",
+       "steps": [
+        "有第四格宾语 das Auto → 及物",
+        "及物一律 haben",
+        "hat + gefahren(同一个词,助动词随宾语变)"
+       ]
+      }
+     ],
+     "miniQuiz": {
+      "type": "choice",
+      "prompt": "下面哪个用 sein?",
+      "options": [
+       "bleiben",
+       "bekommen",
+       "aussehen"
+      ],
+      "answer": "bleiben",
+      "explanation": "bleiben 是三例外之一,虽不位移却用 sein;bekommen/aussehen 都用 haben。"
+     },
+     "related": [
+      "G33"
+     ]
+    },
+    {
+     "id": "G34",
+     "title": "A. ei–ie 长音家族（schreiben / steigen / bleiben）",
+     "level": "A2",
+     "difficulty": 3,
+     "tags": [
+      "perfekt",
+      "ablaut"
+     ],
+     "summary": "ei → ie，现在时完全不变音（er schreibt / er steigt ein）；PII = ge + 词干(ie) + en。untrennbar 的 beschreiben / unterschreiben / überweisen 不加 ge-。",
+     "mnemonic": "ei 一拉长就成 ie；steigen 三兄弟上车下车换车一律 ist，bleiben 不动也用 ist，其余全是 hat。",
+     "tables": [
+      {
+       "caption": "A. ei–ie 长音家族（schreiben / steigen / bleiben） — 可开「默写模式」",
+       "maskable": true,
+       "headers": [
+        "原形",
+        "er-形式",
+        "完成时",
+        "中文"
+       ],
+       "rows": [
+        [
+         "bleiben",
+         "er bleibt",
+         "ist geblieben",
+         "停留,保持"
+        ],
+        [
+         "schreiben",
+         "er schreibt",
+         "hat geschrieben",
+         "写"
+        ],
+        [
+         "aufschreiben",
+         "er schreibt auf",
+         "hat aufgeschrieben",
+         "记下,写下"
+        ],
+        [
+         "beschreiben",
+         "er beschreibt",
+         "hat beschrieben",
+         "描述"
+        ],
+        [
+         "unterschreiben",
+         "er unterschreibt",
+         "hat unterschrieben",
+         "签名"
+        ],
+        [
+         "überweisen",
+         "er überweist",
+         "hat überwiesen",
+         "汇款；转诊"
+        ],
+        [
+         "scheinen",
+         "er scheint",
+         "hat geschienen",
+         "照耀；似乎"
+        ],
+        [
+         "einsteigen",
+         "er steigt ein",
+         "ist eingestiegen",
+         "上车"
+        ],
+        [
+         "aussteigen",
+         "er steigt aus",
+         "ist ausgestiegen",
+         "下车"
+        ],
+        [
+         "umsteigen",
+         "er steigt um",
+         "ist umgestiegen",
+         "换乘"
+        ]
+       ]
+      }
+     ],
+     "notes": [
+      "非位移动词却用 sein",
+      "不可分前缀,无 ge-;与 schreiben 同族",
+      "不可分前缀，无 ge-",
+      "ist 不是 hat；um- 此处可分（ge- 夹中间）"
+     ],
+     "examples": [],
+     "miniQuiz": {
+      "type": "choice",
+      "prompt": "把卡片 aufschreiben 放进哪个家族桶?",
+      "options": [
+       "ei–ie",
+       "ei–i",
+       "ie–o"
+      ],
+      "answer": "ei–ie",
+      "explanation": "可分动词按词根判定:auf- + schreiben,schreiben 属 ei–ie(geschrieben),所以 aufgeschrieben 也是长 ie。前缀不影响元音家族,只影响 ge- 的位置(auf-ge-schrieben)。"
+     },
+     "related": [
+      "G33"
+     ]
+    },
+    {
+     "id": "G35",
+     "title": "B. ei–i 短音家族 + ei–ei 例外（最小可辨差异块，必须紧跟 A 学）",
+     "level": "A2",
+     "difficulty": 3,
+     "tags": [
+      "perfekt",
+      "ablaut"
+     ],
+     "summary": "同样 ei 开头，但后接双辅音或 ch 时缩成短 i：schneiden→geschnitten、vergleichen→verglichen、unterstreichen→unterstrichen；heißen 则完全不变 → geheißen。全部 haben，现在时不变音。",
+     "mnemonic": "辅音一变双（tt / ch），ei 就缩成短 i；heißen 顽固不化，ei 到底。",
+     "tables": [
+      {
+       "caption": "B. ei–i 短音家族 + ei–ei 例外（最小可辨差异块，必须紧跟 A 学） — 可开「默写模式」",
+       "maskable": true,
+       "headers": [
+        "原形",
+        "er-形式",
+        "完成时",
+        "中文"
+       ],
+       "rows": [
+        [
+         "schneiden",
+         "er schneidet",
+         "hat geschnitten",
+         "切，剪"
+        ],
+        [
+         "vergleichen",
+         "er vergleicht",
+         "hat verglichen",
+         "比较"
+        ],
+        [
+         "unterstreichen",
+         "er unterstreicht",
+         "hat unterstrichen",
+         "划线;强调"
+        ],
+        [
+         "heißen",
+         "er heißt",
+         "hat geheißen",
+         "名叫;意为"
+        ]
+       ]
+      }
+     ],
+     "notes": [
+      "ei–i 类，PII 双写 tt",
+      "不可分前缀,无 ge-",
+      "不可分前缀,无 ge-;元音变短 ei→i"
+     ],
+     "examples": [],
+     "miniQuiz": {
+      "type": "choice",
+      "prompt": "把卡片 unterstreichen 放进哪个家族桶?",
+      "options": [
+       "ei–i",
+       "ei–ie",
+       "ei–ei"
+      ],
+      "answer": "ei–i",
+      "explanation": "PII 是 unterstrichen,元音变短 i(后面接 ch)。ei 家族中 schneiden / vergleichen / unterstreichen 这一支走短 i,不是长 ie。另外 unter- 在此不可分,所以没有 ge-。"
+     },
+     "related": [
+      "G33"
+     ]
+    },
+    {
+     "id": "G36",
+     "title": "C. ie–o 家族（ziehen / fliegen / schließen）",
+     "level": "A2",
+     "difficulty": 3,
+     "tags": [
+      "perfekt",
+      "ablaut"
+     ],
+     "summary": "ie → o，现在时完全不变音；带 ß 的 PII 元音变短，ß 必须改写成 ss。genießen / erschließen 是不可分前缀，不再加 ge-。fliegen 与 umziehen 用 sein，其余 haben。",
+     "mnemonic": "ie 一律塌成 o：zieh→zog、flieg→flog、wieg→wog；带 ß 的塌下来还要改成 ss。",
+     "tables": [
+      {
+       "caption": "C. ie–o 家族（ziehen / fliegen / schließen） — 可开「默写模式」",
+       "maskable": true,
+       "headers": [
+        "原形",
+        "er-形式",
+        "完成时",
+        "中文"
+       ],
+       "rows": [
+        [
+         "ziehen",
+         "er zieht",
+         "hat gezogen",
+         "拉;拽"
+        ],
+        [
+         "anziehen",
+         "er zieht an",
+         "hat angezogen",
+         "穿上"
+        ],
+        [
+         "ausziehen",
+         "er zieht aus",
+         "hat ausgezogen",
+         "脱下"
+        ],
+        [
+         "umziehen",
+         "er zieht um",
+         "ist umgezogen",
+         "搬家"
+        ],
+        [
+         "fliegen",
+         "er fliegt",
+         "ist geflogen",
+         "飞;坐飞机"
+        ],
+        [
+         "riechen",
+         "er riecht",
+         "hat gerochen",
+         "闻；有气味"
+        ],
+        [
+         "wiegen",
+         "er wiegt",
+         "hat gewogen",
+         "称重;重达"
+        ],
+        [
+         "schließen",
+         "er schließt",
+         "hat geschlossen",
+         "关闭"
+        ],
+        [
+         "genießen",
+         "er genießt",
+         "hat genossen",
+         "享受;品味"
+        ],
+        [
+         "erschließen",
+         "er erschließt",
+         "hat erschlossen",
+         "开发,推知"
+        ]
+       ]
+      }
+     ],
+     "notes": [
+      "表「搬迁」时用 ist gezogen",
+      "现在时不变音,但 PII 变 o",
+      "表\"脱衣\"用 hat;表\"搬出\"时用 ist",
+      "ist 不是 hat；反身 sich umziehen（换衣服）用 hat",
+      "用 sein"
+     ],
+     "examples": [],
+     "miniQuiz": {
+      "type": "choice",
+      "prompt": "把卡片 anziehen 放进哪个家族桶?",
+      "options": [
+       "ie–o",
+       "ie–e",
+       "e–o"
+      ],
+      "answer": "ie–o",
+      "explanation": "词根 ziehen:angezogen。现在时完全不变音(er zieht an),但 PII 掉到 o——这类词现在时给不了任何提示,只能靠家族记。"
+     },
+     "related": [
+      "G33"
+     ]
+    },
+    {
+     "id": "G37",
+     "title": "D. i–u 家族 + 三个 i 系叛徒（finden / singen / trinken）",
+     "level": "A2",
+     "difficulty": 3,
+     "tags": [
+      "perfekt",
+      "ablaut"
+     ],
+     "summary": "i → u，现在时不变音，全部 haben。刻意混入三个异类当陷阱：schwimmen 是 i–o 且用 sein，sitzen 是 i–e，liegen 是 ie–e，后两个都用 haben。",
+     "mnemonic": "i 变 u 是正牌（sing–sung 像英语）；schwimmen 变 o 还用 ist，sitzen / liegen 变 e 却用 hat，这三个是叛徒。",
+     "tables": [
+      {
+       "caption": "D. i–u 家族 + 三个 i 系叛徒（finden / singen / trinken） — 可开「默写模式」",
+       "maskable": true,
+       "headers": [
+        "原形",
+        "er-形式",
+        "完成时",
+        "中文"
+       ],
+       "rows": [
+        [
+         "finden",
+         "er findet",
+         "hat gefunden",
+         "找到;认为"
+        ],
+        [
+         "stattfinden",
+         "er findet statt",
+         "hat stattgefunden",
+         "举行，发生"
+        ],
+        [
+         "zurückfinden",
+         "er findet zurück",
+         "hat zurückgefunden",
+         "找回路"
+        ],
+        [
+         "verbinden",
+         "er verbindet",
+         "hat verbunden",
+         "连接;包扎"
+        ],
+        [
+         "singen",
+         "er singt",
+         "hat gesungen",
+         "唱歌"
+        ],
+        [
+         "klingen",
+         "er klingt",
+         "hat geklungen",
+         "听起来"
+        ],
+        [
+         "trinken",
+         "er trinkt",
+         "hat getrunken",
+         "喝"
+        ],
+        [
+         "schwimmen",
+         "er schwimmt",
+         "ist geschwommen",
+         "游泳"
+        ],
+        [
+         "sitzen",
+         "er sitzt",
+         "hat gesessen",
+         "坐着"
+        ],
+        [
+         "liegen",
+         "er liegt",
+         "hat gelegen",
+         "躺;位于"
+        ]
+       ]
+      }
+     ],
+     "notes": [
+      "finden 家族；主语只能是活动/事件",
+      "虽含位移义仍用 hat(反直觉)",
+      "不可分前缀,无 ge-;与 finden 同族",
+      "ist 不是 hat（位移动词）",
+      "hat 不是 ist（状态动词，反直觉）"
+     ],
+     "examples": [],
+     "miniQuiz": {
+      "type": "choice",
+      "prompt": "fliegen 该进哪个桶?",
+      "options": [
+       "ie–o",
+       "ie–e",
+       "i–u"
+      ],
+      "answer": "ie–o",
+      "explanation": "geflogen。同桶还有 riechen→gerochen、ziehen→gezogen、wiegen→gewogen。fliegen 是位移动词,用 ist。"
+     },
+     "related": [
+      "G33"
+     ]
+    },
+    {
+     "id": "G38",
+     "title": "E. a–a 家族①：fahren 族 + fangen / fallen",
+     "level": "A2",
+     "difficulty": 3,
+     "tags": [
+      "perfekt",
+      "ablaut"
+     ],
+     "summary": "PII 元音原地不动（a 回 a），难点全在现在时 a→ä。fahren 族 4 个继承 ist，hochfahren 及物用 hat；einfallen 用 sein，gefallen 用 haben 且 PII 与原形同形。",
+     "mnemonic": "PII 一动不动，er 形头上加两点：fährt / fängt an / fällt ein / gefällt。fahren 全家坐车走人用 ist，只有 hochfahren 开电脑用 hat。",
+     "tables": [
+      {
+       "caption": "E. a–a 家族①：fahren 族 + fangen / fallen — 可开「默写模式」",
+       "maskable": true,
+       "headers": [
+        "原形",
+        "er-形式",
+        "完成时",
+        "中文"
+       ],
+       "rows": [
+        [
+         "fahren",
+         "er fährt",
+         "ist gefahren",
+         "开车;乘车去"
+        ],
+        [
+         "abfahren",
+         "er fährt ab",
+         "ist abgefahren",
+         "出发,开走"
+        ],
+        [
+         "losfahren",
+         "er fährt los",
+         "ist losgefahren",
+         "出发;启程"
+        ],
+        [
+         "zurückfahren",
+         "er fährt zurück",
+         "ist zurückgefahren",
+         "返回;开回"
+        ],
+        [
+         "hochfahren",
+         "er fährt hoch",
+         "hat hochgefahren",
+         "启动(电脑)"
+        ],
+        [
+         "anfangen",
+         "er fängt an",
+         "hat angefangen",
+         "开始"
+        ],
+        [
+         "einfallen",
+         "er fällt ein",
+         "ist eingefallen",
+         "想起,浮现"
+        ],
+        [
+         "gefallen",
+         "er gefällt",
+         "hat gefallen",
+         "讨人喜欢"
+        ]
+       ]
+      }
+     ],
+     "notes": [
+      "用 sein(位移动词)",
+      "与 fahren 同族,用 sein",
+      "用 sein",
+      "位移动词用 ist;与 fahren 同族",
+      "hat 不是 ist(与 fahren 相反,及物用法)"
+     ],
+     "examples": [],
+     "miniQuiz": {
+      "type": "choice",
+      "prompt": "把卡片 abfahren 放进哪个家族桶?",
+      "options": [
+       "a–a",
+       "e–a",
+       "o–o"
+      ],
+      "answer": "a–a",
+      "explanation": "按词根 fahren 判定:gefahren,PII 元音回到 a。现在时才变音(er fährt ab),PII 不变音——这是 a–a 家族的统一规律。"
+     },
+     "related": [
+      "G33"
+     ]
+    },
+    {
+     "id": "G39",
+     "title": "F. a–a 家族②：schlafen / tragen 组 + laufen",
+     "level": "A2",
+     "difficulty": 3,
+     "tags": [
+      "perfekt",
+      "ablaut"
+     ],
+     "summary": "同样 PII 元音回 a，现在时 a→ä；laufen 是 au→äu。全部 haben，唯独 einschlafen（状态变化）和 laufen（位移）用 sein。",
+     "mnemonic": "schläft / trägt / wäscht / rät / lädt ein / läuft——六张变音脸，PII 一律回原形；schlafen 用 hat，einschlafen 用 ist。",
+     "tables": [
+      {
+       "caption": "F. a–a 家族②：schlafen / tragen 组 + laufen — 可开「默写模式」",
+       "maskable": true,
+       "headers": [
+        "原形",
+        "er-形式",
+        "完成时",
+        "中文"
+       ],
+       "rows": [
+        [
+         "schlafen",
+         "er schläft",
+         "hat geschlafen",
+         "睡觉"
+        ],
+        [
+         "einschlafen",
+         "er schläft ein",
+         "ist eingeschlafen",
+         "入睡"
+        ],
+        [
+         "tragen",
+         "er trägt",
+         "hat getragen",
+         "携带；穿着"
+        ],
+        [
+         "waschen",
+         "er wäscht",
+         "hat gewaschen",
+         "洗"
+        ],
+        [
+         "raten",
+         "er rät",
+         "hat geraten",
+         "猜；建议"
+        ],
+        [
+         "einladen",
+         "er lädt ein",
+         "hat eingeladen",
+         "邀请"
+        ],
+        [
+         "laufen",
+         "er läuft",
+         "ist gelaufen",
+         "跑;走路"
+        ]
+       ]
+      }
+     ],
+     "notes": [
+      "现在时变音但 PII 不变音",
+      "schlafen 用 haben,einschlafen 用 sein",
+      "PII 词干与原形同形（geraten），只是现在时变音",
+      "er lädt ein(不是 ladet)",
+      "用 sein;现在时 au→äu"
+     ],
+     "examples": [],
+     "miniQuiz": {
+      "type": "choice",
+      "prompt": "把卡片 einladen 放进哪个家族桶?它的 er 形式是?",
+      "options": [
+       "a–a,er lädt ein",
+       "a–a,er ladet ein",
+       "e–a,er lädt ein"
+      ],
+      "answer": "a–a,er lädt ein",
+      "explanation": "eingeladen 属 a–a。现在时 a→ä 且不加 e:er lädt ein,写成 er ladet ein 是把强变化误当弱变化。"
+     },
+     "related": [
+      "G33"
+     ]
+    },
+    {
+     "id": "G40",
+     "title": "G. e–e 家族①：现在时 e→ie（sehen / lesen 组）",
+     "level": "A2",
+     "difficulty": 3,
+     "tags": [
+      "perfekt",
+      "ablaut"
+     ],
+     "summary": "现在时 e→ie（er sieht / er liest），PII 老老实实回 e：gesehen / gelesen。全部 haben，可分前缀夹 ge-（ferngesehen / vorgelesen）。",
+     "mnemonic": "眼睛一睁大变 ie（sieht / liest），过去分词又乖乖眯回 e；aussehen 看着像位移，其实用 hat。",
+     "tables": [
+      {
+       "caption": "G. e–e 家族①：现在时 e→ie（sehen / lesen 组） — 可开「默写模式」",
+       "maskable": true,
+       "headers": [
+        "原形",
+        "er-形式",
+        "完成时",
+        "中文"
+       ],
+       "rows": [
+        [
+         "sehen",
+         "er sieht",
+         "hat gesehen",
+         "看见"
+        ],
+        [
+         "ansehen",
+         "er sieht an",
+         "hat angesehen",
+         "观看,注视"
+        ],
+        [
+         "aussehen",
+         "er sieht aus",
+         "hat ausgesehen",
+         "看起来"
+        ],
+        [
+         "fernsehen",
+         "er sieht fern",
+         "hat ferngesehen",
+         "看电视"
+        ],
+        [
+         "lesen",
+         "er liest",
+         "hat gelesen",
+         "读;阅读"
+        ],
+        [
+         "mitlesen",
+         "er liest mit",
+         "hat mitgelesen",
+         "跟着读"
+        ],
+        [
+         "vorlesen",
+         "er liest vor",
+         "hat vorgelesen",
+         "朗读"
+        ]
+       ]
+      }
+     ],
+     "notes": [
+      "现在时变 ie，但 PII 回到 e",
+      "hat 不是 ist(反直觉)",
+      "词根 sehen,现在时 e→ie",
+      "er liest 只有一个 s(词干已含 s)",
+      "ge- 夹在 vor- 之后"
+     ],
+     "examples": [],
+     "miniQuiz": {
+      "type": "choice",
+      "prompt": "sehen 该进哪个桶?",
+      "options": [
+       "e–e",
+       "e–o",
+       "ie–e"
+      ],
+      "answer": "e–e",
+      "explanation": "gesehen。现在时 e→ie(er sieht),PII 却回到 e。ansehen / aussehen / fernsehen / vorlesen 之类全族同理。"
+     },
+     "related": [
+      "G33"
+     ]
+    },
+    {
+     "id": "G41",
+     "title": "H. e–e 家族②：现在时 e→i（geben / essen 组）",
+     "level": "A2",
+     "difficulty": 3,
+     "tags": [
+      "perfekt",
+      "ablaut"
+     ],
+     "summary": "现在时 e→i（er gibt / er isst / er vergisst），PII 仍回 e。essen 的 PII 例外多一个 ge → gegessen；vergessen 不可分，PII 与原形同形。全部 haben。",
+     "mnemonic": "e 缩成 i（gibt / isst / vergisst），分词又长回 e；essen 太饿，多吃一个 ge → gegessen。",
+     "tables": [
+      {
+       "caption": "H. e–e 家族②：现在时 e→i（geben / essen 组） — 可开「默写模式」",
+       "maskable": true,
+       "headers": [
+        "原形",
+        "er-形式",
+        "完成时",
+        "中文"
+       ],
+       "rows": [
+        [
+         "geben",
+         "er gibt",
+         "hat gegeben",
+         "给"
+        ],
+        [
+         "eingeben",
+         "er gibt ein",
+         "hat eingegeben",
+         "输入,录入"
+        ],
+        [
+         "wiedergeben",
+         "er gibt wieder",
+         "hat wiedergegeben",
+         "归还;复述"
+        ],
+        [
+         "essen",
+         "er isst",
+         "hat gegessen",
+         "吃"
+        ],
+        [
+         "vergessen",
+         "er vergisst",
+         "hat vergessen",
+         "忘记"
+        ]
+       ]
+      }
+     ],
+     "notes": [
+      "wieder- 此处可分(有 ge- 夹中间)",
+      "PII 例外多出一个 ge:gegessen",
+      "PII 与原形同形(不可分前缀,无 ge-)"
+     ],
+     "examples": [],
+     "miniQuiz": {
+      "type": "choice",
+      "prompt": "geben 该进哪个桶?",
+      "options": [
+       "e–e",
+       "e–o",
+       "e–a"
+      ],
+      "answer": "e–e",
+      "explanation": "gegeben:现在时变音(er gibt),但 PII 回到 e。这就是「PII 回 e」组的标志。"
+     },
+     "related": [
+      "G33"
+     ]
+    },
+    {
+     "id": "G42",
+     "title": "I. e–o 家族（nehmen / sprechen / helfen）——与 H 是最易互污的一对",
+     "level": "A2",
+     "difficulty": 3,
+     "tags": [
+      "perfekt",
+      "ablaut"
+     ],
+     "summary": "现在时 e→i，PII 却掉到 o：nimmt→genommen、spricht→gesprochen、hilft→geholfen。empfehlen 是唯一现在时走 ie（empfiehlt）但 PII 仍是 o 的词，且 emp- 不可分无 ge-。全部 haben。",
+     "mnemonic": "现在时 e 缩成 i，分词一路掉到 o；nehmen 掉得最狠——h 没了、m 变双（nimmt / genommen）。",
+     "tables": [
+      {
+       "caption": "I. e–o 家族（nehmen / sprechen / helfen）——与 H 是最易互污的一对 — 可开「默写模式」",
+       "maskable": true,
+       "headers": [
+        "原形",
+        "er-形式",
+        "完成时",
+        "中文"
+       ],
+       "rows": [
+        [
+         "nehmen",
+         "er nimmt",
+         "hat genommen",
+         "拿，取"
+        ],
+        [
+         "annehmen",
+         "er nimmt an",
+         "hat angenommen",
+         "接受,假定"
+        ],
+        [
+         "mitnehmen",
+         "er nimmt mit",
+         "hat mitgenommen",
+         "带走;捎上"
+        ],
+        [
+         "sprechen",
+         "er spricht",
+         "hat gesprochen",
+         "说话"
+        ],
+        [
+         "mitsprechen",
+         "er spricht mit",
+         "hat mitgesprochen",
+         "跟着说"
+        ],
+        [
+         "nachsprechen",
+         "er spricht nach",
+         "hat nachgesprochen",
+         "跟读"
+        ],
+        [
+         "helfen",
+         "er hilft",
+         "hat geholfen",
+         "帮助"
+        ],
+        [
+         "treffen",
+         "er trifft",
+         "hat getroffen",
+         "遇见，会面"
+        ],
+        [
+         "empfehlen",
+         "er empfiehlt",
+         "hat empfohlen",
+         "推荐"
+        ]
+       ]
+      }
+     ],
+     "notes": [
+      "现在时 er nimmt 辅音也变（h→mm），需死记",
+      "er nimmt an 词干大改(nehm→nimm),双写 mm",
+      "现在时双写 mm:er nimmt mit",
+      "sprechen 家族，可分前缀 ge- 夹中间",
+      "sprechen 家族，可分前缀 ge- 夹中间"
+     ],
+     "examples": [],
+     "miniQuiz": {
+      "type": "choice",
+      "prompt": "sprechen 该进哪个桶?",
+      "options": [
+       "e–o",
+       "e–e",
+       "e–a"
+      ],
+      "answer": "e–o",
+      "explanation": "gesprochen:PII 掉到 o。现在时 e→i(er spricht)。mitsprechen / nachsprechen 按词根同桶。"
+     },
+     "related": [
+      "G33"
+     ]
+    },
+    {
+     "id": "G43",
+     "title": "J. e–a 家族：gehen / stehen（词干整体改写）",
+     "level": "A2",
+     "difficulty": 3,
+     "tags": [
+      "perfekt",
+      "ablaut"
+     ],
+     "summary": "现在时完全不变音，PII 词干整个换掉：geh→gang（gegangen）、steh→stand（gestanden）。gehen 系全部 sein；stehen 系 haben，唯独 aufstehen 用 sein。",
+     "mnemonic": "geh 变 gang、steh 变 stand，推不出来只能背声音；gehen 全家出门用 ist，stehen 全家站着用 hat，aufstehen 起床叛变用 ist。",
+     "tables": [
+      {
+       "caption": "J. e–a 家族：gehen / stehen（词干整体改写） — 可开「默写模式」",
+       "maskable": true,
+       "headers": [
+        "原形",
+        "er-形式",
+        "完成时",
+        "中文"
+       ],
+       "rows": [
+        [
+         "gehen",
+         "er geht",
+         "ist gegangen",
+         "走;去"
+        ],
+        [
+         "ausgehen",
+         "er geht aus",
+         "ist ausgegangen",
+         "外出,出门"
+        ],
+        [
+         "losgehen",
+         "er geht los",
+         "ist losgegangen",
+         "开始;动身"
+        ],
+        [
+         "rausgehen",
+         "er geht raus",
+         "ist rausgegangen",
+         "出去"
+        ],
+        [
+         "stehen",
+         "er steht",
+         "hat gestanden",
+         "站立"
+        ],
+        [
+         "aufstehen",
+         "er steht auf",
+         "ist aufgestanden",
+         "起床,起立"
+        ],
+        [
+         "verstehen",
+         "er versteht",
+         "hat verstanden",
+         "理解;懂"
+        ]
+       ]
+      }
+     ],
+     "notes": [
+      "用 sein",
+      "gehen 族特殊变化 geh→gang",
+      "用 sein",
+      "gehen 家族，位移动词用 sein",
+      "hat 不是 ist（德标准语；南德才用 ist）"
+     ],
+     "examples": [],
+     "miniQuiz": {
+      "type": "choice",
+      "prompt": "gehen 该进哪个桶?",
+      "options": [
+       "e–a",
+       "e–e",
+       "e–o"
+      ],
+      "answer": "e–a",
+      "explanation": "gegangen:gehen 族词干整体大改(geh→gang),归 e–a。ausgehen / losgehen / rausgehen 同族,全部用 sein。"
+     },
+     "related": [
+      "G33"
+     ]
+    },
+    {
+     "id": "G44",
+     "title": "K. o–o 家族：kommen 一族",
+     "level": "A2",
+     "difficulty": 3,
+     "tags": [
+      "perfekt",
+      "ablaut"
+     ],
+     "summary": "三形都是 o，现在时一点不变。全族 sein，唯独 bekommen 用 haben，且 be- 不可分、PII 与原形同形（hat bekommen）。",
+     "mnemonic": "kommen 全家从头 o 到尾，来来去去用 ist；bekommen「收到」不动地方，用 hat 还不加 ge-。",
+     "tables": [
+      {
+       "caption": "K. o–o 家族：kommen 一族 — 可开「默写模式」",
+       "maskable": true,
+       "headers": [
+        "原形",
+        "er-形式",
+        "完成时",
+        "中文"
+       ],
+       "rows": [
+        [
+         "kommen",
+         "er kommt",
+         "ist gekommen",
+         "来"
+        ],
+        [
+         "ankommen",
+         "er kommt an",
+         "ist angekommen",
+         "到达"
+        ],
+        [
+         "mitkommen",
+         "er kommt mit",
+         "ist mitgekommen",
+         "一起来"
+        ],
+        [
+         "drankommen",
+         "er kommt dran",
+         "ist drangekommen",
+         "轮到"
+        ],
+        [
+         "bekommen",
+         "er bekommt",
+         "hat bekommen",
+         "得到,收到"
+        ]
+       ]
+      }
+     ],
+     "notes": [
+      "用 sein",
+      "现在时不变音;kommen 词干本就是 o,PII 仍是 o;用 sein",
+      "用 sein",
+      "dran- 可分,ge- 夹在中间",
+      "不可分前缀,无 ge-;PII 与原形同形;kommen 用 sein 但此词用 hat"
+     ],
+     "examples": [],
+     "miniQuiz": {
+      "type": "choice",
+      "prompt": "kommen 该进哪个桶?",
+      "options": [
+       "o–o",
+       "e–o",
+       "ie–o"
+      ],
+      "answer": "o–o",
+      "explanation": "gekommen:原形已经是 o,PII 还是 o。ankommen / mitkommen / drankommen / bekommen 全族同桶。"
+     },
+     "related": [
+      "G33"
+     ]
+    },
+    {
+     "id": "G45",
+     "title": "L. Mischverben 混合动词",
+     "level": "A2",
+     "difficulty": 3,
+     "tags": [
+      "perfekt",
+      "ablaut"
+     ],
+     "summary": "既换元音又加 -t（不是 -en）：bringen→gebracht、denken→gedacht、kennen→gekannt、nennen→genannt、wissen→gewusst。现在时基本不变音，只有 wissen 单数不规则（weiß / weißt / weiß）。全部 haben。",
+     "mnemonic": "混合动词=换元音还要加 -t，五个一起背永远不拆散：bracht / dacht / kannt / nannt / wusst。",
+     "tables": [
+      {
+       "caption": "L. Mischverben 混合动词 — 可开「默写模式」",
+       "maskable": true,
+       "headers": [
+        "原形",
+        "er-形式",
+        "完成时",
+        "中文"
+       ],
+       "rows": [
+        [
+         "bringen",
+         "er bringt",
+         "hat gebracht",
+         "带来,拿来"
+        ],
+        [
+         "mitbringen",
+         "er bringt mit",
+         "hat mitgebracht",
+         "带来"
+        ],
+        [
+         "denken",
+         "er denkt",
+         "hat gedacht",
+         "想,思考"
+        ],
+        [
+         "kennen",
+         "er kennt",
+         "hat gekannt",
+         "认识;熟悉"
+        ],
+        [
+         "nennen",
+         "er nennt",
+         "hat genannt",
+         "称呼，说出"
+        ],
+        [
+         "wissen",
+         "er weiß",
+         "hat gewusst",
+         "知道"
+        ]
+       ]
+      }
+     ],
+     "notes": [
+      "混合动词:换元音又加 -t",
+      "混合动词:变元音又加 -t",
+      "混合动词:换元音又加 -t",
+      "混合动词:变元音又加 -t",
+      "混合动词：变元音 e→a 又加 -t"
+     ],
+     "examples": [],
+     "miniQuiz": {
+      "type": "choice",
+      "prompt": "mitbringen 该进哪个桶?",
+      "options": [
+       "Mischverb(混合动词)",
+       "i–u",
+       "e–a"
+      ],
+      "answer": "Mischverb(混合动词)",
+      "explanation": "词根 bringen 是混合动词:既换元音又加 -t → mitgebracht。同类还有 denken→gedacht、kennen→gekannt、nennen→genannt、wissen→gewusst。这一桶不属于任何元音家族,必须单独立一个桶。"
+     },
+     "related": [
+      "G33"
+     ]
+    },
+    {
+     "id": "G46",
+     "title": "M. Sonderformen 特殊形（haben / sein / werden / tun 四个词根）",
+     "level": "A2",
+     "difficulty": 3,
+     "tags": [
+      "perfekt",
+      "ablaut"
+     ],
+     "summary": "无规律可推，却撑起整个完成时。haben→gehabt、sein→gewesen、werden→geworden、tun→getan。sein 和 werden 用 sein，其余用 haben；可分派生词照样 ge- 夹中间（freigehabt / zugehabt / wehgetan / leidgetan）。",
+     "mnemonic": "四个引擎没有规律：gehabt / gewesen / geworden / getan；sein 和 werden 用 ist，haben 和 tun 用 hat。",
+     "tables": [
+      {
+       "caption": "M. Sonderformen 特殊形（haben / sein / werden / tun 四个词根） — 可开「默写模式」",
+       "maskable": true,
+       "headers": [
+        "原形",
+        "er-形式",
+        "完成时",
+        "中文"
+       ],
+       "rows": [
+        [
+         "haben",
+         "er hat",
+         "hat gehabt",
+         "有;拥有"
+        ],
+        [
+         "freihaben",
+         "er hat frei",
+         "hat freigehabt",
+         "有空;放假"
+        ],
+        [
+         "zuhaben",
+         "er hat zu",
+         "hat zugehabt",
+         "关门;未营业"
+        ],
+        [
+         "sein",
+         "er ist",
+         "ist gewesen",
+         "是;存在"
+        ],
+        [
+         "los sein",
+         "er ist los",
+         "ist los gewesen",
+         "发生;出事"
+        ],
+        [
+         "werden",
+         "er wird",
+         "ist geworden",
+         "变成;成为"
+        ],
+        [
+         "tun",
+         "er tut",
+         "hat getan",
+         "做"
+        ],
+        [
+         "wehtun",
+         "er tut weh",
+         "hat wehgetan",
+         "疼;弄疼"
+        ],
+        [
+         "leidtun",
+         "er tut leid",
+         "hat leidgetan",
+         "感到抱歉"
+        ]
+       ]
+      }
+     ],
+     "notes": [
+      "完全不规则:du hast / er hat",
+      "词根 haben,PII 弱变化 freigehabt",
+      "haben 不规则;可分,ge- 夹中间",
+      "完全不规则:bin/bist/ist;完成时用 ist",
+      "词根 sein,分写;常用 Was ist los?"
+     ],
+     "examples": [],
+     "related": [
+      "G33"
+     ]
+    },
+    {
+     "id": "G47",
+     "title": "N. Modalverben 情态动词（只背现在时）",
+     "level": "A2",
+     "difficulty": 3,
+     "tags": [
+      "perfekt",
+      "ablaut"
+     ],
+     "summary": "现在时单数掉变音且 er 不加 -t：er darf / kann / muss / soll / will / mag / möchte。PII 全是 ge-…-t（gedurft / gekonnt / gemusst / gesollt / gewollt / gemocht），但带动词不定式时用替代不定式（hat kommen können），A1/A2 阶段只需认得。möchten 无独立 PII，借 mögen 的 gemocht。",
+     "mnemonic": "情态动词单数脱帽（ü/ö 变 a/u/i）、er 不戴 -t；分词一律 ge-…-t，但真句子里用替代不定式，先认后背。",
+     "tables": [
+      {
+       "caption": "N. Modalverben 情态动词（只背现在时） — 可开「默写模式」",
+       "maskable": true,
+       "headers": [
+        "原形",
+        "er-形式",
+        "完成时",
+        "中文"
+       ],
+       "rows": [
+        [
+         "dürfen",
+         "er darf",
+         "hat gedurft",
+         "允许;可以"
+        ],
+        [
+         "können",
+         "er kann",
+         "hat gekonnt",
+         "能;会"
+        ],
+        [
+         "müssen",
+         "er muss",
+         "hat gemusst",
+         "必须"
+        ],
+        [
+         "sollen",
+         "er soll",
+         "hat gesollt",
+         "应该"
+        ],
+        [
+         "wollen",
+         "er will",
+         "hat gewollt",
+         "想要"
+        ],
+        [
+         "mögen",
+         "er mag",
+         "hat gemocht",
+         "喜欢"
+        ],
+        [
+         "möchten",
+         "er möchte",
+         "hat gemocht",
+         "想要;愿意"
+        ]
+       ]
+      }
+     ],
+     "notes": [
+      "带动词不定式时用 hat dürfen(替代不定式)",
+      "带动词不定式时用 hat können",
+      "带动词不定式时用 hat müssen",
+      "现在时单数不变音;带不定式时用 hat sollen",
+      "带动词不定式时用 hat wollen"
+     ],
+     "examples": [],
+     "related": [
+      "G33"
+     ]
     }
+   ],
+   "vocab": [],
+   "exercises": [
+    {
+     "type": "choice",
+     "prompt": "Er ___ den Computer hochgefahren.（他把电脑启动了）",
+     "options": [
+      "hat",
+      "ist",
+      "wird"
+     ],
+     "answer": "hat",
+     "explanation": "hochfahren 在「启动电脑」义上是及物动词（den Computer 是第四格宾语），及物动词一律用 haben。注意它是 fahren 家族 5 个词里唯一用 hat 的：fahren / abfahren / losfahren / zurückfahren 全部用 ist。"
+    },
+    {
+     "type": "choice",
+     "prompt": "fahren 的完成时正确形式是？",
+     "options": [
+      "ist gefahren",
+      "hat gefahren",
+      "hat gefahrt"
+     ],
+     "answer": "ist gefahren",
+     "explanation": "fahren 是位移动词，用 sein。它属 a–a 组：原形 a、PII 回到 a（gefahren），只有现在时变音 er fährt。gefahrt 是把强变化误当弱变化。"
+    },
+    {
+     "type": "fill",
+     "prompt": "abfahren（出发，可分）的第二分词是 ___。",
+     "hint": "可分前缀在前，ge- 夹在前缀和词干中间；元音跟 fahren 一样不变",
+     "answer": [
+      "abgefahren"
+     ],
+     "explanation": "可分动词的 ge- 永远插在前缀与词干之间：ab + ge + fahren。a–a 组元音不变，助动词随 fahren 用 ist。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Der Bus ___ pünktlich losgefahren.（公交准时出发了）",
+     "options": [
+      "ist",
+      "hat",
+      "wird"
+     ],
+     "answer": "ist",
+     "explanation": "losfahren 表位移，用 sein。fahren 族默认 ist，唯一例外是及物的 hochfahren（hat）。"
+    },
+    {
+     "type": "fill",
+     "prompt": "zurückfahren 的第三人称单数现在时是 ___。",
+     "hint": "a→ä 变音只发生在现在时单数，可分前缀要后置分写",
+     "answer": [
+      "er fährt zurück",
+      "fährt zurück",
+      "er faehrt zurueck",
+      "faehrt zurueck"
+     ],
+     "explanation": "a→ä 只在现在时第二、三人称单数发生，故 fährt；zurück- 是可分前缀，必须后置分写成 er fährt zurück，写成 fährtzurück 判错。"
+    },
+    {
+     "type": "choice",
+     "prompt": "bekommen 的第二分词是？",
+     "options": [
+      "bekommen",
+      "gebekommen",
+      "bekommt"
+     ],
+     "answer": "bekommen",
+     "explanation": "be- 是不可分前缀，带不可分前缀的动词第二分词不加 ge-；kommen 是 o–o 组，词干元音本来就是 o，所以 PII 与原形完全同形：er hat bekommen。"
+    },
+    {
+     "type": "fill",
+     "prompt": "kommen 的第二分词是 ___。",
+     "hint": "o–o 组，简单动词要加 ge-",
+     "answer": [
+      "gekommen"
+     ],
+     "explanation": "kommen 属 o–o 组，元音不变，简单动词加 ge- 和 -en。它是位移动词，用 ist gekommen。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Der Zug ___ um acht angekommen.（火车八点到了）",
+     "options": [
+      "ist",
+      "hat",
+      "wird"
+     ],
+     "answer": "ist",
+     "explanation": "ankommen 是位移动词用 sein。整个 kommen 家族（kommen / ankommen / mitkommen / drankommen）都用 ist，唯独 bekommen 用 hat——因为它已经不表示「来」而是「得到」。"
+    },
+    {
+     "type": "fill",
+     "prompt": "mitkommen 的第二分词是 ___。",
+     "hint": "可分前缀 mit- 在前，ge- 夹中间，元音保持 o",
+     "answer": [
+      "mitgekommen"
+     ],
+     "explanation": "mit + ge + kommen。o–o 组不换元音；随 kommen 用 ist mitgekommen。"
+    },
+    {
+     "type": "choice",
+     "prompt": "drankommen（轮到）的第二分词是？",
+     "options": [
+      "drangekommen",
+      "gedrankommen",
+      "drankommen"
+     ],
+     "answer": "drangekommen",
+     "explanation": "dran- 是可分前缀，所以 ge- 必须夹在中间：dran + ge + kommen。放到最前面（gedrankommen）是把可分误判成不可分。"
+    },
+    {
+     "type": "choice",
+     "prompt": "aufstehen 的完成时是？",
+     "options": [
+      "ist aufgestanden",
+      "hat aufgestanden",
+      "ist aufgestehen"
+     ],
+     "answer": "ist aufgestanden",
+     "explanation": "aufstehen 表状态变化/位移，用 sein——这是反直觉点：同族的 stehen 和 verstehen 都用 hat。词干 e–a 变化：steh→stand。"
+    },
+    {
+     "type": "fill",
+     "prompt": "stehen 的第二分词是 ___。",
+     "hint": "e–a 组，词干末尾还多一个 d",
+     "answer": [
+      "gestanden"
+     ],
+     "explanation": "stehen 属 e–a 组，PII 为 gestanden（词干扩展出 -d-）。德国标准语用 hat gestanden，不是 ist。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Er ___ die Frage verstanden.（他听懂了这个问题）",
+     "options": [
+      "hat",
+      "ist",
+      "wird"
+     ],
+     "answer": "hat",
+     "explanation": "verstehen 是及物动词，用 haben。ver- 不可分所以无 ge-：verstanden。别被同族 aufstehen（ist）带跑。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Er ___ zwei Stunden gesessen.（他坐了两小时）",
+     "options": [
+      "hat",
+      "ist",
+      "wird"
+     ],
+     "answer": "hat",
+     "explanation": "sitzen 是状态动词，德国标准语用 haben。同理 liegen 也是 hat gelegen。别因为 aufstehen 用 ist 就把这一组也改成 ist。"
+    },
+    {
+     "type": "fill",
+     "prompt": "liegen 的第二分词是 ___。",
+     "hint": "ie–e 组，元音缩短成 e；别和规则动词 legen 混",
+     "answer": [
+      "gelegen"
+     ],
+     "explanation": "liegen 属 ie–e 组：ie 在 PII 里变成短 e，得 gelegen。助动词是 hat。规则动词 legen（放）的 PII 是 gelegt，形近但不同。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Das Kind ___ sofort eingeschlafen.（孩子马上睡着了）",
+     "options": [
+      "ist",
+      "hat",
+      "wird"
+     ],
+     "answer": "ist",
+     "explanation": "einschlafen 表「状态变化」（从醒到睡），状态变化动词用 sein；而 schlafen 表状态持续，用 hat geschlafen。同一对立还有 einfallen（ist）对 gefallen（hat）。"
+    },
+    {
+     "type": "fill",
+     "prompt": "schlafen 的第二分词是 ___。",
+     "hint": "a–a 组，现在时才变音，PII 不变音",
+     "answer": [
+      "geschlafen"
+     ],
+     "explanation": "schlafen 属 a–a 组：现在时 er schläft 变音，但 PII 回到 a，写 geschlafen 而不是 *geschläfen。助动词 hat。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Mir ___ der Name eingefallen.（我想起这个名字了）",
+     "options": [
+      "ist",
+      "hat",
+      "wird"
+     ],
+     "answer": "ist",
+     "explanation": "einfallen 表突然出现的状态变化，用 sein，并常带第三格（mir）。对照 gefallen 用 hat——ein- 与 ge- 一个可分一个不可分，助动词也相反。"
+    },
+    {
+     "type": "choice",
+     "prompt": "gefallen 的第二分词是？",
+     "options": [
+      "gefallen",
+      "gegefallen",
+      "gefallt"
+     ],
+     "answer": "gefallen",
+     "explanation": "这里的 ge- 是不可分前缀，已经占了位置，不能再加一个 ge-，所以 PII 与原形同形：Das Buch hat mir gefallen。a–a 组元音不变；gefallt 是误用弱变化。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Er ___ heute müde ausgesehen.（他今天看起来很累）",
+     "options": [
+      "hat",
+      "ist",
+      "wird"
+     ],
+     "answer": "hat",
+     "explanation": "aussehen 是感官/状态动词，用 haben，尽管长得像 aus- 开头的位移词（aussteigen ist / ausgehen ist）。sehen 家族 ansehen、fernsehen 同样全部用 hat。"
+    },
+    {
+     "type": "fill",
+     "prompt": "ansehen 的第二分词是 ___。",
+     "hint": "可分动词，ge- 夹中间；e–e 组元音不变",
+     "answer": [
+      "angesehen"
+     ],
+     "explanation": "an + ge + sehen。sehen 属 e–e 组：现在时变 ie（er sieht an），但 PII 回到 e。助动词 hat。"
+    },
+    {
+     "type": "fill",
+     "prompt": "fernsehen 的第三人称单数现在时是 ___。",
+     "hint": "词根是 sehen，现在时 e→ie；可分部分要后置",
+     "answer": [
+      "er sieht fern",
+      "sieht fern"
+     ],
+     "explanation": "词根 sehen 现在时 e→ie，故 sieht；fern- 可分必须后置分写：er sieht fern。PII 为 ferngesehen，助动词 hat。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Er ___ zu Hause geblieben.（他待在家里了）",
+     "options": [
+      "ist",
+      "hat",
+      "wird"
+     ],
+     "answer": "ist",
+     "explanation": "bleiben 完全不表示位移，却用 sein——这是纯例外，任何规则都推不出来，只能死记 ist geblieben。它属 ei–ie 组，PII 为 geblieben。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Er ___ den Weg zurückgefunden.（他找回了路）",
+     "options": [
+      "hat",
+      "ist",
+      "wird"
+     ],
+     "answer": "hat",
+     "explanation": "尽管带 zurück- 且有位移义，zurückfinden 仍用 haben——finden 家族（finden / stattfinden / verbinden / zurückfinden）一律 hat。i–u 组：zurückgefunden。"
+    },
+    {
+     "type": "fill",
+     "prompt": "finden 的第二分词是 ___。",
+     "hint": "i–u 组，元音换成 u",
+     "answer": [
+      "gefunden"
+     ],
+     "explanation": "finden 属 i–u 组，与 singen / klingen / trinken 同队：i 在 PII 变 u，得 gefunden。助动词 hat。"
+    },
+    {
+     "type": "fill",
+     "prompt": "stattfinden（举行）的第二分词是 ___。",
+     "hint": "可分前缀 statt- 在前，ge- 夹中间，元音变 u",
+     "answer": [
+      "stattgefunden"
+     ],
+     "explanation": "statt + ge + funden。i–u 组元音变 u；主语只能是活动/事件，助动词 hat：Das Konzert hat stattgefunden。"
+    },
+    {
+     "type": "choice",
+     "prompt": "verbinden 的第二分词是？",
+     "options": [
+      "verbunden",
+      "gebunden",
+      "verbindet"
+     ],
+     "answer": "verbunden",
+     "explanation": "ver- 不可分，所以不加 ge-；i–u 组元音变 u，得 verbunden。gebunden 是另一个词 binden 的 PII，属干扰项。"
+    },
+    {
+     "type": "fill",
+     "prompt": "anziehen（穿上）的第二分词是 ___。",
+     "hint": "可分，ge- 夹中间；ie 在 PII 变 o",
+     "answer": [
+      "angezogen"
+     ],
+     "explanation": "an + ge + zogen。ziehen 属 ie–o 组，PII 元音变 o。anziehen 恒用 hat。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Er ___ die Jacke ausgezogen.（他脱下了外套）",
+     "options": [
+      "hat",
+      "ist",
+      "wird"
+     ],
+     "answer": "hat",
+     "explanation": "表「脱衣」时 ausziehen 是及物的，用 haben；只有表「搬出（住处）」时才用 ist ausgezogen。ziehen 一族三种结果：anziehen 恒 hat、ausziehen 双解、umziehen（搬家）ist。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Er ___ letzte Woche nach Wien umgezogen.（他上周搬到维也纳）",
+     "options": [
+      "ist",
+      "hat",
+      "wird"
+     ],
+     "answer": "ist",
+     "explanation": "umziehen 表「搬家」是位置变化，用 sein。但反身的 sich umziehen（换衣服）用 hat sich umgezogen——同一个词根，助动词随意义翻转。"
+    },
+    {
+     "type": "fill",
+     "prompt": "ziehen 的第二分词是 ___。",
+     "hint": "ie–o 组，PII 元音落到 o",
+     "answer": [
+      "gezogen"
+     ],
+     "explanation": "ziehen 属 ie–o 组：现在时不变音（er zieht），但 PII 变 o，得 gezogen。一般用 hat；表「搬迁」时用 ist gezogen。"
+    },
+    {
+     "type": "choice",
+     "prompt": "essen 的第二分词是？",
+     "options": [
+      "gegessen",
+      "geessen",
+      "gessen"
+     ],
+     "answer": "gegessen",
+     "explanation": "essen 的 PII 例外地多出一个 ge：gegessen（历史上词干本身带 g-）。这是全表唯一一例，写成 geessen 是最常见的错。此格不做元音容错。"
+    },
+    {
+     "type": "fill",
+     "prompt": "einladen（邀请）的第三人称单数现在时是 ___。",
+     "hint": "a→ä 变音，且词干后不加 -et；可分部分后置",
+     "answer": [
+      "er lädt ein",
+      "lädt ein",
+      "er laedt ein",
+      "laedt ein"
+     ],
+     "explanation": "laden 是强变化：er lädt，绝不是 *er ladet ein（强变化动词不插入口语 -e-）。ein- 可分必须后置：er lädt ein。PII 为 eingeladen。"
+    },
+    {
+     "type": "choice",
+     "prompt": "raten（猜/建议）的第三人称单数现在时是？",
+     "options": [
+      "er rät",
+      "er ratet",
+      "er rätet"
+     ],
+     "answer": "er rät",
+     "explanation": "raten 是 a–a 组强变化，现在时 a→ä 且不加 -et：er rät。同排必须一起过的还有 er wäscht、er trägt、er lädt ein。PII 是 geraten，元音回到 a。"
+    },
+    {
+     "type": "fill",
+     "prompt": "waschen 的第三人称单数现在时是 ___。",
+     "hint": "a→ä 变音，词干以 sch 结尾直接加 -t",
+     "answer": [
+      "er wäscht",
+      "wäscht",
+      "er waescht",
+      "waescht"
+     ],
+     "explanation": "a→ä 只出现在现在时单数：er wäscht。PII 回到 a：gewaschen，助动词 hat。"
+    },
+    {
+     "type": "fill",
+     "prompt": "tragen 的第三人称单数现在时是 ___。",
+     "hint": "a→ä 变音的 a–a 组",
+     "answer": [
+      "er trägt",
+      "trägt",
+      "er traegt",
+      "traegt"
+     ],
+     "explanation": "a–a 组现在时变音：er trägt；PII 元音回到 a：getragen。助动词 hat。"
+    },
+    {
+     "type": "choice",
+     "prompt": "laufen 的第三人称单数现在时是？",
+     "options": [
+      "er läuft",
+      "er läft",
+      "er lauft"
+     ],
+     "answer": "er läuft",
+     "explanation": "laufen 的现在时变音是 au→äu，不是 a→ä，所以是 er läuft。PII 回到 au：gelaufen，位移动词用 ist。"
+    },
+    {
+     "type": "fill",
+     "prompt": "empfehlen（推荐）的第三人称单数现在时是 ___。",
+     "hint": "e→ie 变音，注意 f 后面还有 h",
+     "answer": [
+      "er empfiehlt",
+      "empfiehlt"
+     ],
+     "explanation": "现在时 e→ie：er empfiehlt，常被误写成 *empfielt（漏 h）。empfehlen 三个方向各变一次：现在时 ie、PII 却是 o（empfohlen）、emp- 不可分故无 ge-。"
+    },
+    {
+     "type": "choice",
+     "prompt": "empfehlen 的第二分词是？",
+     "options": [
+      "empfohlen",
+      "geempfohlen",
+      "empfiehlen"
+     ],
+     "answer": "empfohlen",
+     "explanation": "emp- 是不可分前缀，不加 ge-；虽然现在时是 e→ie，PII 却掉到 o（e–o 组）：empfohlen。三个形式三个元音，是全表最难的一个词。"
+    },
+    {
+     "type": "fill",
+     "prompt": "nehmen 的第三人称单数现在时是 ___。",
+     "hint": "不仅元音 e→i，辅音也变了：h 消失、m 双写",
+     "answer": [
+      "er nimmt",
+      "nimmt"
+     ],
+     "explanation": "nehmen 现在时词干被改造两次：nehm→nimm（e→i 且 h→mm），故 er nimmt。PII 同样双写：genommen。"
+    },
+    {
+     "type": "choice",
+     "prompt": "判断这句话对不对：Ich bin um 7 Uhr aufgestanden.",
+     "options": [
+      "正确",
+      "错：bin 应改为 habe",
+      "错：aufgestanden 应改为 geaufstanden"
+     ],
+     "answer": "正确",
+     "explanation": "aufstehen 表示「状态变化」，完成时用 sein，所以 ich bin aufgestanden 是对的（注意同族的 stehen / verstehen 反而用 haben）。可分前缀 auf- 后面夹 ge-：auf+ge+standen，写成 geaufstanden 是把 ge- 放错了位置。"
+    },
+    {
+     "type": "fill",
+     "prompt": "改错：Der Zug ist geabfahren.（句中若有错，写出改正后的那一个词；若全句无误就写 richtig）___",
+     "hint": "可分前缀和词干之间少了点什么，多出来的东西跑到最前面去了",
+     "answer": [
+      "abgefahren",
+      "Abgefahren"
+     ],
+     "explanation": "可分动词的 ge- 必须夹在可分前缀和词干中间：ab + ge + fahren → abgefahren，不能整体前置写成 geabfahren。abfahren 是位移动词，助动词 ist 用得没错。"
+    },
+    {
+     "type": "choice",
+     "prompt": "判断这句话对不对：Er hat den Computer hochgefahren.",
+     "options": [
+      "正确",
+      "错：hat 应改为 ist",
+      "错：hochgefahren 应改为 gehochfahren"
+     ],
+     "answer": "正确",
+     "explanation": "hochfahren（启动电脑）带宾语 den Computer，是及物用法，所以用 haben——它是 fahren 家族（fahren / abfahren / losfahren / zurückfahren 全用 sein）里唯一的叛徒。ge- 也正确地夹在 hoch- 之后。"
+    },
+    {
+     "type": "fill",
+     "prompt": "改错：Er hat das Geschenk begekommen.（句中若有错，写出改正后的那一个词；若全句无误就写 richtig）___",
+     "hint": "be- 这类前缀不允许再插入那个音节",
+     "answer": [
+      "bekommen",
+      "Bekommen"
+     ],
+     "explanation": "be- 是不可分前缀，带不可分前缀的动词第二分词一律不加 ge-，所以是 hat bekommen（PII 与原形完全同形）。另外 bekommen 用 haben，虽然 kommen / ankommen / mitkommen 都用 sein。"
+    },
+    {
+     "type": "choice",
+     "prompt": "判断这句话对不对：Ich habe den Brief bekommen.",
+     "options": [
+      "正确",
+      "错：habe 应改为 bin",
+      "错：bekommen 应改为 begekommen"
+     ],
+     "answer": "正确",
+     "explanation": "bekommen 一词踩三个坑而这句全躲过了：用 haben（不跟 kommen 族的 sein 走）、be- 不可分所以无 ge-、第二分词与不定式同形。"
+    },
+    {
+     "type": "fill",
+     "prompt": "改错：Ich bin um sechs geaufstanden.（句中若有错，写出改正后的那一个词；若全句无误就写 richtig）___",
+     "hint": "ge- 站错了队；助动词本身没问题",
+     "answer": [
+      "aufgestanden",
+      "Aufgestanden"
+     ],
+     "explanation": "aufstehen 是可分动词，ge- 要夹在中间：auf + ge + standen → aufgestanden。词干还是 stehen 的 e–a 换音（gestanden）。助动词 bin 正确，aufstehen 用 sein。"
+    },
+    {
+     "type": "choice",
+     "prompt": "判断这句话对不对：Ich bin zu Hause geblieben.",
+     "options": [
+      "正确",
+      "错：bin 应改为 habe",
+      "错：geblieben 应改为 gebleiben"
+     ],
+     "answer": "正确",
+     "explanation": "bleiben 完全不位移却用 sein，是纯例外必须死记。元音上它属于 ei→ie 长音一队（bleiben / schreiben / steigen / scheinen），所以是 geblieben 不是 gebleiben。"
+    },
+    {
+     "type": "fill",
+     "prompt": "改错：Er hat mir das Buch geempfohlen.（句中若有错，写出改正后的那一个词；若全句无误就写 richtig）___",
+     "hint": "emp- 属于不可分前缀那一类",
+     "answer": [
+      "empfohlen",
+      "Empfohlen"
+     ],
+     "explanation": "emp- 是不可分前缀，第二分词不加 ge-，正确形式是 empfohlen。注意 empfehlen 三个方向各变一次：现在时 e→ie（er empfiehlt）、PII 掉到 o（empfohlen）、无 ge-。"
+    },
+    {
+     "type": "choice",
+     "prompt": "判断这句话对不对：Wir haben Pizza gegessen.",
+     "options": [
+      "正确",
+      "错：haben 应改为 sind",
+      "错：gegessen 应改为 geessen"
+     ],
+     "answer": "正确",
+     "explanation": "essen 的第二分词是全表唯一多出一个 ge 的例外：ge + gessen = gegessen，写成 geessen 是最常见的错。essen 及物，助动词用 haben。"
+    },
+    {
+     "type": "fill",
+     "prompt": "改错：Ich habe zu viel geessen.（句中若有错，写出改正后的那一个词；若全句无误就写 richtig）___",
+     "hint": "这个词的第二分词比你想的多一个音节，是全表孤例",
+     "answer": [
+      "gegessen",
+      "Gegessen"
+     ],
+     "explanation": "essen → gegessen，词干已经是 gess-，前面还要再加 ge-，形成全表唯一的「双 ge」。这条只能死记，没有规律可推。"
+    },
+    {
+     "type": "choice",
+     "prompt": "判断这句话对不对：Er ist im See geschwommen.",
+     "options": [
+      "正确",
+      "错：ist 应改为 hat",
+      "错：geschwommen 应改为 geschwummen"
+     ],
+     "answer": "正确",
+     "explanation": "schwimmen 是 i–o 组（geschwommen），不跟 finden/singen/trinken 的 i–u 组（gefunden/gesungen/getrunken）走；而且作为位移动词用 sein。两个反直觉点这句都对。"
+    },
+    {
+     "type": "fill",
+     "prompt": "改错：Er ist im Meer geschwummen.（句中若有错，写出改正后的那一个词；若全句无误就写 richtig）___",
+     "hint": "它不属于 gefunden / gesungen 那一队，元音落点不一样",
+     "answer": [
+      "geschwommen",
+      "Geschwommen"
+     ],
+     "explanation": "schwimmen 的换音组是 i–o，第二分词 geschwommen，不是 i–u 的 *geschwummen。助动词 ist 正确（位移动词）。"
+    },
+    {
+     "type": "fill",
+     "prompt": "改错：Sie hat mir das Buch gegoben.（句中若有错，写出改正后的那一个词；若全句无误就写 richtig）___",
+     "hint": "这个词属于「现在时变 i、第二分词回到原元音」那一类",
+     "answer": [
+      "gegeben",
+      "Gegeben"
+     ],
+     "explanation": "geben 属于 e–e 组：现在时 er gibt 变 i，但第二分词回到 e，写作 gegeben。*gegoben 是把它误当成 e–o 组（如 nehmen→genommen、helfen→geholfen）。"
+    },
+    {
+     "type": "fill",
+     "prompt": "改错：Sie hat die Tür geschliessen.（句中若有错，写出改正后的那一个词；若全句无误就写 richtig）___",
+     "hint": "元音变短了，长音的那个字母也得跟着换写法",
+     "answer": [
+      "geschlossen",
+      "Geschlossen"
+     ],
+     "explanation": "schließen 属 ie–o 组，第二分词元音变短为 o，短元音后 ß 必须改写成 ss：geschlossen。同款三连还有 genießen→genossen、erschließen→erschlossen。"
+    },
+    {
+     "type": "fill",
+     "prompt": "改错：Sie hat die Tür geschlossen.（句中若有错，写出改正后的那一个词；若全句无误就写 richtig）___",
+     "hint": "逐项核对：助动词对不对、ge- 位置对不对、元音和辅音写法对不对",
+     "answer": [
+      "richtig",
+      "Richtig",
+      "对",
+      "正确"
+     ],
+     "explanation": "这句完全正确。schließen → geschlossen（ie–o，短元音故 ß→ss），及物动词用 haben。别因为看到 ss 就以为写错了。"
+    },
+    {
+     "type": "choice",
+     "prompt": "判断这句话对不对：Er lädt mich ein.",
+     "options": [
+      "正确",
+      "错：lädt 应改为 ladet",
+      "错：lädt 应改为 lädet"
+     ],
+     "answer": "正确",
+     "explanation": "einladen 属 a→ä 变音一排，第三人称单数是 er lädt ein，既变音又不加 -e-。*er ladet ein 是最典型的错。同排还要一起过的有 er rät、er wäscht、er trägt。"
+    },
+    {
+     "type": "fill",
+     "prompt": "改错：Er ladet uns zum Essen ein.（句中若有错，写出改正后的那一个词；若全句无误就写 richtig）___",
+     "hint": "这是现在时 a→ä 那一排的词，第三人称单数不加多余的 e",
+     "answer": [
+      "lädt",
+      "Lädt"
+     ],
+     "explanation": "einladen 现在时 a→ä：er lädt ein。词干以 d 结尾时通常要加 -et，但强变化变音动词不走这条规则，所以不是 *ladet 也不是 *lädet。"
+    },
+    {
+     "type": "choice",
+     "prompt": "判断这句话对不对：Er empfiehlt mir ein Buch.",
+     "options": [
+      "正确",
+      "错：empfiehlt 应改为 empfielt",
+      "错：empfiehlt 应改为 empfehlt"
+     ],
+     "answer": "正确",
+     "explanation": "empfehlen 现在时是 e→ie：er empfiehlt，ie 后面还有 h，少写 h 的 *empfielt 是高频错。它的第二分词却掉到 o（empfohlen），三个方向各变一次。"
+    },
+    {
+     "type": "fill",
+     "prompt": "改错：Er empfielt mir den Film.（句中若有错，写出改正后的那一个词；若全句无误就写 richtig）___",
+     "hint": "e→ie 变音后，词干里原有的那个辅音字母不能丢",
+     "answer": [
+      "empfiehlt",
+      "Empfiehlt"
+     ],
+     "explanation": "empfehlen 现在时 e→ie，词干 empfehl- 的 h 保留，所以是 er empfiehlt。这是全表最难的词之一，必须单独多练。"
+    },
+    {
+     "type": "choice",
+     "prompt": "判断这句话对不对：Das Konzert hat gestern stattgefunden.",
+     "options": [
+      "正确",
+      "错：hat 应改为 ist",
+      "错：stattgefunden 应改为 stattgefanden"
+     ],
+     "answer": "正确",
+     "explanation": "finden 家族（finden / stattfinden / verbinden / zurückfinden）全部用 haben；元音是 i–u，所以是 gefunden 系列。可分前缀 statt- 后夹 ge-，写法也对。"
+    },
+    {
+     "type": "fill",
+     "prompt": "周末报告：Gestern ___ ich um sieben Uhr ___ (aufstehen).",
+     "hint": "起床是「状态变化」，助动词填第二位，第二分词钉死句末",
+     "answer": [
+      "bin ... aufgestanden",
+      "bin aufgestanden",
+      "bin, aufgestanden",
+      "bin/aufgestanden"
+     ],
+     "explanation": "aufstehen 用 sein（ist aufgestanden），虽然词根 stehen 用 haben——同族反直觉必须死记。语序：助动词 bin 占第二位，PII aufgestanden 钉在句末，中间放时间地点，形成动词框架。"
+    },
+    {
+     "type": "fill",
+     "prompt": "Zum Frühstück ___ ich zwei Brötchen ___ (essen).",
+     "hint": "及物动词用 haben；这个 PII 比一般词多出一个音节",
+     "answer": [
+      "habe ... gegessen",
+      "habe gegessen",
+      "habe, gegessen",
+      "habe/gegessen"
+     ],
+     "explanation": "essen 是及物动词，用 haben。PII 是 gegessen（多出一个 ge-，全表唯一例外），不要写成 *geessen。框架：habe 第二位，gegessen 句末。"
+    },
+    {
+     "type": "fill",
+     "prompt": "Dann ___ ich mit der U-Bahn zur Schule ___ (fahren).",
+     "hint": "位移动词，选表示「位置改变」的那个助动词",
+     "answer": [
+      "bin ... gefahren",
+      "bin gefahren",
+      "bin, gefahren",
+      "bin/gefahren"
+     ],
+     "explanation": "fahren 是位移动词，用 sein（ist gefahren），a–a 类元音不变。中文母语者最典型错误是 *Ich habe gefahren nach Wien：助动词错 + 语序错。正确框架：bin 第二位，gefahren 句末。"
+    },
+    {
+     "type": "fill",
+     "prompt": "Der Kurs ___ um acht Uhr ___ (anfangen).",
+     "hint": "可分动词，ge- 要夹在前缀后面；助动词不是位移那个",
+     "answer": [
+      "hat ... angefangen",
+      "hat angefangen",
+      "hat, angefangen",
+      "hat/angefangen"
+     ],
+     "explanation": "anfangen 用 haben（不同于同为 a–a 类的 abfahren 用 sein）。可分前缀 an- 在前，ge- 夹在中间：an+ge+fangen = angefangen。主语 der Kurs 是第三人称单数，助动词用 hat。"
+    },
+    {
+     "type": "fill",
+     "prompt": "Am Abend ___ ich vor dem Fernseher ___ (einschlafen).",
+     "hint": "「睡着」是从醒到睡的状态变化",
+     "answer": [
+      "bin ... eingeschlafen",
+      "bin eingeschlafen",
+      "bin, eingeschlafen",
+      "bin/eingeschlafen"
+     ],
+     "explanation": "einschlafen 表状态变化，用 sein；而 schlafen（状态持续）用 haben。这是同一词根两个助动词的经典对立。ge- 夹在 ein- 之后：ein+ge+schlafen。"
+    },
+    {
+     "type": "fill",
+     "prompt": "Danach ___ ich acht Stunden ___ (schlafen).",
+     "hint": "和「睡着」不同，这里是持续状态",
+     "answer": [
+      "habe ... geschlafen",
+      "habe geschlafen",
+      "habe, geschlafen",
+      "habe/geschlafen"
+     ],
+     "explanation": "schlafen 表持续状态，用 haben（hat geschlafen）；只有 einschlafen（状态变化）才用 sein。a–a 类：现在时 er schläft 变音，但 PII geschlafen 不变音。"
+    },
+    {
+     "type": "fill",
+     "prompt": "Im Büro ___ er zuerst den Computer ___ (hochfahren).",
+     "hint": "这里有第四格宾语 den Computer，助动词跟着及物性走",
+     "answer": [
+      "hat ... hochgefahren",
+      "hat hochgefahren",
+      "hat, hochgefahren",
+      "hat/hochgefahren"
+     ],
+     "explanation": "hochfahren（启动电脑）是及物动词，用 haben——它是 fahren 家族（fahren / abfahren / losfahren / zurückfahren 全用 sein）里唯一的叛徒。判断口诀：有第四格宾语就用 haben。"
+    },
+    {
+     "type": "fill",
+     "prompt": "Gestern ___ ich eine E-Mail von der Bank ___ (bekommen).",
+     "hint": "be- 是不可分前缀；PII 长得和原形一模一样",
+     "answer": [
+      "habe ... bekommen",
+      "habe bekommen",
+      "habe, bekommen",
+      "habe/bekommen"
+     ],
+     "explanation": "bekommen 一词三坑：①用 haben，尽管 kommen/ankommen/mitkommen 全用 sein；②be- 不可分，所以不加 ge-；③PII 与原形同形 bekommen。"
+    },
+    {
+     "type": "fill",
+     "prompt": "Der Zug ___ um zehn Uhr in Wien ___ (ankommen).",
+     "hint": "到达＝位移终点；ge- 夹在可分前缀之后",
+     "answer": [
+      "ist ... angekommen",
+      "ist angekommen",
+      "ist, angekommen",
+      "ist/angekommen"
+     ],
+     "explanation": "ankommen 是位移动词，用 sein。现在时不变音（er kommt an），但 PII 元音变 o：an+ge+kommen = angekommen。注意与 bekommen（hat）对照。"
+    },
+    {
+     "type": "fill",
+     "prompt": "Am Sonntag ___ wir den ganzen Tag zu Hause ___ (bleiben).",
+     "hint": "完全没有位移，但助动词偏偏反规律；主语是 wir",
+     "answer": [
+      "sind ... geblieben",
+      "sind geblieben",
+      "sind, geblieben",
+      "sind/geblieben"
+     ],
+     "explanation": "bleiben 是纯例外：不位移却用 sein（ist geblieben），任何规则都推不出来。ei 家族此处走长 ie：bleiben→geblieben。主语 wir，助动词是 sind。"
+    },
+    {
+     "type": "fill",
+     "prompt": "Nach dem Spaziergang ___ ich allein nach Hause ___ (zurückfinden).",
+     "hint": "带 zurück- 看着像位移，但 finden 家族的助动词是统一的",
+     "answer": [
+      "habe ... zurückgefunden",
+      "habe zurückgefunden",
+      "habe, zurückgefunden",
+      "habe/zurückgefunden"
+     ],
+     "explanation": "zurückfinden 用 haben，尽管带 zurück- 且有位移义——finden 家族（finden / stattfinden / verbinden / zurückfinden）一律 haben。i–u 类：finden→gefunden，ge- 夹在 zurück- 之后。"
+    },
+    {
+     "type": "fill",
+     "prompt": "Letzten Monat ___ meine Familie nach Graz ___ (umziehen).",
+     "hint": "搬家＝住址位移；ie 在 PII 里掉成 o",
+     "answer": [
+      "ist ... umgezogen",
+      "ist umgezogen",
+      "ist, umgezogen",
+      "ist/umgezogen"
+     ],
+     "explanation": "umziehen（搬家）用 sein；但反身 sich umziehen（换衣服）用 haben。ziehen 族一根三果：anziehen 恒 haben、ausziehen 双解、umziehen 搬家用 sein。ie–o：ziehen→gezogen，ge- 夹在 um- 后。"
+    },
+    {
+     "type": "fill",
+     "prompt": "Vor dem Weggehen ___ ich eine warme Jacke ___ (anziehen).",
+     "hint": "有第四格宾语 eine Jacke；PII 元音掉成 o",
+     "answer": [
+      "habe ... angezogen",
+      "habe angezogen",
+      "habe, angezogen",
+      "habe/angezogen"
+     ],
+     "explanation": "anziehen（穿上）及物，恒用 haben，与 umziehen（搬家 sein）形成对照。现在时不变音（er zieht an），但 PII 变 o：an+ge+zogen = angezogen。"
+    },
+    {
+     "type": "fill",
+     "prompt": "Nach der Reise ___ du sehr müde ___ (aussehen).",
+     "hint": "看着像 aus- 位移词，其实是感官动词；主语是 du",
+     "answer": [
+      "hast ... ausgesehen",
+      "hast ausgesehen",
+      "hast, ausgesehen",
+      "hast/ausgesehen"
+     ],
+     "explanation": "aussehen 用 haben，不是 sein——它虽以 aus- 开头（aussteigen / ausgehen 都用 sein），但属感官动词，和 ansehen / fernsehen 一样全部 haben。e–e 类：PII 回到 e，ausgesehen。"
+    },
+    {
+     "type": "fill",
+     "prompt": "An der Haltestelle Oper ___ ich ___ (aussteigen).",
+     "hint": "下车是真位移；ei 在这里拉长成 ie",
+     "answer": [
+      "bin ... ausgestiegen",
+      "bin ausgestiegen",
+      "bin, ausgestiegen",
+      "bin/ausgestiegen"
+     ],
+     "explanation": "aussteigen 是位移动词，用 sein。ei 家族三种结局中它走长 ie：steigen→gestiegen，ge- 夹在 aus- 之后 = ausgestiegen。对照 aussehen 用 haben。"
+    },
+    {
+     "type": "fill",
+     "prompt": "Beim Arzt ___ ich zwanzig Minuten im Flur ___ (stehen).",
+     "hint": "站着是状态不是位移；德标准语的助动词",
+     "answer": [
+      "habe ... gestanden",
+      "habe gestanden",
+      "habe, gestanden",
+      "habe/gestanden"
+     ],
+     "explanation": "stehen 用 haben（hat gestanden，德标准语；只有南德口语用 ist）。注意反差：aufstehen 却用 sein。e–a 类：stehen→gestanden。"
+    },
+    {
+     "type": "fill",
+     "prompt": "Dann ___ ich noch eine Stunde im Wartezimmer ___ (sitzen).",
+     "hint": "坐着是状态；元音从 i 掉到 e",
+     "answer": [
+      "habe ... gesessen",
+      "habe gesessen",
+      "habe, gesessen",
+      "habe/gesessen"
+     ],
+     "explanation": "sitzen 用 haben（hat gesessen），别因为 aufstehen 用 sein 就把 sitzen / liegen 也改成 sein——这两个状态动词同样是 haben。i–e 类：sitzen→gesessen。"
+    },
+    {
+     "type": "fill",
+     "prompt": "Am Samstag ___ die Kinder im See ___ (schwimmen).",
+     "hint": "位移动词；元音不是 i–u 那一队，落到 o",
+     "answer": [
+      "sind ... geschwommen",
+      "sind geschwommen",
+      "sind, geschwommen",
+      "sind/geschwommen"
+     ],
+     "explanation": "schwimmen 是 i–o 类（geschwommen），不跟 finden/singen/trinken 的 i–u 队（gefunden/gesungen/getrunken）；而且是位移动词用 sein。主语 die Kinder 复数，助动词 sind。"
+    },
+    {
+     "type": "fill",
+     "prompt": "Nach dem Kurs ___ mein Deutsch viel besser ___ (werden).",
+     "hint": "「变成」是状态变化，助动词反直觉",
+     "answer": [
+      "ist ... geworden",
+      "ist geworden",
+      "ist, geworden",
+      "ist/geworden"
+     ],
+     "explanation": "werden 用 sein：ist geworden，绝不是 *hat geworden。状态变化类动词（werden / einschlafen / einfallen）一律 sein。主语 mein Deutsch 单数，用 ist。"
+    },
+    {
+     "type": "fill",
+     "prompt": "Um sechs Uhr ___ die Bank ___ (schließen).",
+     "hint": "PII 元音变短，ß 必须改写",
+     "answer": [
+      "hat ... geschlossen",
+      "hat geschlossen",
+      "hat, geschlossen",
+      "hat/geschlossen"
+     ],
+     "explanation": "schließen 用 haben。ie–o 类且 PII 元音变短，所以 ß→ss：geschlossen（同族三连 genießen→genossen、erschließen→erschlossen）。这个变化发音听不出来，只在笔试扣分。"
+    }
+   ],
+   "quiz": [
+    {
+     "type": "choice",
+     "prompt": "Er ___ um sechs Uhr aufgestanden.",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "ist",
+     "explanation": "aufstehen 表示「从躺到站」的位置/状态变化，用 sein。注意同族的 stehen（hat gestanden）和 verstehen（hat verstanden）都用 haben——只有加了 auf- 的这个变成 ist。"
+    },
+    {
+     "type": "choice",
+     "prompt": "aufgestanden",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "ist",
+     "explanation": "aufstehen = ist aufgestanden。判断路径：没有第四格宾语 → 有状态变化 → sein。这是「同族不同助动词」的典型反直觉点。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Er ___ sofort aufgestanden.",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "ist",
+     "explanation": "aufstehen 用 sein。别被 stehen（hat gestanden）带偏：stehen 是静态持续，aufstehen 是状态改变。"
+    },
+    {
+     "type": "choice",
+     "prompt": "eingeschlafen",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "ist",
+     "explanation": "einschlafen「入睡」是状态变化（醒→睡）→ sein。而 schlafen「睡着」是状态持续 → hat geschlafen。ein- 一加上去助动词就翻面。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Das Kind ___ schnell eingeschlafen.",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "ist",
+     "explanation": "einschlafen = ist eingeschlafen，状态变化用 sein。同一逻辑：einfallen（ist eingefallen）也是变化，gefallen（hat gefallen）是持续状态。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Er ___ im Zug eingeschlafen.",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "ist",
+     "explanation": "einschlafen 用 sein。对照记：Er hat gut geschlafen（持续，hat） / Er ist schnell eingeschlafen（变化，ist）。"
+    },
+    {
+     "type": "choice",
+     "prompt": "ausgesehen",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "hat",
+     "explanation": "aussehen「看起来」是感官/状态描述动词，用 haben，不是 sein。虽然它以 aus- 开头，看着像 aussteigen（ist）、ausgehen（ist）那类位移词，但完全没有位移。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Er ___ müde ausgesehen.",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "hat",
+     "explanation": "aussehen = hat ausgesehen。sehen 家族全部用 haben：gesehen / angesehen / ferngesehen / ausgesehen。前缀不改变这一点。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Das Essen ___ gut ausgesehen.",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "hat",
+     "explanation": "aussehen 用 haben。决策树第②步「位移/状态变化」在这里不成立——它只是描述外观，所以落到例外叶子：aussehen = haben。"
+    },
+    {
+     "type": "choice",
+     "prompt": "bekommen (Partizip II)",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "hat",
+     "explanation": "bekommen 用 haben，因为它是及物动词（bekommen + 第四格宾语）→ 决策树第①步就判 haben。别被词根 kommen（ist gekommen）骗了。顺带：be- 是不可分前缀，所以 PII 不加 ge-，与原形同形。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Er ___ einen Brief bekommen.",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "hat",
+     "explanation": "einen Brief 是第四格宾语，有第四格必用 haben。kommen / ankommen / mitkommen / drankommen 全是 ist，唯独 bekommen 是 hat。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Er ___ ein Geschenk bekommen.",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "hat",
+     "explanation": "bekommen = hat bekommen。一个词踩三个坑：助动词 hat（不是 ist）、不可分前缀无 ge-、PII 与原形同形。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Er ___ den Computer hochgefahren.",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "hat",
+     "explanation": "这里有第四格宾语 den Computer → 决策树第①步直接判 haben。hochfahren 是 fahren 家族里唯一的叛徒：fahren / abfahren / losfahren / zurückfahren 全用 ist。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Er ___ den Computer schon hochgefahren.",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "hat",
+     "explanation": "及物用法（启动电脑）→ haben。记忆钩子：能问「把什么 hochfahren？」→ 有宾语 → hat。"
+    },
+    {
+     "type": "choice",
+     "prompt": "hochgefahren",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "hat",
+     "explanation": "hochfahren 用 haben。虽然含 fahren，但它的常用义是及物的「启动（电脑）」，及物压过位移，判 haben。"
+    },
+    {
+     "type": "choice",
+     "prompt": "geblieben",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "ist",
+     "explanation": "bleiben 用 sein——完全不位移却用 sein，任何规则都推不出来，属于纯例外叶子：bleiben / sein / werden 三个都是 sein，必须死记。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Er ___ zu Hause geblieben.",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "ist",
+     "explanation": "bleiben = ist geblieben。它是决策树的例外叶子：没有第四格、也没有位移，但照样用 sein。A1 高频词，错一次会长期错。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Er ___ lange geblieben.",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "ist",
+     "explanation": "bleiben 恒用 sein。把 bleiben / sein / werden 打包成一组「静态却用 sein」的三兄弟一起背。"
+    },
+    {
+     "type": "choice",
+     "prompt": "zurückgefunden",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "hat",
+     "explanation": "zurückfinden 用 haben，尽管带 zurück- 且有明显位移含义。理由是 finden 家族整体用 haben：gefunden / stattgefunden / verbunden / zurückgefunden。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Er ___ allein zurückgefunden.",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "hat",
+     "explanation": "zurückfinden = hat zurückgefunden。这是决策树的例外叶子：位移感很强但仍判 haben，靠词族（finden 族）而不是靠语义。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Er ___ nach Hause zurückgefunden.",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "hat",
+     "explanation": "即使有 nach Hause 这样的方向补足语，zurückfinden 仍用 haben。对照 zurückfahren = ist zurückgefahren（真位移，fahren 族）。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Er ___ die Jacke ausgezogen.",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "hat",
+     "explanation": "die Jacke 是第四格宾语 → haben。ausziehen 是双解词：脱衣（及物）用 hat，搬出（位移）用 ist；先看有没有第四格。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Er ___ aus der Wohnung ausgezogen.",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "ist",
+     "explanation": "这里 ausziehen 意为「搬出」，是位移、无第四格 → sein。同一个词两个义两个助动词：hat die Jacke ausgezogen / ist aus der Wohnung ausgezogen。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Er ___ die Schuhe ausgezogen.",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "hat",
+     "explanation": "有第四格 die Schuhe → haben。ziehen 一族三种结果：anziehen 恒 hat、ausziehen 双解、umziehen（搬家）ist。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Er ___ nach Wien umgezogen.",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "ist",
+     "explanation": "umziehen「搬家」是位移、无第四格 → sein。补一句：sich umziehen「换衣服」才用 hat。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Er ___ letztes Jahr umgezogen.",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "ist",
+     "explanation": "umziehen（搬家）= ist umgezogen。注意 um- 在这里可分，所以 ge- 夹在中间：um-ge-zogen。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Er ___ sich schnell umgezogen.",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "hat",
+     "explanation": "反身 sich umziehen「换衣服」有反身第四格 sich → haben。没有 sich 的 umziehen（搬家）才是 ist。这是同词根第三个答案。"
+    },
+    {
+     "type": "choice",
+     "prompt": "gesessen",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "hat",
+     "explanation": "sitzen 用 haben（德国标准语）。它是静态动词，既无第四格也无位移/变化，落到例外叶子：sitzen / liegen / stehen 三个姿势动词都用 haben。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Er ___ am Fenster gesessen.",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "hat",
+     "explanation": "sitzen = hat gesessen。别因为 aufstehen 是 ist 就把 sitzen 也改成 ist——姿势保持用 haben，姿势改变才用 sein。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Er ___ lange im Café gesessen.",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "hat",
+     "explanation": "sitzen 用 haben。顺带记 PII 形式：sitzen 是 i–e 类，gesessen（不是 *gesitzt）。"
+    },
+    {
+     "type": "choice",
+     "prompt": "gelegen",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "hat",
+     "explanation": "liegen 用 haben，与 sitzen / stehen 同属静态姿势动词组。位置没有改变 → 不用 sein。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Das Buch ___ auf dem Tisch gelegen.",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "hat",
+     "explanation": "liegen = hat gelegen（ie–e 类）。注意与规则动词 legen「放」区分，legen 是 hat gelegt。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Er ___ im Bett gelegen.",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "hat",
+     "explanation": "liegen 用 haben。对照记：Er hat im Bett gelegen（状态）/ Er ist eingeschlafen（变化）。"
+    },
+    {
+     "type": "choice",
+     "prompt": "gestanden",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "hat",
+     "explanation": "stehen 用 haben（德国标准语；只有南德口语才说 ist gestanden）。静态姿势动词组：sitzen / liegen / stehen 全部 haben。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Er ___ vor der Tür gestanden.",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "hat",
+     "explanation": "stehen = hat gestanden。而 aufstehen = ist aufgestanden。同一词根，加了 auf- 就变位移/变化，助动词跟着翻面。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Er ___ lange gestanden.",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "hat",
+     "explanation": "stehen 用 haben。stehen 族三个答案要一起过：stehen hat、verstehen hat、aufstehen ist。"
+    },
+    {
+     "type": "choice",
+     "prompt": "verstanden",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "hat",
+     "explanation": "verstehen 用 haben——它是及物动词（etwas verstehen），第①步就判 haben。ver- 不可分，所以 PII 无 ge-：verstanden。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Er ___ die Frage verstanden.",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "hat",
+     "explanation": "die Frage 是第四格 → haben。别被词根 stehen 里 aufstehen 的 ist 干扰，verstehen 与位移毫无关系。"
+    },
+    {
+     "type": "choice",
+     "prompt": "Er ___ alles verstanden.",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "hat",
+     "explanation": "verstehen = hat verstanden。注意 PII 是 e–a 变化的 verstanden，且不可分前缀无 ge-。"
+    },
+    {
+     "type": "choice",
+     "prompt": "geschwommen",
+     "options": [
+      "hat",
+      "ist"
+     ],
+     "answer": "ist",
+     "explanation": "schwimmen 用 sein（视为位移动词）。顺带注意元音：它是 i–o 类的 geschwommen，不跟 finden/singen/trinken 的 i–u 一队。"
+    },
+    {
+     "type": "fill",
+     "prompt": "逆向还原①：看到 PII「genossen」，写出「原形 + 助动词(hat/ist)」。格式：原形, hat/ist",
+     "hint": "ie–o 家族；PII 里的双 s 是因为元音变短了，原形那里元音是长的",
+     "answer": [
+      "genießen, hat",
+      "genießen hat",
+      "genießen / hat"
+     ],
+     "explanation": "genießen 属 ie–o 换音家族：原形长元音 ie 写 ß（genießen），PII 元音缩短为短 o，按正字法长音才用 ß、短音必须写 ss，所以是 genossen。ge- 在这里是不可分前缀，本身已在词首，所以不再另加 ge-。及物、非位移，用 hat。"
+    },
+    {
+     "type": "fill",
+     "prompt": "逆向还原①：看到 PII「gewogen」，写出「原形 + 助动词」。格式：原形, hat/ist",
+     "hint": "「称重、重达」；现在时不变音，只有 PII 掉到 o",
+     "answer": [
+      "wiegen, hat",
+      "wiegen hat",
+      "wiegen / hat"
+     ],
+     "explanation": "wiegen 现在时完全不变音（er wiegt），但 PII 落进 -o- 组：gewogen。词干大改，只有反向练过才认得。非位移，用 hat。"
+    },
+    {
+     "type": "fill",
+     "prompt": "逆向还原①：看到 PII「verstanden」，写出「原形 + 助动词」。格式：原形, hat/ist",
+     "hint": "ver- 是不可分前缀，所以 PII 里没有 ge-；词根是「站」那个词",
+     "answer": [
+      "verstehen, hat",
+      "verstehen hat",
+      "verstehen / hat"
+     ],
+     "explanation": "stehen 族 e–a 换音：stehen→gestanden，加不可分前缀 ver- 后不再加 ge-，得 verstanden。注意 stehen / verstehen 在标准德语里都用 hat，不是 ist。"
+    },
+    {
+     "type": "fill",
+     "prompt": "逆向还原①：看到 PII「aufgestanden」，写出「原形 + 助动词」。格式：原形, hat/ist",
+     "hint": "同样是 stehen 词根，但这个是「早上从床上起来」，助动词跟 stehen 反着来",
+     "answer": [
+      "aufstehen, ist",
+      "aufstehen ist",
+      "aufstehen / ist"
+     ],
+     "explanation": "auf- 可分，ge- 夹在中间：auf+ge+standen。陷阱在助动词：stehen / verstehen 都用 hat，唯独 aufstehen 表示状态改变（躺→站），用 ist。"
+    },
+    {
+     "type": "fill",
+     "prompt": "逆向还原①：看到 PII「ausgestiegen」，写出「原形 + 助动词」。格式：原形, hat/ist",
+     "hint": "ei→长 ie 家族；「从车上下来」",
+     "answer": [
+      "aussteigen, ist",
+      "aussteigen ist",
+      "aussteigen / ist"
+     ],
+     "explanation": "steigen 属 ei–ie 家族（长 ie）：gestiegen；aus- 可分，ge- 夹中间→ausgestiegen。位移动词，用 ist。同族 einsteigen（eingestiegen）、umsteigen（umgestiegen）全部 ist。"
+    },
+    {
+     "type": "fill",
+     "prompt": "逆向还原①：看到 PII「gegangen」，写出「原形 + 助动词」。格式：原形, hat/ist",
+     "hint": "最基础的位移动词，词干由 geh 变成 gang",
+     "answer": [
+      "gehen, ist",
+      "gehen ist",
+      "gehen / ist"
+     ],
+     "explanation": "gehen 属 e–a 特殊组，词干整个改成 gang：gegangen。位移动词，用 ist。同族 ausgehen→ausgegangen、losgehen→losgegangen、rausgehen→rausgegangen 也都是 ist。"
+    },
+    {
+     "type": "fill",
+     "prompt": "逆向还原①：看到 PII「bekommen」（形式与原形完全一样），写出「原形 + 助动词」。格式：原形, hat/ist",
+     "hint": "「收到、得到」；be- 前缀让它一个词踩三个坑",
+     "answer": [
+      "bekommen, hat",
+      "bekommen hat",
+      "bekommen / hat"
+     ],
+     "explanation": "be- 是不可分前缀：①不加 ge-，②kommen 属 o–o 组本来 PII 就是 -kommen，所以 PII 与原形同形；③虽然 kommen / ankommen / mitkommen / drankommen 全用 ist，bekommen 是及物动词（etwas bekommen），必须用 hat。"
+    },
+    {
+     "type": "fill",
+     "prompt": "逆向还原①：看到 PII「geblieben」，写出「原形 + 助动词」。格式：原形, hat/ist",
+     "hint": "「留下、保持」；完全不移动，助动词却是纯例外",
+     "answer": [
+      "bleiben, ist",
+      "bleiben ist",
+      "bleiben / ist"
+     ],
+     "explanation": "bleiben 属 ei–ie 长音家族：geblieben。助动词是纯例外——它一点也不位移，却和 sein/werden 一样用 ist，没有规则可推，只能死记。"
+    },
+    {
+     "type": "fill",
+     "prompt": "逆向还原①：看到 PII「geschwommen」，写出「原形 + 助动词」。格式：原形, hat/ist",
+     "hint": "注意它不是 i–u 那一队；游泳是位移",
+     "answer": [
+      "schwimmen, ist",
+      "schwimmen ist",
+      "schwimmen / ist"
+     ],
+     "explanation": "finden/singen/klingen/trinken 是 i–u（gefunden/gesungen/geklungen/getrunken），但 schwimmen 是 i–o：geschwommen，且作为位移动词用 ist。两处都和邻居不一样。"
+    },
+    {
+     "type": "fill",
+     "prompt": "逆向还原①：看到 PII「gegessen」，写出「原形 + 助动词」。格式：原形, hat/ist",
+     "hint": "全表唯一一个多出一个 ge 的 PII",
+     "answer": [
+      "essen, hat",
+      "essen hat",
+      "essen / hat"
+     ],
+     "explanation": "essen 的 PII 例外地写成 gegessen（不是 *geessen），是全表唯一一例。属 e–e 组，元音回到 e。及物动词，用 hat。"
+    },
+    {
+     "type": "fill",
+     "prompt": "逆向还原①：看到 PII「empfohlen」，写出「原形 + 助动词」。格式：原形, hat/ist",
+     "hint": "「推荐」；emp- 不可分所以没有 ge-，原形里的元音不是 o",
+     "answer": [
+      "empfehlen, hat",
+      "empfehlen hat",
+      "empfehlen / hat"
+     ],
+     "explanation": "全表最难的词：原形 empfehlen（e），现在时 e→ie（er empfiehlt），PII 却掉到 o（empfohlen），属 e–o 家族；emp- 是不可分前缀所以无 ge-。及物，用 hat。"
+    },
+    {
+     "type": "fill",
+     "prompt": "逆向还原①：看到 PII「hochgefahren」，写出「原形 + 助动词」。格式：原形, hat/ist",
+     "hint": "「把电脑启动起来」；是及物用法，助动词和 fahren 一族反着来",
+     "answer": [
+      "hochfahren, hat",
+      "hochfahren hat",
+      "hochfahren / hat"
+     ],
+     "explanation": "fahren / abfahren / losfahren / zurückfahren 全用 ist，唯独 hochfahren（den Computer hochfahren）是及物动词，用 hat。它是 fahren 词族折叠策略唯一的破绽。"
+    },
+    {
+     "type": "fill",
+     "prompt": "逆向还原①：看到 PII「eingeschlafen」，写出「原形 + 助动词」。格式：原形, hat/ist",
+     "hint": "「睡着」是状态发生改变，不是状态持续",
+     "answer": [
+      "einschlafen, ist",
+      "einschlafen ist",
+      "einschlafen / ist"
+     ],
+     "explanation": "schlafen（持续状态）用 hat：hat geschlafen；einschlafen 表示状态变化（醒→睡），用 ist。同理 gefallen 用 hat 而 einfallen 用 ist。"
+    },
+    {
+     "type": "fill",
+     "prompt": "逆向还原①：看到 PII「gesessen」，写出「原形 + 助动词」。格式：原形, hat/ist",
+     "hint": "「坐着」；i–e 家族，别因为 aufstehen 用 ist 就跟风",
+     "answer": [
+      "sitzen, hat",
+      "sitzen hat",
+      "sitzen / hat"
+     ],
+     "explanation": "sitzen 属 i–e：gesessen。它是状态动词，标准德语用 hat（南德口语才有 ist）。同理 liegen→hat gelegen、stehen→hat gestanden。"
+    },
+    {
+     "type": "fill",
+     "prompt": "逆向还原①：看到 PII「zurückgefunden」，写出「原形 + 助动词」。格式：原形, hat/ist",
+     "hint": "finden 家族；虽然带 zurück- 有位移义，助动词仍反直觉",
+     "answer": [
+      "zurückfinden, hat",
+      "zurückfinden hat",
+      "zurückfinden / hat"
+     ],
+     "explanation": "finden 属 i–u：gefunden；zurück- 可分，ge- 夹中间→zurückgefunden。尽管有明显位移义，finden 全族（finden / stattfinden / verbinden / zurückfinden）都用 hat。"
+    },
+    {
+     "type": "fill",
+     "prompt": "逆向还原①：看到 PII「geworden」，写出「原形 + 助动词」。格式：原形, hat/ist",
+     "hint": "「变成」；表示状态转变的那个助动词",
+     "answer": [
+      "werden, ist",
+      "werden ist",
+      "werden / ist"
+     ],
+     "explanation": "werden 是特殊形，PII 为 geworden，助动词用 ist（状态转变），不是 *hat geworden。被动态里 PII 缩成 worden。"
+    },
+    {
+     "type": "fill",
+     "prompt": "逆向还原①：看到 PII「erschlossen」，写出「原形 + 助动词」。格式：原形, hat/ist",
+     "hint": "er- 不可分所以无 ge-；原形里元音是长的，要写 ß",
+     "answer": [
+      "erschließen, hat",
+      "erschließen hat",
+      "erschließen / hat"
+     ],
+     "explanation": "ß→ss 三连之一：schließen→geschlossen、genießen→genossen、erschließen→erschlossen。PII 元音变短所以 ß 改 ss；er- 不可分，无 ge-。及物，用 hat。"
+    },
+    {
+     "type": "fill",
+     "prompt": "逆向还原②：听到/看到「er lädt ein」，写出「原形 + PII」。格式：原形, PII",
+     "hint": "「邀请」；别被 lädt 骗成 *ladet 那种规则形",
+     "answer": [
+      "einladen, eingeladen",
+      "einladen eingeladen",
+      "einladen / eingeladen"
+     ],
+     "explanation": "词根 laden 属 a→ä 变音组，第三人称单数是 er lädt（绝不是 *er ladet）。ein- 可分，ge- 夹中间；a–a 家族 PII 元音回到 a：eingeladen。"
+    },
+    {
+     "type": "fill",
+     "prompt": "逆向还原②：看到「er nimmt an」，写出「原形 + PII」。格式：原形, PII",
+     "hint": "「接受、假定」；nimmt 是被改过两次的词干，原形里没有双 m",
+     "answer": [
+      "annehmen, angenommen",
+      "annehmen angenommen",
+      "annehmen / angenommen"
+     ],
+     "explanation": "别被 nimmt 骗成 *nimmen！原形是 nehmen（an+nehmen）。现在时连辅音都变：h 消失、m 双写→er nimmt an；PII 属 e–o 且双写 mm：angenommen（an+ge+nommen）。"
+    },
+    {
+     "type": "fill",
+     "prompt": "逆向还原②：看到「er empfiehlt」，写出「原形 + PII」。格式：原形, PII",
+     "hint": "「推荐」；现在时的 ie 是变出来的，原形和 PII 的元音各不相同",
+     "answer": [
+      "empfehlen, empfohlen",
+      "empfehlen empfohlen",
+      "empfehlen / empfohlen"
+     ],
+     "explanation": "三个方向各变一次：原形 e（empfehlen）→现在时 e→ie（er empfiehlt，不是 *empfielt）→PII 掉到 o（empfohlen）。emp- 不可分，所以 PII 没有 ge-。"
+    },
+    {
+     "type": "choice",
+     "prompt": "把卡片 aufschreiben 放进哪个家族桶?",
+     "options": [
+      "ei–ie",
+      "ei–i",
+      "ie–o"
+     ],
+     "answer": "ei–ie",
+     "explanation": "可分动词按词根判定:auf- + schreiben,schreiben 属 ei–ie(geschrieben),所以 aufgeschrieben 也是长 ie。前缀不影响元音家族,只影响 ge- 的位置(auf-ge-schrieben)。"
+    },
+    {
+     "type": "choice",
+     "prompt": "把卡片 aussteigen 放进哪个家族桶?",
+     "options": [
+      "ei–ie",
+      "ei–i",
+      "ei–ei"
+     ],
+     "answer": "ei–ie",
+     "explanation": "steigen 走 ei→长 ie:ausgestiegen。ei 家族有三种结局,steigen/schreiben/bleiben/scheinen/überweisen 这一支全部变长 ie。"
+    },
+    {
+     "type": "choice",
+     "prompt": "把卡片 unterstreichen 放进哪个家族桶?",
+     "options": [
+      "ei–i",
+      "ei–ie",
+      "ei–ei"
+     ],
+     "answer": "ei–i",
+     "explanation": "PII 是 unterstrichen,元音变短 i(后面接 ch)。ei 家族中 schneiden / vergleichen / unterstreichen 这一支走短 i,不是长 ie。另外 unter- 在此不可分,所以没有 ge-。"
+    },
+    {
+     "type": "choice",
+     "prompt": "把卡片 vergleichen 放进哪个家族桶?",
+     "options": [
+      "ei–i",
+      "ei–ie",
+      "ie–o"
+     ],
+     "answer": "ei–i",
+     "explanation": "verglichen:短 i,判断窍门是 PII 词干后面跟着 ch 或双辅音时元音变短。ver- 不可分,无 ge-。"
+    },
+    {
+     "type": "choice",
+     "prompt": "这一轮 ei 家族里混进了 heißen。它该进哪个桶?",
+     "options": [
+      "ei–ei",
+      "ei–ie",
+      "ei–i"
+     ],
+     "answer": "ei–ei",
+     "explanation": "heißen 的 PII 是 geheißen,元音完全不变。它是 ei 家族的第三种结局(不变),所以 ei 轮绝不能一刀切成「都变 ie」。"
+    },
+    {
+     "type": "choice",
+     "prompt": "下面哪张卡不属于 ei–ie 桶?",
+     "options": [
+      "schneiden",
+      "scheinen",
+      "überweisen"
+     ],
+     "answer": "schneiden",
+     "explanation": "scheinen→geschienen、überweisen→überwiesen 都是长 ie;schneiden→geschnitten 是短 i(且双写 tt),属 ei–i 桶。"
+    },
+    {
+     "type": "choice",
+     "prompt": "heißen 的第二分词是哪一个?",
+     "options": [
+      "geheißen",
+      "gehießen",
+      "geheißt"
+     ],
+     "answer": "geheißen",
+     "explanation": "heißen 是强变化但元音不变,只加 ge-…-en:geheißen。写成 gehießen 是被 ei–ie 家族带偏,写成 geheißt 是误用弱变化 -t 结尾。"
+    },
+    {
+     "type": "choice",
+     "prompt": "bleiben 该进哪个桶?",
+     "options": [
+      "ei–ie",
+      "ei–i",
+      "ei–ei"
+     ],
+     "answer": "ei–ie",
+     "explanation": "geblieben,长 ie。顺带记住例外:bleiben 完全不位移却用 sein(ist geblieben),这条推不出来只能死记。"
+    },
+    {
+     "type": "fill",
+     "prompt": "überweisen 的第二分词是 ___。",
+     "hint": "不可分前缀的词不加 ge-;这一支 ei 变成长音的那个双元音。",
+     "answer": [
+      "überwiesen"
+     ],
+     "explanation": "über- 在此不可分,所以没有 ge-;词干走 ei→长 ie,得 überwiesen。同理 unterschreiben→unterschrieben、beschreiben→beschrieben。"
+    },
+    {
+     "type": "choice",
+     "prompt": "把卡片 abfahren 放进哪个家族桶?",
+     "options": [
+      "a–a",
+      "e–a",
+      "o–o"
+     ],
+     "answer": "a–a",
+     "explanation": "按词根 fahren 判定:gefahren,PII 元音回到 a。现在时才变音(er fährt ab),PII 不变音——这是 a–a 家族的统一规律。"
+    },
+    {
+     "type": "choice",
+     "prompt": "把卡片 einladen 放进哪个家族桶?它的 er 形式是?",
+     "options": [
+      "a–a,er lädt ein",
+      "a–a,er ladet ein",
+      "e–a,er lädt ein"
+     ],
+     "answer": "a–a,er lädt ein",
+     "explanation": "eingeladen 属 a–a。现在时 a→ä 且不加 e:er lädt ein,写成 er ladet ein 是把强变化误当弱变化。"
+    },
+    {
+     "type": "choice",
+     "prompt": "这一轮 a–a 桶里混进了 laufen。判对之后,它的例外点是什么?",
+     "options": [
+      "现在时是 au→äu(er läuft),不是 a→ä",
+      "PII 变成 o",
+      "不可分前缀,没有 ge-"
+     ],
+     "answer": "现在时是 au→äu(er läuft),不是 a→ä",
+     "explanation": "laufen 的 PII 确实是 gelaufen(a–a),但现在时变音走 au→äu:er läuft。别按 fahren/tragen 的 a→ä 类推成 *er läft。另外它用 sein。"
+    },
+    {
+     "type": "choice",
+     "prompt": "raten 属于哪个桶?",
+     "options": [
+      "a–a",
+      "e–a",
+      "Sonderform"
+     ],
+     "answer": "a–a",
+     "explanation": "geraten 与原形词干同形,归 a–a。现在时变音:er rät(不是 ratet)。同排要一起过的还有 er wäscht / er trägt / er lädt ein。"
+    },
+    {
+     "type": "choice",
+     "prompt": "einschlafen 属于哪个桶?它和 schlafen 的差别在哪?",
+     "options": [
+      "同属 a–a,但 einschlafen 用 sein、schlafen 用 haben",
+      "einschlafen 属 e–a,schlafen 属 a–a",
+      "两个都用 haben"
+     ],
+     "answer": "同属 a–a,但 einschlafen 用 sein、schlafen 用 haben",
+     "explanation": "元音家族相同(geschlafen / eingeschlafen),助动词不同:einschlafen 表状态变化用 ist,schlafen 表状态持续用 hat。einfallen(ist)对 gefallen(hat)是同一套逻辑。"
+    },
+    {
+     "type": "fill",
+     "prompt": "waschen 的第三人称单数是 er ___。",
+     "hint": "a–a 家族现在时要变音,词干末尾已有 sch。",
+     "answer": [
+      "wäscht",
+      "er wäscht"
+     ],
+     "explanation": "a→ä 变音,词尾 -t:er wäscht。PII 却不变音:gewaschen——现在时变、PII 回 a,是 a–a 桶的共同签名。"
+    },
+    {
+     "type": "choice",
+     "prompt": "tragen 该进哪个桶?",
+     "options": [
+      "a–a",
+      "e–a",
+      "i–u"
+     ],
+     "answer": "a–a",
+     "explanation": "getragen,PII 回到 a。现在时 er trägt 变音。与 fahren / schlafen / raten / waschen 同一支。"
+    },
+    {
+     "type": "choice",
+     "prompt": "hochfahren 归入 a–a 桶没问题,但它的助动词是?",
+     "options": [
+      "haben(hat hochgefahren)",
+      "sein(ist hochgefahren)",
+      "两个都行"
+     ],
+     "answer": "haben(hat hochgefahren)",
+     "explanation": "fahren / abfahren / losfahren / zurückfahren 全用 ist,唯独 hochfahren 用 hat,因为它是及物的(den Computer hochgefahren)。这是「词族折叠」策略唯一的破绽。"
+    },
+    {
+     "type": "choice",
+     "prompt": "kommen 该进哪个桶?",
+     "options": [
+      "o–o",
+      "e–o",
+      "ie–o"
+     ],
+     "answer": "o–o",
+     "explanation": "gekommen:原形已经是 o,PII 还是 o。ankommen / mitkommen / drankommen / bekommen 全族同桶。"
+    },
+    {
+     "type": "choice",
+     "prompt": "bekommen 进 o–o 桶后,哪一点最容易错?",
+     "options": [
+      "PII 与原形完全同形,且用 hat",
+      "PII 是 bekommt",
+      "PII 是 bekgekommen"
+     ],
+     "answer": "PII 与原形完全同形,且用 hat",
+     "explanation": "be- 不可分所以不加 ge-,加上 o–o 不换元音,结果 PII = bekommen,和原形一模一样;而且它用 hat,与整个 kommen 族(全用 ist)相反。一个词踩三个坑。"
+    },
+    {
+     "type": "choice",
+     "prompt": "drankommen 的第二分词是?",
+     "options": [
+      "drangekommen",
+      "drankommen",
+      "gedrankommen"
+     ],
+     "answer": "drangekommen",
+     "explanation": "dran- 可分,所以 ge- 夹在中间:dran-ge-kommen。可分看 ge- 夹中间,不可分则完全没有 ge-(对比 bekommen)。"
+    }
+   ]
+  }
   ],
 
   // ===== 词汇库(按 Level + Lektion 分组,来自 A1/A2 例句背词词库)=====
@@ -3045,6 +6313,1515 @@ window.GERMAN_DATA = {
         { de: "aber", gender: "动", plural: "", zh: "但是", example: "Meine Wohnung ist schön, **aber** klein.", exampleZh: "我的房子漂亮，但小。", note: "Konj. (Pos. 0) · 🔴 零号位，不倒装 · 语法核心 3", level: "暑期", tags: ["密集"] },
         { de: "Leider …", gender: "副", plural: "", zh: "可惜", example: "Leider ist das Haus nicht in der Stadt.", exampleZh: "可惜房子不在城里。", note: "Adv. · 🔴 句首 → 动词第二位 · 语法核心 5", level: "暑期", tags: ["密集"] }
       ]
+    },
+
+{
+   "id": "verb-unregel",
+   "level": "动词",
+   "lesson": "不规则动词",
+   "theme": "Unregelmäßige Verben 104 词",
+   "group": "⚡ 不规则动词",
+   "source": "Netzwerk neu 动词表",
+   "date": "2026-07-21",
+   "words": [
+    {
+     "de": "abfahren",
+     "gender": "可分",
+     "plural": "fährt ab · ist abgefahren",
+     "zh": "出发,开走",
+     "example": "er fährt ab. — ist **abgefahren**",
+     "exampleZh": "出发,开走(ist = sein)",
+     "note": "a–a · 现在时 a→ä · trennbar · 与 fahren 同族,用 sein",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "a–a",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "anfangen",
+     "gender": "可分",
+     "plural": "fängt an · hat angefangen",
+     "zh": "开始",
+     "example": "er fängt an. — hat **angefangen**",
+     "exampleZh": "开始(hat = haben)",
+     "note": "a–a · 现在时 a→ä · trennbar",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "a–a",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "ankommen",
+     "gender": "可分",
+     "plural": "kommt an · ist angekommen",
+     "zh": "到达",
+     "example": "er kommt an. — ist **angekommen**",
+     "exampleZh": "到达(ist = sein)",
+     "note": "o–o · 现在时 无 · trennbar · 现在时不变音;kommen 词干本就是 o,PII 仍是 o;用 sein",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "o–o",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "annehmen",
+     "gender": "可分",
+     "plural": "nimmt an · hat angenommen",
+     "zh": "接受,假定",
+     "example": "er nimmt an. — hat **angenommen**",
+     "exampleZh": "接受,假定(hat = haben)",
+     "note": "e–o · 现在时 e→i · trennbar · er nimmt an 词干大改(nehm→nimm),双写 mm",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "e–o",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "ansehen",
+     "gender": "可分",
+     "plural": "sieht an · hat angesehen",
+     "zh": "观看,注视",
+     "example": "er sieht an. — hat **angesehen**",
+     "exampleZh": "观看,注视(hat = haben)",
+     "note": "e–e · 现在时 e→ie · trennbar",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "e–e",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "anziehen",
+     "gender": "可分",
+     "plural": "zieht an · hat angezogen",
+     "zh": "穿上",
+     "example": "er zieht an. — hat **angezogen**",
+     "exampleZh": "穿上(hat = haben)",
+     "note": "ie–o · 现在时 无 · trennbar · 现在时不变音,但 PII 变 o",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "ie–o",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "aufschreiben",
+     "gender": "可分",
+     "plural": "schreibt auf · hat aufgeschrieben",
+     "zh": "记下,写下",
+     "example": "er schreibt auf. — hat **aufgeschrieben**",
+     "exampleZh": "记下,写下(hat = haben)",
+     "note": "ei–ie · 现在时 无 · trennbar",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "ei–ie",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "aufstehen",
+     "gender": "可分",
+     "plural": "steht auf · ist aufgestanden",
+     "zh": "起床,起立",
+     "example": "er steht auf. — ist **aufgestanden**",
+     "exampleZh": "起床,起立(ist = sein)",
+     "note": "e–a · 现在时 无 · trennbar · stehen 用 haben,但 aufstehen 用 sein(反直觉)",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "e–a",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "ausgehen",
+     "gender": "可分",
+     "plural": "geht aus · ist ausgegangen",
+     "zh": "外出,出门",
+     "example": "er geht aus. — ist **ausgegangen**",
+     "exampleZh": "外出,出门(ist = sein)",
+     "note": "e–a · 现在时 无 · trennbar · gehen 族特殊变化 geh→gang",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "e–a",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "aussehen",
+     "gender": "可分",
+     "plural": "sieht aus · hat ausgesehen",
+     "zh": "看起来",
+     "example": "er sieht aus. — hat **ausgesehen**",
+     "exampleZh": "看起来(hat = haben)",
+     "note": "e–e · 现在时 e→ie · trennbar · hat 不是 ist(反直觉)",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "e–e",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "aussteigen",
+     "gender": "可分",
+     "plural": "steigt aus · ist ausgestiegen",
+     "zh": "下车",
+     "example": "er steigt aus. — ist **ausgestiegen**",
+     "exampleZh": "下车(ist = sein)",
+     "note": "ei–ie · 现在时 无 · trennbar",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "ei–ie",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "ausziehen",
+     "gender": "可分",
+     "plural": "zieht aus · hat ausgezogen",
+     "zh": "脱下",
+     "example": "er zieht aus. — hat **ausgezogen**",
+     "exampleZh": "脱下(hat = haben)",
+     "note": "ie–o · 现在时 无 · trennbar · 表\"脱衣\"用 hat;表\"搬出\"时用 ist",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "ie–o",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "bekommen",
+     "gender": "动",
+     "plural": "bekommt · hat bekommen",
+     "zh": "得到,收到",
+     "example": "er bekommt. — hat **bekommen**",
+     "exampleZh": "得到,收到(hat = haben)",
+     "note": "o–o · 现在时 无 · untrennbar · 不可分前缀,无 ge-;PII 与原形同形;kommen 用 sein 但此词用 hat",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "o–o"
+     ]
+    },
+    {
+     "de": "beschreiben",
+     "gender": "动",
+     "plural": "beschreibt · hat beschrieben",
+     "zh": "描述",
+     "example": "er beschreibt. — hat **beschrieben**",
+     "exampleZh": "描述(hat = haben)",
+     "note": "ei–ie · 现在时 无 · untrennbar",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "ei–ie"
+     ]
+    },
+    {
+     "de": "bleiben",
+     "gender": "动",
+     "plural": "bleibt · ist geblieben",
+     "zh": "停留,保持",
+     "example": "er bleibt. — ist **geblieben**",
+     "exampleZh": "停留,保持(ist = sein)",
+     "note": "ei–ie · 现在时 无 · einfach · 非位移动词却用 sein",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "ei–ie"
+     ]
+    },
+    {
+     "de": "bringen",
+     "gender": "动",
+     "plural": "bringt · hat gebracht",
+     "zh": "带来,拿来",
+     "example": "er bringt. — hat **gebracht**",
+     "exampleZh": "带来,拿来(hat = haben)",
+     "note": "Mischverb · 现在时 无 · einfach · 混合动词:换元音又加 -t",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "Mischverb"
+     ]
+    },
+    {
+     "de": "denken",
+     "gender": "动",
+     "plural": "denkt · hat gedacht",
+     "zh": "想,思考",
+     "example": "er denkt. — hat **gedacht**",
+     "exampleZh": "想,思考(hat = haben)",
+     "note": "Mischverb · 现在时 无 · einfach · 混合动词:换元音又加 -t",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "Mischverb"
+     ]
+    },
+    {
+     "de": "drankommen",
+     "gender": "可分",
+     "plural": "kommt dran · ist drangekommen",
+     "zh": "轮到",
+     "example": "er kommt dran. — ist **drangekommen**",
+     "exampleZh": "轮到(ist = sein)",
+     "note": "o–o · 现在时 无 · trennbar · dran- 可分,ge- 夹在中间",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "o–o",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "einfallen",
+     "gender": "可分",
+     "plural": "fällt ein · ist eingefallen",
+     "zh": "想起,浮现",
+     "example": "er fällt ein. — ist **eingefallen**",
+     "exampleZh": "想起,浮现(ist = sein)",
+     "note": "a–a · 现在时 a→ä · trennbar · 用 sein,常搭三格:Mir fällt ein …",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "a–a",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "eingeben",
+     "gender": "可分",
+     "plural": "gibt ein · hat eingegeben",
+     "zh": "输入,录入",
+     "example": "er gibt ein. — hat **eingegeben**",
+     "exampleZh": "输入,录入(hat = haben)",
+     "note": "e–e · 现在时 e→i · trennbar",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "e–e",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "einladen",
+     "gender": "可分",
+     "plural": "lädt ein · hat eingeladen",
+     "zh": "邀请",
+     "example": "er lädt ein. — hat **eingeladen**",
+     "exampleZh": "邀请(hat = haben)",
+     "note": "a–a · 现在时 a→ä · trennbar · er lädt ein(不是 ladet)",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "a–a",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "einschlafen",
+     "gender": "可分",
+     "plural": "schläft ein · ist eingeschlafen",
+     "zh": "入睡",
+     "example": "er schläft ein. — ist **eingeschlafen**",
+     "exampleZh": "入睡(ist = sein)",
+     "note": "a–a · 现在时 a→ä · trennbar · schlafen 用 haben,einschlafen 用 sein",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "a–a",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "einsteigen",
+     "gender": "可分",
+     "plural": "steigt ein · ist eingestiegen",
+     "zh": "上车",
+     "example": "er steigt ein. — ist **eingestiegen**",
+     "exampleZh": "上车(ist = sein)",
+     "note": "ei–ie · 现在时 无 · trennbar",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "ei–ie",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "empfehlen",
+     "gender": "动",
+     "plural": "empfiehlt · hat empfohlen",
+     "zh": "推荐",
+     "example": "er empfiehlt. — hat **empfohlen**",
+     "exampleZh": "推荐(hat = haben)",
+     "note": "e–o · 现在时 e→ie · untrennbar · emp- 不可分,无 ge-;现在时 e→ie,PII 却是 o",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "e–o"
+     ]
+    },
+    {
+     "de": "erschließen",
+     "gender": "动",
+     "plural": "erschließt · hat erschlossen",
+     "zh": "开发,推知",
+     "example": "er erschließt. — hat **erschlossen**",
+     "exampleZh": "开发,推知(hat = haben)",
+     "note": "ie–o · 现在时 无 · untrennbar · er- 不可分,无 ge-;ß→ss(短元音)",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "ie–o"
+     ]
+    },
+    {
+     "de": "essen",
+     "gender": "动",
+     "plural": "isst · hat gegessen",
+     "zh": "吃",
+     "example": "er isst. — hat **gegessen**",
+     "exampleZh": "吃(hat = haben)",
+     "note": "e–e · 现在时 e→i · einfach · PII 例外多出一个 ge:gegessen",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "e–e"
+     ]
+    },
+    {
+     "de": "fahren",
+     "gender": "动",
+     "plural": "fährt · ist gefahren",
+     "zh": "开车;乘车去",
+     "example": "er fährt. — ist **gefahren**",
+     "exampleZh": "开车;乘车去(ist = sein)",
+     "note": "a–a · 现在时 a→ä · einfach · 用 sein(位移动词)",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "a–a"
+     ]
+    },
+    {
+     "de": "fernsehen",
+     "gender": "可分",
+     "plural": "sieht fern · hat ferngesehen",
+     "zh": "看电视",
+     "example": "er sieht fern. — hat **ferngesehen**",
+     "exampleZh": "看电视(hat = haben)",
+     "note": "e–e · 现在时 e→ie · trennbar · 词根 sehen,现在时 e→ie",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "e–e",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "finden",
+     "gender": "动",
+     "plural": "findet · hat gefunden",
+     "zh": "找到;认为",
+     "example": "er findet. — hat **gefunden**",
+     "exampleZh": "找到;认为(hat = haben)",
+     "note": "i–u · 现在时 无 · einfach",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "i–u"
+     ]
+    },
+    {
+     "de": "fliegen",
+     "gender": "动",
+     "plural": "fliegt · ist geflogen",
+     "zh": "飞;坐飞机",
+     "example": "er fliegt. — ist **geflogen**",
+     "exampleZh": "飞;坐飞机(ist = sein)",
+     "note": "ie–o · 现在时 无 · einfach · 用 sein",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "ie–o"
+     ]
+    },
+    {
+     "de": "freihaben",
+     "gender": "可分",
+     "plural": "hat frei · hat freigehabt",
+     "zh": "有空;放假",
+     "example": "er hat frei. — hat **freigehabt**",
+     "exampleZh": "有空;放假(hat = haben)",
+     "note": "Sonderform · 现在时 无 · trennbar · 词根 haben,PII 弱变化 freigehabt",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "Sonderform",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "geben",
+     "gender": "动",
+     "plural": "gibt · hat gegeben",
+     "zh": "给",
+     "example": "er gibt. — hat **gegeben**",
+     "exampleZh": "给(hat = haben)",
+     "note": "e–e · 现在时 e→i · einfach",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "e–e"
+     ]
+    },
+    {
+     "de": "gefallen",
+     "gender": "动",
+     "plural": "gefällt · hat gefallen",
+     "zh": "讨人喜欢",
+     "example": "er gefällt. — hat **gefallen**",
+     "exampleZh": "讨人喜欢(hat = haben)",
+     "note": "a–a · 现在时 a→ä · untrennbar · ge- 是不可分前缀,PII 与原形同形;主语是被喜欢的事物,人用第三格",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "a–a"
+     ]
+    },
+    {
+     "de": "gehen",
+     "gender": "动",
+     "plural": "geht · ist gegangen",
+     "zh": "走;去",
+     "example": "er geht. — ist **gegangen**",
+     "exampleZh": "走;去(ist = sein)",
+     "note": "e–a · 现在时 无 · einfach · 用 sein",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "e–a"
+     ]
+    },
+    {
+     "de": "genießen",
+     "gender": "动",
+     "plural": "genießt · hat genossen",
+     "zh": "享受;品味",
+     "example": "er genießt. — hat **genossen**",
+     "exampleZh": "享受;品味(hat = haben)",
+     "note": "ie–o · 现在时 无 · untrennbar · 不可分前缀 ge-,无额外 ge-;ß→ss",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "ie–o"
+     ]
+    },
+    {
+     "de": "heißen",
+     "gender": "动",
+     "plural": "heißt · hat geheißen",
+     "zh": "名叫;意为",
+     "example": "er heißt. — hat **geheißen**",
+     "exampleZh": "名叫;意为(hat = haben)",
+     "note": "ei–ei · 现在时 无 · einfach",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "ei–ei"
+     ]
+    },
+    {
+     "de": "helfen",
+     "gender": "动",
+     "plural": "hilft · hat geholfen",
+     "zh": "帮助",
+     "example": "er hilft. — hat **geholfen**",
+     "exampleZh": "帮助(hat = haben)",
+     "note": "e–o · 现在时 e→i · einfach · 支配第三格",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "e–o"
+     ]
+    },
+    {
+     "de": "hochfahren",
+     "gender": "可分",
+     "plural": "fährt hoch · hat hochgefahren",
+     "zh": "启动(电脑)",
+     "example": "er fährt hoch. — hat **hochgefahren**",
+     "exampleZh": "启动(电脑)(hat = haben)",
+     "note": "a–a · 现在时 a→ä · trennbar · hat 不是 ist(与 fahren 相反,及物用法)",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "a–a",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "kennen",
+     "gender": "动",
+     "plural": "kennt · hat gekannt",
+     "zh": "认识;熟悉",
+     "example": "er kennt. — hat **gekannt**",
+     "exampleZh": "认识;熟悉(hat = haben)",
+     "note": "Mischverb · 现在时 无 · einfach · 混合动词:变元音又加 -t",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "Mischverb"
+     ]
+    },
+    {
+     "de": "klingen",
+     "gender": "动",
+     "plural": "klingt · hat geklungen",
+     "zh": "听起来",
+     "example": "er klingt. — hat **geklungen**",
+     "exampleZh": "听起来(hat = haben)",
+     "note": "i–u · 现在时 无 · einfach",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "i–u"
+     ]
+    },
+    {
+     "de": "kommen",
+     "gender": "动",
+     "plural": "kommt · ist gekommen",
+     "zh": "来",
+     "example": "er kommt. — ist **gekommen**",
+     "exampleZh": "来(ist = sein)",
+     "note": "o–o · 现在时 无 · einfach · 用 sein",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "o–o"
+     ]
+    },
+    {
+     "de": "laufen",
+     "gender": "动",
+     "plural": "läuft · ist gelaufen",
+     "zh": "跑;走路",
+     "example": "er läuft. — ist **gelaufen**",
+     "exampleZh": "跑;走路(ist = sein)",
+     "note": "au–au · 现在时 au→äu · einfach · 用 sein;现在时 au→äu",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "au–au"
+     ]
+    },
+    {
+     "de": "leidtun",
+     "gender": "可分",
+     "plural": "tut leid · hat leidgetan",
+     "zh": "感到抱歉",
+     "example": "er tut leid. — hat **leidgetan**",
+     "exampleZh": "感到抱歉(hat = haben)",
+     "note": "Sonderform · 现在时 无 · trennbar · 词根 tun,完全不规则;常用 Es tut mir leid,人用第三格",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "Sonderform",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "lesen",
+     "gender": "动",
+     "plural": "liest · hat gelesen",
+     "zh": "读;阅读",
+     "example": "er liest. — hat **gelesen**",
+     "exampleZh": "读;阅读(hat = haben)",
+     "note": "e–e · 现在时 e→ie · einfach · er liest 只有一个 s(词干已含 s)",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "e–e"
+     ]
+    },
+    {
+     "de": "liegen",
+     "gender": "动",
+     "plural": "liegt · hat gelegen",
+     "zh": "躺;位于",
+     "example": "er liegt. — hat **gelegen**",
+     "exampleZh": "躺;位于(hat = haben)",
+     "note": "ie–e · 现在时 无 · einfach · 与规则动词 legen(放)区分",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "ie–e"
+     ]
+    },
+    {
+     "de": "los sein",
+     "gender": "可分",
+     "plural": "ist los · ist los gewesen",
+     "zh": "发生;出事",
+     "example": "er ist los. — ist **los gewesen**",
+     "exampleZh": "发生;出事(ist = sein)",
+     "note": "Sonderform · 现在时 无 · trennbar · 词根 sein,分写;常用 Was ist los?",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "Sonderform",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "losfahren",
+     "gender": "可分",
+     "plural": "fährt los · ist losgefahren",
+     "zh": "出发;启程",
+     "example": "er fährt los. — ist **losgefahren**",
+     "exampleZh": "出发;启程(ist = sein)",
+     "note": "a–a · 现在时 a→ä · trennbar · 用 sein",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "a–a",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "losgehen",
+     "gender": "可分",
+     "plural": "geht los · ist losgegangen",
+     "zh": "开始;动身",
+     "example": "er geht los. — ist **losgegangen**",
+     "exampleZh": "开始;动身(ist = sein)",
+     "note": "e–a · 现在时 无 · trennbar · 用 sein",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "e–a",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "mitbringen",
+     "gender": "可分",
+     "plural": "bringt mit · hat mitgebracht",
+     "zh": "带来",
+     "example": "er bringt mit. — hat **mitgebracht**",
+     "exampleZh": "带来(hat = haben)",
+     "note": "Mischverb · 现在时 无 · trennbar · 混合动词:变元音又加 -t",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "Mischverb",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "mitkommen",
+     "gender": "可分",
+     "plural": "kommt mit · ist mitgekommen",
+     "zh": "一起来",
+     "example": "er kommt mit. — ist **mitgekommen**",
+     "exampleZh": "一起来(ist = sein)",
+     "note": "o–o · 现在时 无 · trennbar · 用 sein",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "o–o",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "mitlesen",
+     "gender": "可分",
+     "plural": "liest mit · hat mitgelesen",
+     "zh": "跟着读",
+     "example": "er liest mit. — hat **mitgelesen**",
+     "exampleZh": "跟着读(hat = haben)",
+     "note": "e–e · 现在时 e→ie · trennbar",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "e–e",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "mitnehmen",
+     "gender": "可分",
+     "plural": "nimmt mit · hat mitgenommen",
+     "zh": "带走;捎上",
+     "example": "er nimmt mit. — hat **mitgenommen**",
+     "exampleZh": "带走;捎上(hat = haben)",
+     "note": "e–o · 现在时 e→i · trennbar · 现在时双写 mm:er nimmt mit",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "e–o",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "mitsprechen",
+     "gender": "可分",
+     "plural": "spricht mit · hat mitgesprochen",
+     "zh": "跟着说",
+     "example": "er spricht mit. — hat **mitgesprochen**",
+     "exampleZh": "跟着说(hat = haben)",
+     "note": "e–o · 现在时 e→i · trennbar · sprechen 家族，可分前缀 ge- 夹中间",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "e–o",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "nachsprechen",
+     "gender": "可分",
+     "plural": "spricht nach · hat nachgesprochen",
+     "zh": "跟读",
+     "example": "er spricht nach. — hat **nachgesprochen**",
+     "exampleZh": "跟读(hat = haben)",
+     "note": "e–o · 现在时 e→i · trennbar · sprechen 家族，可分前缀 ge- 夹中间",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "e–o",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "nehmen",
+     "gender": "动",
+     "plural": "nimmt · hat genommen",
+     "zh": "拿，取",
+     "example": "er nimmt. — hat **genommen**",
+     "exampleZh": "拿，取(hat = haben)",
+     "note": "e–o · 现在时 e→i · einfach · 现在时 er nimmt 辅音也变（h→mm），需死记",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "e–o"
+     ]
+    },
+    {
+     "de": "nennen",
+     "gender": "动",
+     "plural": "nennt · hat genannt",
+     "zh": "称呼，说出",
+     "example": "er nennt. — hat **genannt**",
+     "exampleZh": "称呼，说出(hat = haben)",
+     "note": "Mischverb · 现在时 无 · einfach · 混合动词：变元音 e→a 又加 -t",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "Mischverb"
+     ]
+    },
+    {
+     "de": "raten",
+     "gender": "动",
+     "plural": "rät · hat geraten",
+     "zh": "猜；建议",
+     "example": "er rät. — hat **geraten**",
+     "exampleZh": "猜；建议(hat = haben)",
+     "note": "a–a · 现在时 a→ä · einfach · PII 词干与原形同形（geraten），只是现在时变音",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "a–a"
+     ]
+    },
+    {
+     "de": "rausgehen",
+     "gender": "可分",
+     "plural": "geht raus · ist rausgegangen",
+     "zh": "出去",
+     "example": "er geht raus. — ist **rausgegangen**",
+     "exampleZh": "出去(ist = sein)",
+     "note": "e–a · 现在时 无 · trennbar · gehen 家族，位移动词用 sein",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "e–a",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "riechen",
+     "gender": "动",
+     "plural": "riecht · hat gerochen",
+     "zh": "闻；有气味",
+     "example": "er riecht. — hat **gerochen**",
+     "exampleZh": "闻；有气味(hat = haben)",
+     "note": "ie–o · 现在时 无 · einfach",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "ie–o"
+     ]
+    },
+    {
+     "de": "scheinen",
+     "gender": "动",
+     "plural": "scheint · hat geschienen",
+     "zh": "照耀；似乎",
+     "example": "er scheint. — hat **geschienen**",
+     "exampleZh": "照耀；似乎(hat = haben)",
+     "note": "ei–ie · 现在时 无 · einfach",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "ei–ie"
+     ]
+    },
+    {
+     "de": "schlafen",
+     "gender": "动",
+     "plural": "schläft · hat geschlafen",
+     "zh": "睡觉",
+     "example": "er schläft. — hat **geschlafen**",
+     "exampleZh": "睡觉(hat = haben)",
+     "note": "a–a · 现在时 a→ä · einfach · 现在时变音但 PII 不变音",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "a–a"
+     ]
+    },
+    {
+     "de": "schließen",
+     "gender": "动",
+     "plural": "schließt · hat geschlossen",
+     "zh": "关闭",
+     "example": "er schließt. — hat **geschlossen**",
+     "exampleZh": "关闭(hat = haben)",
+     "note": "ie–o · 现在时 无 · einfach · PII 短元音故 ß→ss",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "ie–o"
+     ]
+    },
+    {
+     "de": "schneiden",
+     "gender": "动",
+     "plural": "schneidet · hat geschnitten",
+     "zh": "切，剪",
+     "example": "er schneidet. — hat **geschnitten**",
+     "exampleZh": "切，剪(hat = haben)",
+     "note": "ei–i · 现在时 无 · einfach · ei–i 类，PII 双写 tt",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "ei–i"
+     ]
+    },
+    {
+     "de": "schreiben",
+     "gender": "动",
+     "plural": "schreibt · hat geschrieben",
+     "zh": "写",
+     "example": "er schreibt. — hat **geschrieben**",
+     "exampleZh": "写(hat = haben)",
+     "note": "ei–ie · 现在时 无 · einfach",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "ei–ie"
+     ]
+    },
+    {
+     "de": "schwimmen",
+     "gender": "动",
+     "plural": "schwimmt · ist geschwommen",
+     "zh": "游泳",
+     "example": "er schwimmt. — ist **geschwommen**",
+     "exampleZh": "游泳(ist = sein)",
+     "note": "i–o · 现在时 无 · einfach · ist 不是 hat（位移动词）",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "i–o"
+     ]
+    },
+    {
+     "de": "sehen",
+     "gender": "动",
+     "plural": "sieht · hat gesehen",
+     "zh": "看见",
+     "example": "er sieht. — hat **gesehen**",
+     "exampleZh": "看见(hat = haben)",
+     "note": "e–e · 现在时 e→ie · einfach · 现在时变 ie，但 PII 回到 e",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "e–e"
+     ]
+    },
+    {
+     "de": "singen",
+     "gender": "动",
+     "plural": "singt · hat gesungen",
+     "zh": "唱歌",
+     "example": "er singt. — hat **gesungen**",
+     "exampleZh": "唱歌(hat = haben)",
+     "note": "i–u · 现在时 无 · einfach",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "i–u"
+     ]
+    },
+    {
+     "de": "sitzen",
+     "gender": "动",
+     "plural": "sitzt · hat gesessen",
+     "zh": "坐着",
+     "example": "er sitzt. — hat **gesessen**",
+     "exampleZh": "坐着(hat = haben)",
+     "note": "i–e · 现在时 无 · einfach · hat 不是 ist（状态动词，反直觉）",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "i–e"
+     ]
+    },
+    {
+     "de": "sprechen",
+     "gender": "动",
+     "plural": "spricht · hat gesprochen",
+     "zh": "说话",
+     "example": "er spricht. — hat **gesprochen**",
+     "exampleZh": "说话(hat = haben)",
+     "note": "e–o · 现在时 e→i · einfach",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "e–o"
+     ]
+    },
+    {
+     "de": "stattfinden",
+     "gender": "可分",
+     "plural": "findet statt · hat stattgefunden",
+     "zh": "举行，发生",
+     "example": "er findet statt. — hat **stattgefunden**",
+     "exampleZh": "举行，发生(hat = haben)",
+     "note": "i–u · 现在时 无 · trennbar · finden 家族；主语只能是活动/事件",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "i–u",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "stehen",
+     "gender": "动",
+     "plural": "steht · hat gestanden",
+     "zh": "站立",
+     "example": "er steht. — hat **gestanden**",
+     "exampleZh": "站立(hat = haben)",
+     "note": "e–a · 现在时 无 · einfach · hat 不是 ist（德标准语；南德才用 ist）",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "e–a"
+     ]
+    },
+    {
+     "de": "tragen",
+     "gender": "动",
+     "plural": "trägt · hat getragen",
+     "zh": "携带；穿着",
+     "example": "er trägt. — hat **getragen**",
+     "exampleZh": "携带；穿着(hat = haben)",
+     "note": "a–a · 现在时 a→ä · einfach",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "a–a"
+     ]
+    },
+    {
+     "de": "treffen",
+     "gender": "动",
+     "plural": "trifft · hat getroffen",
+     "zh": "遇见，会面",
+     "example": "er trifft. — hat **getroffen**",
+     "exampleZh": "遇见，会面(hat = haben)",
+     "note": "e–o · 现在时 e→i · einfach",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "e–o"
+     ]
+    },
+    {
+     "de": "trinken",
+     "gender": "动",
+     "plural": "trinkt · hat getrunken",
+     "zh": "喝",
+     "example": "er trinkt. — hat **getrunken**",
+     "exampleZh": "喝(hat = haben)",
+     "note": "i–u · 现在时 无 · einfach",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "i–u"
+     ]
+    },
+    {
+     "de": "tun",
+     "gender": "动",
+     "plural": "tut · hat getan",
+     "zh": "做",
+     "example": "er tut. — hat **getan**",
+     "exampleZh": "做(hat = haben)",
+     "note": "Sonderform · 现在时 无 · einfach · 完全不规则，PII 为 getan（无 -en 前的长音变化规律）",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "Sonderform"
+     ]
+    },
+    {
+     "de": "überweisen",
+     "gender": "动",
+     "plural": "überweist · hat überwiesen",
+     "zh": "汇款；转诊",
+     "example": "er überweist. — hat **überwiesen**",
+     "exampleZh": "汇款；转诊(hat = haben)",
+     "note": "ei–ie · 现在时 无 · untrennbar · 不可分前缀，无 ge-",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "ei–ie"
+     ]
+    },
+    {
+     "de": "umsteigen",
+     "gender": "可分",
+     "plural": "steigt um · ist umgestiegen",
+     "zh": "换乘",
+     "example": "er steigt um. — ist **umgestiegen**",
+     "exampleZh": "换乘(ist = sein)",
+     "note": "ei–ie · 现在时 无 · trennbar · ist 不是 hat；um- 此处可分（ge- 夹中间）",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "ei–ie",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "umziehen",
+     "gender": "可分",
+     "plural": "zieht um · ist umgezogen",
+     "zh": "搬家",
+     "example": "er zieht um. — ist **umgezogen**",
+     "exampleZh": "搬家(ist = sein)",
+     "note": "ie–o · 现在时 无 · trennbar · ist 不是 hat；反身 sich umziehen（换衣服）用 hat",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "ie–o",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "unterschreiben",
+     "gender": "动",
+     "plural": "unterschreibt · hat unterschrieben",
+     "zh": "签名",
+     "example": "er unterschreibt. — hat **unterschrieben**",
+     "exampleZh": "签名(hat = haben)",
+     "note": "ei–ie · 现在时 无 · untrennbar · 不可分前缀,无 ge-;与 schreiben 同族",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "ei–ie"
+     ]
+    },
+    {
+     "de": "unterstreichen",
+     "gender": "动",
+     "plural": "unterstreicht · hat unterstrichen",
+     "zh": "划线;强调",
+     "example": "er unterstreicht. — hat **unterstrichen**",
+     "exampleZh": "划线;强调(hat = haben)",
+     "note": "ei–i · 现在时 无 · untrennbar · 不可分前缀,无 ge-;元音变短 ei→i",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "ei–i"
+     ]
+    },
+    {
+     "de": "verbinden",
+     "gender": "动",
+     "plural": "verbindet · hat verbunden",
+     "zh": "连接;包扎",
+     "example": "er verbindet. — hat **verbunden**",
+     "exampleZh": "连接;包扎(hat = haben)",
+     "note": "i–u · 现在时 无 · untrennbar · 不可分前缀,无 ge-;与 finden 同族",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "i–u"
+     ]
+    },
+    {
+     "de": "vergessen",
+     "gender": "动",
+     "plural": "vergisst · hat vergessen",
+     "zh": "忘记",
+     "example": "er vergisst. — hat **vergessen**",
+     "exampleZh": "忘记(hat = haben)",
+     "note": "e–e · 现在时 e→i · untrennbar · PII 与原形同形(不可分前缀,无 ge-)",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "e–e"
+     ]
+    },
+    {
+     "de": "vergleichen",
+     "gender": "动",
+     "plural": "vergleicht · hat verglichen",
+     "zh": "比较",
+     "example": "er vergleicht. — hat **verglichen**",
+     "exampleZh": "比较(hat = haben)",
+     "note": "ei–i · 现在时 无 · untrennbar · 不可分前缀,无 ge-",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "ei–i"
+     ]
+    },
+    {
+     "de": "verstehen",
+     "gender": "动",
+     "plural": "versteht · hat verstanden",
+     "zh": "理解;懂",
+     "example": "er versteht. — hat **verstanden**",
+     "exampleZh": "理解;懂(hat = haben)",
+     "note": "e–a · 现在时 无 · untrennbar · 不可分前缀,无 ge-;stehen 用 hat,不是 ist",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "e–a"
+     ]
+    },
+    {
+     "de": "vorlesen",
+     "gender": "可分",
+     "plural": "liest vor · hat vorgelesen",
+     "zh": "朗读",
+     "example": "er liest vor. — hat **vorgelesen**",
+     "exampleZh": "朗读(hat = haben)",
+     "note": "e–e · 现在时 e→ie · trennbar · ge- 夹在 vor- 之后",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "e–e",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "waschen",
+     "gender": "动",
+     "plural": "wäscht · hat gewaschen",
+     "zh": "洗",
+     "example": "er wäscht. — hat **gewaschen**",
+     "exampleZh": "洗(hat = haben)",
+     "note": "a–a · 现在时 a→ä · einfach",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "a–a"
+     ]
+    },
+    {
+     "de": "wehtun",
+     "gender": "可分",
+     "plural": "tut weh · hat wehgetan",
+     "zh": "疼;弄疼",
+     "example": "er tut weh. — hat **wehgetan**",
+     "exampleZh": "疼;弄疼(hat = haben)",
+     "note": "Sonderform · 现在时 无 · trennbar · tun 完全不规则;可分,ge- 夹中间",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "Sonderform",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "wiedergeben",
+     "gender": "可分",
+     "plural": "gibt wieder · hat wiedergegeben",
+     "zh": "归还;复述",
+     "example": "er gibt wieder. — hat **wiedergegeben**",
+     "exampleZh": "归还;复述(hat = haben)",
+     "note": "e–e · 现在时 e→i · trennbar · wieder- 此处可分(有 ge- 夹中间)",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "e–e",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "wiegen",
+     "gender": "动",
+     "plural": "wiegt · hat gewogen",
+     "zh": "称重;重达",
+     "example": "er wiegt. — hat **gewogen**",
+     "exampleZh": "称重;重达(hat = haben)",
+     "note": "ie/ie-类–o · 现在时 无 · einfach · 现在时不变音,但 PII 变 o",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "ie/ie-类–o"
+     ]
+    },
+    {
+     "de": "wissen",
+     "gender": "动",
+     "plural": "weiß · hat gewusst",
+     "zh": "知道",
+     "example": "er weiß. — hat **gewusst**",
+     "exampleZh": "知道(hat = haben)",
+     "note": "Mischverb · 现在时 i→ei(单数不规则) · einfach · 混合动词:变元音又加 -t;单数 weiß/weißt/weiß",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "Mischverb"
+     ]
+    },
+    {
+     "de": "ziehen",
+     "gender": "动",
+     "plural": "zieht · hat gezogen",
+     "zh": "拉;拽",
+     "example": "er zieht. — hat **gezogen**",
+     "exampleZh": "拉;拽(hat = haben)",
+     "note": "ie/ie-类–o · 现在时 无 · einfach · 表「搬迁」时用 ist gezogen",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "ie/ie-类–o"
+     ]
+    },
+    {
+     "de": "zuhaben",
+     "gender": "可分",
+     "plural": "hat zu · hat zugehabt",
+     "zh": "关门;未营业",
+     "example": "er hat zu. — hat **zugehabt**",
+     "exampleZh": "关门;未营业(hat = haben)",
+     "note": "Sonderform · 现在时 无 · trennbar · haben 不规则;可分,ge- 夹中间",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "Sonderform",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "zurückfahren",
+     "gender": "可分",
+     "plural": "fährt zurück · ist zurückgefahren",
+     "zh": "返回;开回",
+     "example": "er fährt zurück. — ist **zurückgefahren**",
+     "exampleZh": "返回;开回(ist = sein)",
+     "note": "a–a · 现在时 a→ä · trennbar · 位移动词用 ist;与 fahren 同族",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "a–a",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "zurückfinden",
+     "gender": "可分",
+     "plural": "findet zurück · hat zurückgefunden",
+     "zh": "找回路",
+     "example": "er findet zurück. — hat **zurückgefunden**",
+     "exampleZh": "找回路(hat = haben)",
+     "note": "i–u · 现在时 无 · trennbar · 虽含位移义仍用 hat(反直觉)",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "i–u",
+      "trennbar"
+     ]
+    },
+    {
+     "de": "haben",
+     "gender": "动",
+     "plural": "hat · hat gehabt",
+     "zh": "有;拥有",
+     "example": "er hat. — hat **gehabt**",
+     "exampleZh": "有;拥有(hat = haben)",
+     "note": "Sonderform · 现在时 无 · einfach · 完全不规则:du hast / er hat",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "Sonderform"
+     ]
+    },
+    {
+     "de": "sein",
+     "gender": "动",
+     "plural": "ist · ist gewesen",
+     "zh": "是;存在",
+     "example": "er ist. — ist **gewesen**",
+     "exampleZh": "是;存在(ist = sein)",
+     "note": "Sonderform · 现在时 无 · einfach · 完全不规则:bin/bist/ist;完成时用 ist",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "Sonderform"
+     ]
+    },
+    {
+     "de": "werden",
+     "gender": "动",
+     "plural": "wird · ist geworden",
+     "zh": "变成;成为",
+     "example": "er wird. — ist **geworden**",
+     "exampleZh": "变成;成为(ist = sein)",
+     "note": "Sonderform · 现在时 e→i · einfach · 用 ist,不是 hat;被动态中 PII 作 worden",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "Sonderform"
+     ]
+    },
+    {
+     "de": "dürfen",
+     "gender": "情态",
+     "plural": "darf · hat gedurft",
+     "zh": "允许;可以",
+     "example": "er darf. — hat **gedurft**",
+     "exampleZh": "允许;可以(hat = haben)",
+     "note": "Modalverb · 现在时 ü→a · einfach · 带动词不定式时用 hat dürfen(替代不定式)",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "Modalverb"
+     ]
+    },
+    {
+     "de": "können",
+     "gender": "情态",
+     "plural": "kann · hat gekonnt",
+     "zh": "能;会",
+     "example": "er kann. — hat **gekonnt**",
+     "exampleZh": "能;会(hat = haben)",
+     "note": "Modalverb · 现在时 ö→a · einfach · 带动词不定式时用 hat können",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "Modalverb"
+     ]
+    },
+    {
+     "de": "müssen",
+     "gender": "情态",
+     "plural": "muss · hat gemusst",
+     "zh": "必须",
+     "example": "er muss. — hat **gemusst**",
+     "exampleZh": "必须(hat = haben)",
+     "note": "Modalverb · 现在时 ü→u · einfach · 带动词不定式时用 hat müssen",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "Modalverb"
+     ]
+    },
+    {
+     "de": "sollen",
+     "gender": "情态",
+     "plural": "soll · hat gesollt",
+     "zh": "应该",
+     "example": "er soll. — hat **gesollt**",
+     "exampleZh": "应该(hat = haben)",
+     "note": "Modalverb · 现在时 无 · einfach · 现在时单数不变音;带不定式时用 hat sollen",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "Modalverb"
+     ]
+    },
+    {
+     "de": "wollen",
+     "gender": "情态",
+     "plural": "will · hat gewollt",
+     "zh": "想要",
+     "example": "er will. — hat **gewollt**",
+     "exampleZh": "想要(hat = haben)",
+     "note": "Modalverb · 现在时 o→i · einfach · 带动词不定式时用 hat wollen",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "Modalverb"
+     ]
+    },
+    {
+     "de": "möchten",
+     "gender": "情态",
+     "plural": "möchte · hat gemocht",
+     "zh": "想要;愿意",
+     "example": "er möchte. — hat **gemocht**",
+     "exampleZh": "想要;愿意(hat = haben)",
+     "note": "Modalverb · 现在时 无 · einfach · möchten 无独立完成时,借用 mögen 的 gemocht",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "Modalverb"
+     ]
+    },
+    {
+     "de": "mögen",
+     "gender": "情态",
+     "plural": "mag · hat gemocht",
+     "zh": "喜欢",
+     "example": "er mag. — hat **gemocht**",
+     "exampleZh": "喜欢(hat = haben)",
+     "note": "Modalverb · 现在时 ö→a · einfach · 与 möchten 共用 PII gemocht",
+     "level": "A2",
+     "tags": [
+      "unregelmäßig",
+      "Modalverb"
+     ]
     }
+   ]
+  }
   ]
 };

@@ -170,7 +170,8 @@
     [7, "形容词 Adjektive", "词尾三套 + 比较级"],
     [8, "从句与语序", "weil/wenn/dass/ob"],
     [9, "写作与表达", "邮件 + 描述人 + 看图"],
-    [10, "词汇导航 Wortschatz", "按主题背词"]
+    [10, "词汇导航 Wortschatz", "按主题背词"],
+    [11, "不规则动词训练营", "完成时 104 词 · 元音家族"]
   ];
   function renderNav() {
     const nav = $("#module-nav");
