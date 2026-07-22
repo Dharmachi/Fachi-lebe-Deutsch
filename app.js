@@ -19,6 +19,8 @@
     reviewQueue: [], reviewIdx: 0, reviewFlipped: false, reviewTitle: "", reviewSource: "due",
     // 搜索
     searchQuery: "", searchTag: "", searchLevel: "",
+    // 闯关(不规则动词训练营)
+    drillId: null, drillIdx: 0, drillMode: "hub", drillScore: { correct: 0, total: 0 },
     score: { correct: 0, total: 0 }
   };
   /* ---------- 「我的补充」词库(用户自己加的词,存 localStorage,可分合集) ---------- */
@@ -184,7 +186,13 @@
       const active = state.view === "module" && id === state.moduleId;
       const item = el("button", {
         class: "nav-item" + (active ? " active" : "") + (ready ? "" : " todo"),
-        onclick: ready ? () => { state.view = "module"; state.moduleId = id; render(); } : null
+        onclick: ready ? () => {
+          state.view = "module"; state.moduleId = id;
+          const mm = DATA.modules.find((x) => x.id === id);
+          state.tab = (mm && mm.drills && mm.drills.length) ? "drill" : "grammar";
+          state.drillMode = "hub";
+          render();
+        } : null
       }, [
         el("span", {}, ready ? `${id}. ${title}` : `${id}. ${title} ⬜`),
         el("span", { class: "nav-sub" }, sub)
@@ -300,6 +308,9 @@
   const MODULE_TABS = [
     ["grammar", "📐 语法"], ["vocab", "🗂️ 单词"], ["exercises", "✏️ 习题"], ["quiz", "🔁 复习"]
   ];
+  // 有 drills 的模块(如不规则动词训练营):闯关为主,表格降为参考
+  const DRILL_TABS = [["drill", "🎯 闯关背词"], ["grammar", "📖 规律表(参考)"]];
+  const tabsForModule = (m) => (m && m.drills && m.drills.length) ? DRILL_TABS : MODULE_TABS;
   const VOCAB_TABS = [
     ["cards", "🃏 词卡"], ["cloze", "✏️ 例句挖空"]
   ];
@@ -307,7 +318,8 @@
     const bar = $("#tabs");
     bar.innerHTML = "";
     if (state.view === "review" || state.view === "search" || state.view === "add") return;   // 复习 / 搜索 / 添加不用标签页
-    const defs = state.view === "vocab" ? VOCAB_TABS : MODULE_TABS;
+    const defs = state.view === "vocab" ? VOCAB_TABS : tabsForModule(currentModule());
+    if (state.view === "module" && !defs.some(([id]) => id === state.tab)) state.tab = defs[0][0];
     const cur = state.view === "vocab" ? state.vocabTab : state.tab;
     defs.forEach(([id, label]) => {
       const btn = el("button", {
@@ -918,7 +930,8 @@
     grammar: (m) => renderGrammar(m),
     vocab: (m) => renderVocab(m),
     exercises: (m) => renderQuestionList(m.exercises, "课上原题 + 自测题,边做边看反馈。"),
-    quiz: (m) => renderQuestionList(m.quiz, "自动生成的新复习题(区别于原题)。")
+    quiz: (m) => renderQuestionList(m.quiz, "自动生成的新复习题(区别于原题)。"),
+    drill: (m) => renderDrill(m)
   };
 
   function renderPanel() {
@@ -929,7 +942,111 @@
     const m = currentModule();
     const panel = $("#panel");
     panel.innerHTML = "";
-    panel.appendChild(TABS[state.tab](m));
+    let tab = state.tab;
+    if (!tabsForModule(m).some(([id]) => id === tab)) tab = tabsForModule(m)[0][0];
+    panel.appendChild(TABS[tab](m));
+  }
+
+  /* ---------- 闯关背词(不规则动词训练营) ---------- */
+  function renderDrill(m) {
+    if (state.drillMode === "run" && state.drillId) return renderDrillRun(m);
+    return renderDrillHub(m);
+  }
+  function renderDrillHub(m) {
+    const wrap = el("div");
+    wrap.appendChild(el("p", { class: "muted" }, "一关一关来,从易到难。选择题先建立反射,填空题再主动写出来——比盯着表格记得牢。想看规律/口诀,点上面「📖 规律表」。"));
+    m.drills.forEach((d, i) => {
+      const card = el("div", { class: "card drill-card" });
+      card.appendChild(el("h3", {}, `Level ${i + 1} · ${d.name}`));
+      card.appendChild(el("div", {}, [
+        el("span", { class: "badge" }, d.badge || ""),
+        el("span", { class: "badge" }, d.questions.length + " 题")
+      ]));
+      if (d.tip) card.appendChild(el("p", { class: "summary" }, d.tip));
+      card.appendChild(el("button", {
+        class: "btn", onclick: () => {
+          state.drillId = d.id; state.drillMode = "run"; state.drillIdx = 0;
+          state.drillScore = { correct: 0, total: 0 }; renderPanel();
+        }
+      }, "▶ 开始这一关"));
+      wrap.appendChild(card);
+    });
+    return wrap;
+  }
+  function renderDrillRun(m) {
+    const idx = m.drills.findIndex((d) => d.id === state.drillId);
+    const lvl = m.drills[idx];
+    const qs = lvl.questions;
+    const i = state.drillIdx;
+    const wrap = el("div");
+    wrap.appendChild(el("button", { class: "btn ghost", onclick: () => { state.drillMode = "hub"; renderPanel(); } }, "← 关卡列表"));
+
+    if (i >= qs.length) {
+      const pct = Math.round(state.drillScore.correct / qs.length * 100);
+      const pass = pct >= 80;
+      const c = el("div", { class: "card" });
+      c.appendChild(el("h3", {}, pass ? "🎉 过关!" : "再练一遍会更稳"));
+      c.appendChild(el("div", { class: "drill-score-big" }, `正确率 ${pct}%　(${state.drillScore.correct} / ${qs.length})`));
+      c.appendChild(el("p", { class: "muted" }, pass ? "80% 以上算过关。趁热打铁进下一关,或明天再回来巩固。" : "低于 80%,建议再来一遍;答错的重点看解析。"));
+      const btns = [el("button", { class: "btn ghost", onclick: () => { state.drillIdx = 0; state.drillScore = { correct: 0, total: 0 }; renderPanel(); } }, "↻ 再来一遍")];
+      if (idx < m.drills.length - 1) btns.push(el("button", { class: "btn good-btn", onclick: () => { state.drillId = m.drills[idx + 1].id; state.drillIdx = 0; state.drillScore = { correct: 0, total: 0 }; renderPanel(); } }, "下一关 →"));
+      c.appendChild(el("div", { class: "rev-grade" }, btns));
+      wrap.appendChild(c);
+      return wrap;
+    }
+
+    const pct = Math.round(i / qs.length * 100);
+    wrap.appendChild(el("div", { class: "drill-head" }, [
+      el("div", { class: "drill-bar" }, [el("div", { class: "drill-bar-fill", style: `width:${pct}%` })]),
+      el("div", { class: "review-progress" }, `Level ${idx + 1} · ${lvl.name}　第 ${i + 1} / ${qs.length} 题　已对 ${state.drillScore.correct}`)
+    ]));
+    wrap.appendChild(buildDrillCard(qs[i]));
+    return wrap;
+  }
+  function buildDrillCard(q) {
+    const card = el("div", { class: "card" });
+    card.appendChild(el("div", { class: "q" }, [
+      document.createTextNode(q.prompt),
+      q.hint ? el("div", { class: "hint" }, "提示:" + q.hint) : null
+    ]));
+    const fb = el("div"), nextBox = el("div", { class: "drill-next" });
+    const advance = () => { state.drillIdx++; renderPanel(); };
+    const showNext = () => { nextBox.appendChild(el("button", { class: "btn", onclick: advance }, "下一题 →")); };
+
+    if (q.type === "choice") {
+      const row = el("div", { class: "exrow" });
+      q.options.forEach((opt) => {
+        const b = el("button", { class: "opt" }, opt);
+        b.addEventListener("click", () => {
+          if (row.dataset.done) return; row.dataset.done = "1";
+          const ok = opt === q.answer;
+          b.classList.add(ok ? "correct" : "wrong");
+          if (!ok) [...row.children].find((c) => c.textContent === q.answer)?.classList.add("correct");
+          state.drillScore.total++; if (ok) state.drillScore.correct++;
+          showFeedback(fb, ok, q.explanation); showNext();
+        });
+        row.appendChild(b);
+      });
+      card.appendChild(row);
+    } else {
+      const input = el("input", { type: "text", placeholder: "填德语…" });
+      const btn = el("button", { class: "btn" }, "检查");
+      const check = () => {
+        if (input.dataset.done) return; input.dataset.done = "1";
+        const val = input.value.trim();
+        const ans = Array.isArray(q.answer) ? q.answer : [q.answer];
+        const ok = ans.some((a) => a.toLowerCase() === val.toLowerCase());
+        input.classList.add(ok ? "correct" : "wrong");
+        state.drillScore.total++; if (ok) state.drillScore.correct++;
+        showFeedback(fb, ok, (ok ? "" : `正确:${ans.join(" / ")}。`) + q.explanation); showNext();
+      };
+      btn.addEventListener("click", check);
+      input.addEventListener("keydown", (e) => { if (e.key === "Enter") check(); });
+      card.appendChild(el("div", { class: "exrow" }, [input, btn]));
+    }
+    card.appendChild(fb);
+    card.appendChild(nextBox);
+    return card;
   }
 
   function render() {

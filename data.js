@@ -1732,6 +1732,856 @@ window.GERMAN_DATA = {
     "hilfsverb",
     "partizip"
    ],
+   "drills": [
+     {
+      "id": "l1-hilfsverb",
+      "name": "hat 还是 ist",
+      "badge": "① 最简单 · 二选一",
+      "tip": "只判助动词。看到过去分词或句子,秒选 hat / ist,建立条件反射。",
+      "questions": [
+       {
+        "type": "choice",
+        "prompt": "Er ___ um sechs Uhr aufgestanden.",
+        "options": [
+         "hat",
+         "ist"
+        ],
+        "answer": "ist",
+        "explanation": "aufstehen 表示「从躺到站」的位置/状态变化，用 sein。注意同族的 stehen（hat gestanden）和 verstehen（hat verstanden）都用 haben——只有加了 auf- 的这个变成 ist。"
+       },
+       {
+        "type": "choice",
+        "prompt": "aufgestanden",
+        "options": [
+         "hat",
+         "ist"
+        ],
+        "answer": "ist",
+        "explanation": "aufstehen = ist aufgestanden。判断路径：没有第四格宾语 → 有状态变化 → sein。这是「同族不同助动词」的典型反直觉点。"
+       },
+       {
+        "type": "choice",
+        "prompt": "Er ___ sofort aufgestanden.",
+        "options": [
+         "hat",
+         "ist"
+        ],
+        "answer": "ist",
+        "explanation": "aufstehen 用 sein。别被 stehen（hat gestanden）带偏：stehen 是静态持续，aufstehen 是状态改变。"
+       },
+       {
+        "type": "choice",
+        "prompt": "eingeschlafen",
+        "options": [
+         "hat",
+         "ist"
+        ],
+        "answer": "ist",
+        "explanation": "einschlafen「入睡」是状态变化（醒→睡）→ sein。而 schlafen「睡着」是状态持续 → hat geschlafen。ein- 一加上去助动词就翻面。"
+       },
+       {
+        "type": "choice",
+        "prompt": "Das Kind ___ schnell eingeschlafen.",
+        "options": [
+         "hat",
+         "ist"
+        ],
+        "answer": "ist",
+        "explanation": "einschlafen = ist eingeschlafen，状态变化用 sein。同一逻辑：einfallen（ist eingefallen）也是变化，gefallen（hat gefallen）是持续状态。"
+       },
+       {
+        "type": "choice",
+        "prompt": "Er ___ im Zug eingeschlafen.",
+        "options": [
+         "hat",
+         "ist"
+        ],
+        "answer": "ist",
+        "explanation": "einschlafen 用 sein。对照记：Er hat gut geschlafen（持续，hat） / Er ist schnell eingeschlafen（变化，ist）。"
+       },
+       {
+        "type": "choice",
+        "prompt": "ausgesehen",
+        "options": [
+         "hat",
+         "ist"
+        ],
+        "answer": "hat",
+        "explanation": "aussehen「看起来」是感官/状态描述动词，用 haben，不是 sein。虽然它以 aus- 开头，看着像 aussteigen（ist）、ausgehen（ist）那类位移词，但完全没有位移。"
+       },
+       {
+        "type": "choice",
+        "prompt": "Er ___ müde ausgesehen.",
+        "options": [
+         "hat",
+         "ist"
+        ],
+        "answer": "hat",
+        "explanation": "aussehen = hat ausgesehen。sehen 家族全部用 haben：gesehen / angesehen / ferngesehen / ausgesehen。前缀不改变这一点。"
+       },
+       {
+        "type": "choice",
+        "prompt": "Das Essen ___ gut ausgesehen.",
+        "options": [
+         "hat",
+         "ist"
+        ],
+        "answer": "hat",
+        "explanation": "aussehen 用 haben。决策树第②步「位移/状态变化」在这里不成立——它只是描述外观，所以落到例外叶子：aussehen = haben。"
+       },
+       {
+        "type": "choice",
+        "prompt": "bekommen (Partizip II)",
+        "options": [
+         "hat",
+         "ist"
+        ],
+        "answer": "hat",
+        "explanation": "bekommen 用 haben，因为它是及物动词（bekommen + 第四格宾语）→ 决策树第①步就判 haben。别被词根 kommen（ist gekommen）骗了。顺带：be- 是不可分前缀，所以 PII 不加 ge-，与原形同形。"
+       },
+       {
+        "type": "choice",
+        "prompt": "Er ___ einen Brief bekommen.",
+        "options": [
+         "hat",
+         "ist"
+        ],
+        "answer": "hat",
+        "explanation": "einen Brief 是第四格宾语，有第四格必用 haben。kommen / ankommen / mitkommen / drankommen 全是 ist，唯独 bekommen 是 hat。"
+       },
+       {
+        "type": "choice",
+        "prompt": "Er ___ ein Geschenk bekommen.",
+        "options": [
+         "hat",
+         "ist"
+        ],
+        "answer": "hat",
+        "explanation": "bekommen = hat bekommen。一个词踩三个坑：助动词 hat（不是 ist）、不可分前缀无 ge-、PII 与原形同形。"
+       },
+       {
+        "type": "choice",
+        "prompt": "Er ___ den Computer hochgefahren.",
+        "options": [
+         "hat",
+         "ist"
+        ],
+        "answer": "hat",
+        "explanation": "这里有第四格宾语 den Computer → 决策树第①步直接判 haben。hochfahren 是 fahren 家族里唯一的叛徒：fahren / abfahren / losfahren / zurückfahren 全用 ist。"
+       },
+       {
+        "type": "choice",
+        "prompt": "Er ___ den Computer schon hochgefahren.",
+        "options": [
+         "hat",
+         "ist"
+        ],
+        "answer": "hat",
+        "explanation": "及物用法（启动电脑）→ haben。记忆钩子：能问「把什么 hochfahren？」→ 有宾语 → hat。"
+       },
+       {
+        "type": "choice",
+        "prompt": "hochgefahren",
+        "options": [
+         "hat",
+         "ist"
+        ],
+        "answer": "hat",
+        "explanation": "hochfahren 用 haben。虽然含 fahren，但它的常用义是及物的「启动（电脑）」，及物压过位移，判 haben。"
+       },
+       {
+        "type": "choice",
+        "prompt": "geblieben",
+        "options": [
+         "hat",
+         "ist"
+        ],
+        "answer": "ist",
+        "explanation": "bleiben 用 sein——完全不位移却用 sein，任何规则都推不出来，属于纯例外叶子：bleiben / sein / werden 三个都是 sein，必须死记。"
+       }
+      ]
+     },
+     {
+      "id": "l2-pii-choice",
+      "name": "选对完成时形式",
+      "badge": "② 简单 · 三选一",
+      "tip": "给原形,从几个相似选项里认出正确的完成时——先学会「认」。",
+      "questions": [
+       {
+        "type": "choice",
+        "prompt": "Er ___ den Computer hochgefahren.（他把电脑启动了）",
+        "options": [
+         "hat",
+         "ist",
+         "wird"
+        ],
+        "answer": "hat",
+        "explanation": "hochfahren 在「启动电脑」义上是及物动词（den Computer 是第四格宾语），及物动词一律用 haben。注意它是 fahren 家族 5 个词里唯一用 hat 的：fahren / abfahren / losfahren / zurückfahren 全部用 ist。"
+       },
+       {
+        "type": "choice",
+        "prompt": "fahren 的完成时正确形式是？",
+        "options": [
+         "ist gefahren",
+         "hat gefahren",
+         "hat gefahrt"
+        ],
+        "answer": "ist gefahren",
+        "explanation": "fahren 是位移动词，用 sein。它属 a–a 组：原形 a、PII 回到 a（gefahren），只有现在时变音 er fährt。gefahrt 是把强变化误当弱变化。"
+       },
+       {
+        "type": "choice",
+        "prompt": "Der Bus ___ pünktlich losgefahren.（公交准时出发了）",
+        "options": [
+         "ist",
+         "hat",
+         "wird"
+        ],
+        "answer": "ist",
+        "explanation": "losfahren 表位移，用 sein。fahren 族默认 ist，唯一例外是及物的 hochfahren（hat）。"
+       },
+       {
+        "type": "choice",
+        "prompt": "bekommen 的第二分词是？",
+        "options": [
+         "bekommen",
+         "gebekommen",
+         "bekommt"
+        ],
+        "answer": "bekommen",
+        "explanation": "be- 是不可分前缀，带不可分前缀的动词第二分词不加 ge-；kommen 是 o–o 组，词干元音本来就是 o，所以 PII 与原形完全同形：er hat bekommen。"
+       },
+       {
+        "type": "choice",
+        "prompt": "Der Zug ___ um acht angekommen.（火车八点到了）",
+        "options": [
+         "ist",
+         "hat",
+         "wird"
+        ],
+        "answer": "ist",
+        "explanation": "ankommen 是位移动词用 sein。整个 kommen 家族（kommen / ankommen / mitkommen / drankommen）都用 ist，唯独 bekommen 用 hat——因为它已经不表示「来」而是「得到」。"
+       },
+       {
+        "type": "choice",
+        "prompt": "drankommen（轮到）的第二分词是？",
+        "options": [
+         "drangekommen",
+         "gedrankommen",
+         "drankommen"
+        ],
+        "answer": "drangekommen",
+        "explanation": "dran- 是可分前缀，所以 ge- 必须夹在中间：dran + ge + kommen。放到最前面（gedrankommen）是把可分误判成不可分。"
+       },
+       {
+        "type": "choice",
+        "prompt": "aufstehen 的完成时是？",
+        "options": [
+         "ist aufgestanden",
+         "hat aufgestanden",
+         "ist aufgestehen"
+        ],
+        "answer": "ist aufgestanden",
+        "explanation": "aufstehen 表状态变化/位移，用 sein——这是反直觉点：同族的 stehen 和 verstehen 都用 hat。词干 e–a 变化：steh→stand。"
+       },
+       {
+        "type": "choice",
+        "prompt": "Er ___ die Frage verstanden.（他听懂了这个问题）",
+        "options": [
+         "hat",
+         "ist",
+         "wird"
+        ],
+        "answer": "hat",
+        "explanation": "verstehen 是及物动词，用 haben。ver- 不可分所以无 ge-：verstanden。别被同族 aufstehen（ist）带跑。"
+       },
+       {
+        "type": "choice",
+        "prompt": "Er ___ zwei Stunden gesessen.（他坐了两小时）",
+        "options": [
+         "hat",
+         "ist",
+         "wird"
+        ],
+        "answer": "hat",
+        "explanation": "sitzen 是状态动词，德国标准语用 haben。同理 liegen 也是 hat gelegen。别因为 aufstehen 用 ist 就把这一组也改成 ist。"
+       },
+       {
+        "type": "choice",
+        "prompt": "Das Kind ___ sofort eingeschlafen.（孩子马上睡着了）",
+        "options": [
+         "ist",
+         "hat",
+         "wird"
+        ],
+        "answer": "ist",
+        "explanation": "einschlafen 表「状态变化」（从醒到睡），状态变化动词用 sein；而 schlafen 表状态持续，用 hat geschlafen。同一对立还有 einfallen（ist）对 gefallen（hat）。"
+       },
+       {
+        "type": "choice",
+        "prompt": "Mir ___ der Name eingefallen.（我想起这个名字了）",
+        "options": [
+         "ist",
+         "hat",
+         "wird"
+        ],
+        "answer": "ist",
+        "explanation": "einfallen 表突然出现的状态变化，用 sein，并常带第三格（mir）。对照 gefallen 用 hat——ein- 与 ge- 一个可分一个不可分，助动词也相反。"
+       },
+       {
+        "type": "choice",
+        "prompt": "gefallen 的第二分词是？",
+        "options": [
+         "gefallen",
+         "gegefallen",
+         "gefallt"
+        ],
+        "answer": "gefallen",
+        "explanation": "这里的 ge- 是不可分前缀，已经占了位置，不能再加一个 ge-，所以 PII 与原形同形：Das Buch hat mir gefallen。a–a 组元音不变；gefallt 是误用弱变化。"
+       },
+       {
+        "type": "choice",
+        "prompt": "Er ___ heute müde ausgesehen.（他今天看起来很累）",
+        "options": [
+         "hat",
+         "ist",
+         "wird"
+        ],
+        "answer": "hat",
+        "explanation": "aussehen 是感官/状态动词，用 haben，尽管长得像 aus- 开头的位移词（aussteigen ist / ausgehen ist）。sehen 家族 ansehen、fernsehen 同样全部用 hat。"
+       },
+       {
+        "type": "choice",
+        "prompt": "Er ___ zu Hause geblieben.（他待在家里了）",
+        "options": [
+         "ist",
+         "hat",
+         "wird"
+        ],
+        "answer": "ist",
+        "explanation": "bleiben 完全不表示位移，却用 sein——这是纯例外，任何规则都推不出来，只能死记 ist geblieben。它属 ei–ie 组，PII 为 geblieben。"
+       }
+      ]
+     },
+     {
+      "id": "l3-family",
+      "name": "元音家族归类",
+      "badge": "③ 中等 · 归类",
+      "tip": "把动词归进正确的元音变化家族。记住 14 个家族,比死记 104 个词轻松。",
+      "questions": [
+       {
+        "type": "choice",
+        "prompt": "把卡片 aufschreiben 放进哪个家族桶?",
+        "options": [
+         "ei–ie",
+         "ei–i",
+         "ie–o"
+        ],
+        "answer": "ei–ie",
+        "explanation": "可分动词按词根判定:auf- + schreiben,schreiben 属 ei–ie(geschrieben),所以 aufgeschrieben 也是长 ie。前缀不影响元音家族,只影响 ge- 的位置(auf-ge-schrieben)。"
+       },
+       {
+        "type": "choice",
+        "prompt": "把卡片 aussteigen 放进哪个家族桶?",
+        "options": [
+         "ei–ie",
+         "ei–i",
+         "ei–ei"
+        ],
+        "answer": "ei–ie",
+        "explanation": "steigen 走 ei→长 ie:ausgestiegen。ei 家族有三种结局,steigen/schreiben/bleiben/scheinen/überweisen 这一支全部变长 ie。"
+       },
+       {
+        "type": "choice",
+        "prompt": "把卡片 unterstreichen 放进哪个家族桶?",
+        "options": [
+         "ei–i",
+         "ei–ie",
+         "ei–ei"
+        ],
+        "answer": "ei–i",
+        "explanation": "PII 是 unterstrichen,元音变短 i(后面接 ch)。ei 家族中 schneiden / vergleichen / unterstreichen 这一支走短 i,不是长 ie。另外 unter- 在此不可分,所以没有 ge-。"
+       },
+       {
+        "type": "choice",
+        "prompt": "把卡片 vergleichen 放进哪个家族桶?",
+        "options": [
+         "ei–i",
+         "ei–ie",
+         "ie–o"
+        ],
+        "answer": "ei–i",
+        "explanation": "verglichen:短 i,判断窍门是 PII 词干后面跟着 ch 或双辅音时元音变短。ver- 不可分,无 ge-。"
+       },
+       {
+        "type": "choice",
+        "prompt": "这一轮 ei 家族里混进了 heißen。它该进哪个桶?",
+        "options": [
+         "ei–ei",
+         "ei–ie",
+         "ei–i"
+        ],
+        "answer": "ei–ei",
+        "explanation": "heißen 的 PII 是 geheißen,元音完全不变。它是 ei 家族的第三种结局(不变),所以 ei 轮绝不能一刀切成「都变 ie」。"
+       },
+       {
+        "type": "choice",
+        "prompt": "下面哪张卡不属于 ei–ie 桶?",
+        "options": [
+         "schneiden",
+         "scheinen",
+         "überweisen"
+        ],
+        "answer": "schneiden",
+        "explanation": "scheinen→geschienen、überweisen→überwiesen 都是长 ie;schneiden→geschnitten 是短 i(且双写 tt),属 ei–i 桶。"
+       },
+       {
+        "type": "choice",
+        "prompt": "heißen 的第二分词是哪一个?",
+        "options": [
+         "geheißen",
+         "gehießen",
+         "geheißt"
+        ],
+        "answer": "geheißen",
+        "explanation": "heißen 是强变化但元音不变,只加 ge-…-en:geheißen。写成 gehießen 是被 ei–ie 家族带偏,写成 geheißt 是误用弱变化 -t 结尾。"
+       },
+       {
+        "type": "choice",
+        "prompt": "bleiben 该进哪个桶?",
+        "options": [
+         "ei–ie",
+         "ei–i",
+         "ei–ei"
+        ],
+        "answer": "ei–ie",
+        "explanation": "geblieben,长 ie。顺带记住例外:bleiben 完全不位移却用 sein(ist geblieben),这条推不出来只能死记。"
+       },
+       {
+        "type": "choice",
+        "prompt": "把卡片 abfahren 放进哪个家族桶?",
+        "options": [
+         "a–a",
+         "e–a",
+         "o–o"
+        ],
+        "answer": "a–a",
+        "explanation": "按词根 fahren 判定:gefahren,PII 元音回到 a。现在时才变音(er fährt ab),PII 不变音——这是 a–a 家族的统一规律。"
+       },
+       {
+        "type": "choice",
+        "prompt": "把卡片 einladen 放进哪个家族桶?它的 er 形式是?",
+        "options": [
+         "a–a,er lädt ein",
+         "a–a,er ladet ein",
+         "e–a,er lädt ein"
+        ],
+        "answer": "a–a,er lädt ein",
+        "explanation": "eingeladen 属 a–a。现在时 a→ä 且不加 e:er lädt ein,写成 er ladet ein 是把强变化误当弱变化。"
+       },
+       {
+        "type": "choice",
+        "prompt": "这一轮 a–a 桶里混进了 laufen。判对之后,它的例外点是什么?",
+        "options": [
+         "现在时是 au→äu(er läuft),不是 a→ä",
+         "PII 变成 o",
+         "不可分前缀,没有 ge-"
+        ],
+        "answer": "现在时是 au→äu(er läuft),不是 a→ä",
+        "explanation": "laufen 的 PII 确实是 gelaufen(a–a),但现在时变音走 au→äu:er läuft。别按 fahren/tragen 的 a→ä 类推成 *er läft。另外它用 sein。"
+       },
+       {
+        "type": "choice",
+        "prompt": "raten 属于哪个桶?",
+        "options": [
+         "a–a",
+         "e–a",
+         "Sonderform"
+        ],
+        "answer": "a–a",
+        "explanation": "geraten 与原形词干同形,归 a–a。现在时变音:er rät(不是 ratet)。同排要一起过的还有 er wäscht / er trägt / er lädt ein。"
+       }
+      ]
+     },
+     {
+      "id": "l4-pii-fill",
+      "name": "默写过去分词",
+      "badge": "④ 较难 · 填空",
+      "tip": "自己写出过去分词或 er-形式。光认得没用,考试口语要你产出。",
+      "questions": [
+       {
+        "type": "fill",
+        "prompt": "abfahren（出发，可分）的第二分词是 ___。",
+        "hint": "可分前缀在前，ge- 夹在前缀和词干中间；元音跟 fahren 一样不变",
+        "answer": [
+         "abgefahren"
+        ],
+        "explanation": "可分动词的 ge- 永远插在前缀与词干之间：ab + ge + fahren。a–a 组元音不变，助动词随 fahren 用 ist。"
+       },
+       {
+        "type": "fill",
+        "prompt": "zurückfahren 的第三人称单数现在时是 ___。",
+        "hint": "a→ä 变音只发生在现在时单数，可分前缀要后置分写",
+        "answer": [
+         "er fährt zurück",
+         "fährt zurück",
+         "er faehrt zurueck",
+         "faehrt zurueck"
+        ],
+        "explanation": "a→ä 只在现在时第二、三人称单数发生，故 fährt；zurück- 是可分前缀，必须后置分写成 er fährt zurück，写成 fährtzurück 判错。"
+       },
+       {
+        "type": "fill",
+        "prompt": "kommen 的第二分词是 ___。",
+        "hint": "o–o 组，简单动词要加 ge-",
+        "answer": [
+         "gekommen"
+        ],
+        "explanation": "kommen 属 o–o 组，元音不变，简单动词加 ge- 和 -en。它是位移动词，用 ist gekommen。"
+       },
+       {
+        "type": "fill",
+        "prompt": "mitkommen 的第二分词是 ___。",
+        "hint": "可分前缀 mit- 在前，ge- 夹中间，元音保持 o",
+        "answer": [
+         "mitgekommen"
+        ],
+        "explanation": "mit + ge + kommen。o–o 组不换元音；随 kommen 用 ist mitgekommen。"
+       },
+       {
+        "type": "fill",
+        "prompt": "stehen 的第二分词是 ___。",
+        "hint": "e–a 组，词干末尾还多一个 d",
+        "answer": [
+         "gestanden"
+        ],
+        "explanation": "stehen 属 e–a 组，PII 为 gestanden（词干扩展出 -d-）。德国标准语用 hat gestanden，不是 ist。"
+       },
+       {
+        "type": "fill",
+        "prompt": "liegen 的第二分词是 ___。",
+        "hint": "ie–e 组，元音缩短成 e；别和规则动词 legen 混",
+        "answer": [
+         "gelegen"
+        ],
+        "explanation": "liegen 属 ie–e 组：ie 在 PII 里变成短 e，得 gelegen。助动词是 hat。规则动词 legen（放）的 PII 是 gelegt，形近但不同。"
+       },
+       {
+        "type": "fill",
+        "prompt": "schlafen 的第二分词是 ___。",
+        "hint": "a–a 组，现在时才变音，PII 不变音",
+        "answer": [
+         "geschlafen"
+        ],
+        "explanation": "schlafen 属 a–a 组：现在时 er schläft 变音，但 PII 回到 a，写 geschlafen 而不是 *geschläfen。助动词 hat。"
+       },
+       {
+        "type": "fill",
+        "prompt": "ansehen 的第二分词是 ___。",
+        "hint": "可分动词，ge- 夹中间；e–e 组元音不变",
+        "answer": [
+         "angesehen"
+        ],
+        "explanation": "an + ge + sehen。sehen 属 e–e 组：现在时变 ie（er sieht an），但 PII 回到 e。助动词 hat。"
+       },
+       {
+        "type": "fill",
+        "prompt": "fernsehen 的第三人称单数现在时是 ___。",
+        "hint": "词根是 sehen，现在时 e→ie；可分部分要后置",
+        "answer": [
+         "er sieht fern",
+         "sieht fern"
+        ],
+        "explanation": "词根 sehen 现在时 e→ie，故 sieht；fern- 可分必须后置分写：er sieht fern。PII 为 ferngesehen，助动词 hat。"
+       },
+       {
+        "type": "fill",
+        "prompt": "finden 的第二分词是 ___。",
+        "hint": "i–u 组，元音换成 u",
+        "answer": [
+         "gefunden"
+        ],
+        "explanation": "finden 属 i–u 组，与 singen / klingen / trinken 同队：i 在 PII 变 u，得 gefunden。助动词 hat。"
+       },
+       {
+        "type": "fill",
+        "prompt": "逆向还原①：看到 PII「genossen」，写出「原形 + 助动词(hat/ist)」。格式：原形, hat/ist",
+        "hint": "ie–o 家族；PII 里的双 s 是因为元音变短了，原形那里元音是长的",
+        "answer": [
+         "genießen, hat",
+         "genießen hat",
+         "genießen / hat"
+        ],
+        "explanation": "genießen 属 ie–o 换音家族：原形长元音 ie 写 ß（genießen），PII 元音缩短为短 o，按正字法长音才用 ß、短音必须写 ss，所以是 genossen。ge- 在这里是不可分前缀，本身已在词首，所以不再另加 ge-。及物、非位移，用 hat。"
+       },
+       {
+        "type": "fill",
+        "prompt": "逆向还原①：看到 PII「gewogen」，写出「原形 + 助动词」。格式：原形, hat/ist",
+        "hint": "「称重、重达」；现在时不变音，只有 PII 掉到 o",
+        "answer": [
+         "wiegen, hat",
+         "wiegen hat",
+         "wiegen / hat"
+        ],
+        "explanation": "wiegen 现在时完全不变音（er wiegt），但 PII 落进 -o- 组：gewogen。词干大改，只有反向练过才认得。非位移，用 hat。"
+       },
+       {
+        "type": "fill",
+        "prompt": "逆向还原①：看到 PII「verstanden」，写出「原形 + 助动词」。格式：原形, hat/ist",
+        "hint": "ver- 是不可分前缀，所以 PII 里没有 ge-；词根是「站」那个词",
+        "answer": [
+         "verstehen, hat",
+         "verstehen hat",
+         "verstehen / hat"
+        ],
+        "explanation": "stehen 族 e–a 换音：stehen→gestanden，加不可分前缀 ver- 后不再加 ge-，得 verstanden。注意 stehen / verstehen 在标准德语里都用 hat，不是 ist。"
+       },
+       {
+        "type": "fill",
+        "prompt": "逆向还原①：看到 PII「aufgestanden」，写出「原形 + 助动词」。格式：原形, hat/ist",
+        "hint": "同样是 stehen 词根，但这个是「早上从床上起来」，助动词跟 stehen 反着来",
+        "answer": [
+         "aufstehen, ist",
+         "aufstehen ist",
+         "aufstehen / ist"
+        ],
+        "explanation": "auf- 可分，ge- 夹在中间：auf+ge+standen。陷阱在助动词：stehen / verstehen 都用 hat，唯独 aufstehen 表示状态改变（躺→站），用 ist。"
+       },
+       {
+        "type": "fill",
+        "prompt": "逆向还原①：看到 PII「ausgestiegen」，写出「原形 + 助动词」。格式：原形, hat/ist",
+        "hint": "ei→长 ie 家族；「从车上下来」",
+        "answer": [
+         "aussteigen, ist",
+         "aussteigen ist",
+         "aussteigen / ist"
+        ],
+        "explanation": "steigen 属 ei–ie 家族（长 ie）：gestiegen；aus- 可分，ge- 夹中间→ausgestiegen。位移动词，用 ist。同族 einsteigen（eingestiegen）、umsteigen（umgestiegen）全部 ist。"
+       },
+       {
+        "type": "fill",
+        "prompt": "逆向还原①：看到 PII「gegangen」，写出「原形 + 助动词」。格式：原形, hat/ist",
+        "hint": "最基础的位移动词，词干由 geh 变成 gang",
+        "answer": [
+         "gehen, ist",
+         "gehen ist",
+         "gehen / ist"
+        ],
+        "explanation": "gehen 属 e–a 特殊组，词干整个改成 gang：gegangen。位移动词，用 ist。同族 ausgehen→ausgegangen、losgehen→losgegangen、rausgehen→rausgegangen 也都是 ist。"
+       },
+       {
+        "type": "fill",
+        "prompt": "逆向还原①：看到 PII「bekommen」（形式与原形完全一样），写出「原形 + 助动词」。格式：原形, hat/ist",
+        "hint": "「收到、得到」；be- 前缀让它一个词踩三个坑",
+        "answer": [
+         "bekommen, hat",
+         "bekommen hat",
+         "bekommen / hat"
+        ],
+        "explanation": "be- 是不可分前缀：①不加 ge-，②kommen 属 o–o 组本来 PII 就是 -kommen，所以 PII 与原形同形；③虽然 kommen / ankommen / mitkommen / drankommen 全用 ist，bekommen 是及物动词（etwas bekommen），必须用 hat。"
+       },
+       {
+        "type": "fill",
+        "prompt": "逆向还原①：看到 PII「geblieben」，写出「原形 + 助动词」。格式：原形, hat/ist",
+        "hint": "「留下、保持」；完全不移动，助动词却是纯例外",
+        "answer": [
+         "bleiben, ist",
+         "bleiben ist",
+         "bleiben / ist"
+        ],
+        "explanation": "bleiben 属 ei–ie 长音家族：geblieben。助动词是纯例外——它一点也不位移，却和 sein/werden 一样用 ist，没有规则可推，只能死记。"
+       }
+      ]
+     },
+     {
+      "id": "l5-context",
+      "name": "放进句子里",
+      "badge": "⑤ 最难 · 句子填空",
+      "tip": "在真实句子里填对助动词 + 过去分词 + 语序。这才是考试和说话真正考的。",
+      "questions": [
+       {
+        "type": "fill",
+        "prompt": "周末报告：Gestern ___ ich um sieben Uhr ___ (aufstehen).",
+        "hint": "起床是「状态变化」，助动词填第二位，第二分词钉死句末",
+        "answer": [
+         "bin ... aufgestanden",
+         "bin aufgestanden",
+         "bin, aufgestanden",
+         "bin/aufgestanden"
+        ],
+        "explanation": "aufstehen 用 sein（ist aufgestanden），虽然词根 stehen 用 haben——同族反直觉必须死记。语序：助动词 bin 占第二位，PII aufgestanden 钉在句末，中间放时间地点，形成动词框架。"
+       },
+       {
+        "type": "fill",
+        "prompt": "Zum Frühstück ___ ich zwei Brötchen ___ (essen).",
+        "hint": "及物动词用 haben；这个 PII 比一般词多出一个音节",
+        "answer": [
+         "habe ... gegessen",
+         "habe gegessen",
+         "habe, gegessen",
+         "habe/gegessen"
+        ],
+        "explanation": "essen 是及物动词，用 haben。PII 是 gegessen（多出一个 ge-，全表唯一例外），不要写成 *geessen。框架：habe 第二位，gegessen 句末。"
+       },
+       {
+        "type": "fill",
+        "prompt": "Dann ___ ich mit der U-Bahn zur Schule ___ (fahren).",
+        "hint": "位移动词，选表示「位置改变」的那个助动词",
+        "answer": [
+         "bin ... gefahren",
+         "bin gefahren",
+         "bin, gefahren",
+         "bin/gefahren"
+        ],
+        "explanation": "fahren 是位移动词，用 sein（ist gefahren），a–a 类元音不变。中文母语者最典型错误是 *Ich habe gefahren nach Wien：助动词错 + 语序错。正确框架：bin 第二位，gefahren 句末。"
+       },
+       {
+        "type": "fill",
+        "prompt": "Der Kurs ___ um acht Uhr ___ (anfangen).",
+        "hint": "可分动词，ge- 要夹在前缀后面；助动词不是位移那个",
+        "answer": [
+         "hat ... angefangen",
+         "hat angefangen",
+         "hat, angefangen",
+         "hat/angefangen"
+        ],
+        "explanation": "anfangen 用 haben（不同于同为 a–a 类的 abfahren 用 sein）。可分前缀 an- 在前，ge- 夹在中间：an+ge+fangen = angefangen。主语 der Kurs 是第三人称单数，助动词用 hat。"
+       },
+       {
+        "type": "fill",
+        "prompt": "Am Abend ___ ich vor dem Fernseher ___ (einschlafen).",
+        "hint": "「睡着」是从醒到睡的状态变化",
+        "answer": [
+         "bin ... eingeschlafen",
+         "bin eingeschlafen",
+         "bin, eingeschlafen",
+         "bin/eingeschlafen"
+        ],
+        "explanation": "einschlafen 表状态变化，用 sein；而 schlafen（状态持续）用 haben。这是同一词根两个助动词的经典对立。ge- 夹在 ein- 之后：ein+ge+schlafen。"
+       },
+       {
+        "type": "fill",
+        "prompt": "Danach ___ ich acht Stunden ___ (schlafen).",
+        "hint": "和「睡着」不同，这里是持续状态",
+        "answer": [
+         "habe ... geschlafen",
+         "habe geschlafen",
+         "habe, geschlafen",
+         "habe/geschlafen"
+        ],
+        "explanation": "schlafen 表持续状态，用 haben（hat geschlafen）；只有 einschlafen（状态变化）才用 sein。a–a 类：现在时 er schläft 变音，但 PII geschlafen 不变音。"
+       },
+       {
+        "type": "fill",
+        "prompt": "Im Büro ___ er zuerst den Computer ___ (hochfahren).",
+        "hint": "这里有第四格宾语 den Computer，助动词跟着及物性走",
+        "answer": [
+         "hat ... hochgefahren",
+         "hat hochgefahren",
+         "hat, hochgefahren",
+         "hat/hochgefahren"
+        ],
+        "explanation": "hochfahren（启动电脑）是及物动词，用 haben——它是 fahren 家族（fahren / abfahren / losfahren / zurückfahren 全用 sein）里唯一的叛徒。判断口诀：有第四格宾语就用 haben。"
+       },
+       {
+        "type": "fill",
+        "prompt": "Gestern ___ ich eine E-Mail von der Bank ___ (bekommen).",
+        "hint": "be- 是不可分前缀；PII 长得和原形一模一样",
+        "answer": [
+         "habe ... bekommen",
+         "habe bekommen",
+         "habe, bekommen",
+         "habe/bekommen"
+        ],
+        "explanation": "bekommen 一词三坑：①用 haben，尽管 kommen/ankommen/mitkommen 全用 sein；②be- 不可分，所以不加 ge-；③PII 与原形同形 bekommen。"
+       },
+       {
+        "type": "choice",
+        "prompt": "判断这句话对不对：Ich bin um 7 Uhr aufgestanden.",
+        "options": [
+         "正确",
+         "错：bin 应改为 habe",
+         "错：aufgestanden 应改为 geaufstanden"
+        ],
+        "answer": "正确",
+        "explanation": "aufstehen 表示「状态变化」，完成时用 sein，所以 ich bin aufgestanden 是对的（注意同族的 stehen / verstehen 反而用 haben）。可分前缀 auf- 后面夹 ge-：auf+ge+standen，写成 geaufstanden 是把 ge- 放错了位置。"
+       },
+       {
+        "type": "choice",
+        "prompt": "判断这句话对不对：Er hat den Computer hochgefahren.",
+        "options": [
+         "正确",
+         "错：hat 应改为 ist",
+         "错：hochgefahren 应改为 gehochfahren"
+        ],
+        "answer": "正确",
+        "explanation": "hochfahren（启动电脑）带宾语 den Computer，是及物用法，所以用 haben——它是 fahren 家族（fahren / abfahren / losfahren / zurückfahren 全用 sein）里唯一的叛徒。ge- 也正确地夹在 hoch- 之后。"
+       },
+       {
+        "type": "choice",
+        "prompt": "判断这句话对不对：Ich habe den Brief bekommen.",
+        "options": [
+         "正确",
+         "错：habe 应改为 bin",
+         "错：bekommen 应改为 begekommen"
+        ],
+        "answer": "正确",
+        "explanation": "bekommen 一词踩三个坑而这句全躲过了：用 haben（不跟 kommen 族的 sein 走）、be- 不可分所以无 ge-、第二分词与不定式同形。"
+       },
+       {
+        "type": "choice",
+        "prompt": "判断这句话对不对：Ich bin zu Hause geblieben.",
+        "options": [
+         "正确",
+         "错：bin 应改为 habe",
+         "错：geblieben 应改为 gebleiben"
+        ],
+        "answer": "正确",
+        "explanation": "bleiben 完全不位移却用 sein，是纯例外必须死记。元音上它属于 ei→ie 长音一队（bleiben / schreiben / steigen / scheinen），所以是 geblieben 不是 gebleiben。"
+       },
+       {
+        "type": "fill",
+        "prompt": "改错：Der Zug ist geabfahren.（句中若有错，写出改正后的那一个词；若全句无误就写 richtig）___",
+        "hint": "可分前缀和词干之间少了点什么，多出来的东西跑到最前面去了",
+        "answer": [
+         "abgefahren",
+         "Abgefahren"
+        ],
+        "explanation": "可分动词的 ge- 必须夹在可分前缀和词干中间：ab + ge + fahren → abgefahren，不能整体前置写成 geabfahren。abfahren 是位移动词，助动词 ist 用得没错。"
+       },
+       {
+        "type": "fill",
+        "prompt": "改错：Er hat das Geschenk begekommen.（句中若有错，写出改正后的那一个词；若全句无误就写 richtig）___",
+        "hint": "be- 这类前缀不允许再插入那个音节",
+        "answer": [
+         "bekommen",
+         "Bekommen"
+        ],
+        "explanation": "be- 是不可分前缀，带不可分前缀的动词第二分词一律不加 ge-，所以是 hat bekommen（PII 与原形完全同形）。另外 bekommen 用 haben，虽然 kommen / ankommen / mitkommen 都用 sein。"
+       },
+       {
+        "type": "fill",
+        "prompt": "改错：Ich bin um sechs geaufstanden.（句中若有错，写出改正后的那一个词；若全句无误就写 richtig）___",
+        "hint": "ge- 站错了队；助动词本身没问题",
+        "answer": [
+         "aufgestanden",
+         "Aufgestanden"
+        ],
+        "explanation": "aufstehen 是可分动词，ge- 要夹在中间：auf + ge + standen → aufgestanden。词干还是 stehen 的 e–a 换音（gestanden）。助动词 bin 正确，aufstehen 用 sein。"
+       },
+       {
+        "type": "fill",
+        "prompt": "改错：Er hat mir das Buch geempfohlen.（句中若有错，写出改正后的那一个词；若全句无误就写 richtig）___",
+        "hint": "emp- 属于不可分前缀那一类",
+        "answer": [
+         "empfohlen",
+         "Empfohlen"
+        ],
+        "explanation": "emp- 是不可分前缀，第二分词不加 ge-，正确形式是 empfohlen。注意 empfehlen 三个方向各变一次：现在时 e→ie（er empfiehlt）、PII 掉到 o（empfohlen）、无 ge-。"
+       }
+      ]
+     }
+    ],
    "grammar": [
     {
      "id": "G33",
